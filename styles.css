@@ -1,0 +1,23 @@
+body {
+  margin:       0 auto;
+  max-width:    900px;
+  font-family:  Verdana, Helvetica, Arial, sans-serif;
+  text-align:   justify;
+}
+
+h1 {
+  background-color: lightsteelblue;
+  margin:             0;
+  padding:            24px;
+  text-align:         center;
+}
+
+.footer {
+  background-color:   lightsteelblue;
+  font-size:          smaller;
+  padding:            16px;
+}
+
+.content {
+  padding: 16px;
+}
