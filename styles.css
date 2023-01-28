@@ -38,3 +38,8 @@ h1 {
 .menu a:hover {
   text-decoration: underline;
 }
+
+.todo {
+  font-style: italic;
+  color: darkgreen;
+}
