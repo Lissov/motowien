@@ -1,0 +1,49 @@
+<!--injecttemplate header.html-->
+<!doctype html public "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="de">
+  <head>
+    <title>MotoWien</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="images/motowien_icon.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+<!--end_injecttemplate header.html-->
+  <body>
+    <h1>Motorrad rund um Wien: Technologie</h1>
+    <!--injecttemplate menu.html-->
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="day.html">Tagesausflüge</a>
+      <a href="trip.html">Routes</a>
+      <a href="tech.html">Technologie</a>
+    </div>
+    <!--end_injecttemplate menu.html-->
+    <div class="content">
+      <p>
+        Diese Webseite ist auf pures statisches HTML und CSS gemacht. Ist minimalistisch klein und hoffentlich nicht all zu hässlich.
+      </p>
+      <p>
+        Natürlich folge ich DRY prinzip (Don't repeat yourself - wiederhole sich nicht).
+        Deshalb habe ich Menu, Footer u.s.w. als separate HTML-files gemacht, die ich mit Powershell Skript in alle Seiten einbringe.
+        Auf diese Weise brauche ich nur ein enfaches Powershell Kommand vor Deployment, dann bleibt die Webseite vollig statisch und braucht gar keine externe Tools oder Code.
+        Für deployment kann ich nur ein Paar Dateien auf Server hochladen.
+      </p>
+      <p>
+        Ich habe Visual Studio Code benutzt.
+      </p>
+      <p>
+        Als Hosting nutze ich Azure, was vollig unnötig für so ein simples Projekt ist :)
+      </p>
+    </div>
+
+<!--injecttemplate footer.html-->
+    <div class="footer">
+      <p>2023 &#169; Pavlo Lissov</p>
+      <p>Alle Rechte der Bilder liegen bei Pavlo Lissov</p>
+      <p>Kontakt: <a href="mailto: admin@lissov.net?subject=MotoWien">Send email</a></p>  
+    </div>
+  </body>
+</html>
+<!--end_injecttemplate footer.html-->

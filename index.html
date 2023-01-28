@@ -1,3 +1,4 @@
+<!--injecttemplate header.html-->
 <!doctype html public "-//W3C//DTD HTML 4.01//EN"
   "http://www.w3.org/TR/html4/strict.dtd">
 
@@ -8,14 +9,23 @@
     <link rel="icon" type="image/x-icon" href="images/motowien_icon.png">
     <link rel="stylesheet" href="styles.css">
   </head>
+<!--end_injecttemplate header.html-->
   <body>
     <h1>Motorrad rund um Wien</h1>
+    <!--injecttemplate menu.html-->
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="day.html">Tagesausflüge</a>
+      <a href="trip.html">Routes</a>
+      <a href="tech.html">Technologie</a>
+    </div>
+    <!--end_injecttemplate menu.html-->
     <div class="content">
       <p>
         Ich bin Pavlo Lissov, in Ukraine geboren und wohne seit 2012 in Wien.
         In 2021 habe ich Code 111 erhalten (Motorrad bis 125cc, österreichische equivalent zum A1), und dann in 2022 volle A-Führerschein gemacht.
         Ich mag kleine Tagesausflüge, es gibt wirklich viele schöne straßen rund um Wien, die man in einem Tag genießen kann.
-        Auf diese Website werde ich die Strecken beschreiben, mit Fotos, Tipps und Routes für GPS. Meistens für mich selbst, aber vielleicht kann für andere interessant sein.
+        Auf diese Website werde ich die Strecken beschreiben, mit Fotos, Tipps und Routes für GPS. Meistens für mich selbst, aber vielleicht kann für andere auch interessant sein.
       </p>
       <p>
         Deutsch ist nicht meine Muttersprache, also verzeiht ihr bitte für viele Fehler.
@@ -26,10 +36,12 @@
       </p>
     </div>
 
+<!--injecttemplate footer.html-->
     <div class="footer">
       <p>2023 &#169; Pavlo Lissov</p>
       <p>Alle Rechte der Bilder liegen bei Pavlo Lissov</p>
-      <p>Kontakt: admin@lissov.net</p>  
+      <p>Kontakt: <a href="mailto: admin@lissov.net?subject=MotoWien">Send email</a></p>  
     </div>
   </body>
 </html>
+<!--end_injecttemplate footer.html-->
