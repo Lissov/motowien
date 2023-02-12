@@ -52,3 +52,10 @@ h1 {
   font-size: 14px;
   vertical-align: top;
 }
+
+.route-image {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;  
+}
