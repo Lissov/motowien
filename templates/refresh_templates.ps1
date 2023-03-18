@@ -6,7 +6,7 @@ $templateStart = "<!--injecttemplate";
 $templateEnd = "<!--end_injecttemplate";
 
 $files = (Get-Childitem "*.html" | % { $_.Name }) `
-    + (Get-Childitem "day\*.html" | % { "day\" + $_.Name })
+    + (Get-Childitem "trip\*.html" | % { "trip\" + $_.Name })
 foreach ($file in $files) {
     $file
     $content = [System.IO.File]::ReadAllText($file);

@@ -13,6 +13,6 @@ You can clear templates to see page cleaner:
 /templates          <- all templates are here
 /images             <- website styling images
 /images/routes/xxx  <- images for specific routes
-/day                <- day-long routes from Vienna
-/trip               <- multi-day and outside Vienna
+/day                <- day-long routes from Vienna  // removed for now, let all be trips
+/trip               <- multi-day and outside Vienna // now all
 /gps                <- GPX files with gps tracks

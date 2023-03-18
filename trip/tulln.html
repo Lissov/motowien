@@ -1,0 +1,61 @@
+<!--injecttemplate header.html-->
+<!doctype html public "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>MotoWien</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="..\images/motowien_icon.png">
+    <link rel="stylesheet" href="..\styles.css">
+  </head>
+<!--end_injecttemplate header.html-->
+<body>
+    <h1>Tagesroute: Tulln</h1>
+    <!--injecttemplate menu.html-->
+    <div class="menu">
+      <a href="..\index.html">Home</a>
+      <a href="..\trips.html">Routes</a>
+      <a href="..\tech.html">Technologie</a>
+    </div>
+    <!--end_injecttemplate menu.html-->
+    <div class="content">
+      <p>
+        <!--injecttemplate draft.html--><span class="draft-badge" title="Ich habe diese Route mit dieses GPX track noch nicht gefahren. Ich probiere und verbessere wann ich die Zeit habe..">Draft</span><!--end_injecttemplate draft.html-->
+        GPS: <a href="../gps/tulln.gpx" target="_blank">GPX Datei</a>
+        <a href="https://goo.gl/maps/RefJ73uXh1ssdq7y8" target="_blank">Karte</a>
+        <button type="button" onclick="navigator.clipboard.writeText(window.location.origin + '/gps/kahlenberg.gpx')">Copy Link</button>
+      </p>
+      <p class="route-params">
+        82 km, 2.5 Stunden Fahrtzeit, ca. 5 Stunden insgesamt
+      </p>
+      <p class="todo">
+        TODO: Fahre die Route um gpx Datei zu überprüfen, mache mehr Fotos.
+      </p>
+      <p>
+        Sehenswürdigkeiten:
+        <ul>
+          <li>Dopplerhütte - Aussicht auf Wachau und Donau</li>
+          <li>Niebelungendenkmal in Tulln und Donau</li>
+          <li>Hauptplatz Tulln - große Pause für Kaffee oder Eis</li>
+          <li>Tulbinerkogel - auch Kaffee möglich</li>
+          <li>Landgasthaus Scheiblingstein - wenn man mehr Kaffee braucht</li>
+        </ul>
+      </p>
+      <p>
+        Die Route beginnt wie viele andere Routen, die man von Floridsdorf nach Norden und Westen fährt.
+        Man überquert die Donau mit Floridsdorfbrücke, kann schon auf die lange Gerade ruhig überprüfen, ob alles um das Motorrad stimmt.
+        ...
+      </p>
+    </div>
+
+<!--injecttemplate footer.html-->
+    <div class="footer">
+      <p>2023 &#169; Pavlo Lissov</p>
+      <p>Alle Rechte der Bilder liegen bei Pavlo Lissov</p>
+      <p>Kontakt: <a href="..\mailto: admin@lissov.net?subject=MotoWien">Send email</a></p>  
+    </div>
+  </body>
+</html>
+<!--end_injecttemplate footer.html-->

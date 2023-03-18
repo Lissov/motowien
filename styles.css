@@ -59,3 +59,8 @@ h1 {
   margin-right: auto;
   display: block;  
 }
+
+.route-params {
+  color: darkgray;
+  font-style: italic;
+}
