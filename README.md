@@ -3,6 +3,16 @@ Website about motorcycle tours around Vienna
 
 # deployment
 To deploy commit to master.
+
+# new approach with sitemplate
+See `sitemplate` documentation for details
+## to clean:
+run source/clean.bat
+## to build (clean and build)
+run source/build.bat
+
+
+# legacy approach with Powershell templates
 HTML pages are made with custom templates. Before deployment, refresh templates by running from root folder:
 `templates\refresh_templates.ps1`
 

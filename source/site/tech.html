@@ -1,22 +1,8 @@
-<!doctype html public "-//W3C//DTD HTML 4.01//EN"
-  "http://www.w3.org/TR/html4/strict.dtd">
-
-<html lang="de">
-  <head>
-    <meta charset="utf-8">
-    <title>MotoWien</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="$(root)images\motowien_icon.png">
-    <link rel="stylesheet" href="$(root)styles.css">
-  </head>
+<inject header></inject>
 
   <body>
     <h1>Motorrad rund um Wien: Technologie</h1>
-    <div class="menu">
-      <a href="$(root)index.html">Home</a>
-      <a href="$(root)trips.html">Routes</a>
-      <a href="$(root)tech.html">Technologie</a>
-    </div>
+    <inject menu></inject>
     <div class="content">
       <p>
         Diese Webseite ist auf pures statisches HTML und CSS gemacht. Ist minimalistisch klein und hoffentlich nicht all zu hässlich.
@@ -35,10 +21,4 @@
       </p>
     </div>
 
-    <div class="footer">
-      <p>2023 &#169; Pavlo Lissov</p>
-      <p>Alle Rechte der Bilder liegen bei Pavlo Lissov</p>
-      <p>Kontakt: <a href="mailto: admin@lissov.net?subject=MotoWien">Send email</a></p>  
-    </div>
-  </body>
-</html>
+<inject footer></inject>

@@ -1,0 +1,23 @@
+{
+  "name": "Motowien",
+  "outputFolder": "..",
+  "inputFolder": "site",
+  "ignoreInOutput": [
+    "source",
+    ".*",
+    "LICENSE",
+    "README.md",
+    
+    "-- contents to keep",
+    "gps", "images",
+
+    "-- legacy",
+    "templates"
+  ],
+  "include": [
+    "*"
+  ],
+  "templates": [
+    "templates"
+  ]
+}
