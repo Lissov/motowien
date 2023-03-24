@@ -66,3 +66,7 @@ h1 {
   background-color: lightgray;
   padding: 8px;
 }
+
+.active {
+  color: chocolate;
+}

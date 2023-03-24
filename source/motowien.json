@@ -9,7 +9,7 @@
     "README.md",
     
     "-- contents to keep",
-    "gps", "images",
+    "gps", "images", "styles.css",
 
     "-- legacy",
     "templates"

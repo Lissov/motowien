@@ -1,5 +1,9 @@
 <div class="menu">
-  <a href="$(root)index.html">Home</a>
-  <a href="$(root)trips.html">Routes</a>
-  <a href="$(root)tech.html">Technologie</a>
+  <var $classHome $classTrips $classTech></var>
+  <if $active='home'><set $classHome>class="active"</set></if>
+  <if $active='trips'><set $classTrips>class="active"</set></if>
+  <if $active='tech'><set $classTech>class="active"</set></if>
+  <a $classHome href="$(root)index.html">Home</a>
+  <a $classTrips href="$(root)trips.html">Routes</a>
+  <a $classTech href="$(root)tech.html">Technologie</a>
 </div>
