@@ -1,14 +1,15 @@
 <inject header $(root)="..\"></inject>
-<body>
     <h1>Tagesroute: Kahlenberg</h1>
     <inject menu $root="" $active="trips"></inject>
     <div class="content">
-      <p>
-        <inject draft></inject>
-        <a href="https://goo.gl/maps/QBXKhJS8s27w99936" target="_blank">Karte</a>
-        GPS: <a href="../gps/kahlenberg.gpx" target="_blank">GPX Datei</a>
-        <button type="button" onclick="navigator.clipboard.writeText(window.location.origin + '/gps/kahlenberg.gpx')">Copy Link</button>
-      </p>
+      <inject trip.details $map="https://goo.gl/maps/QBXKhJS8s27w99936"
+        $draft="true"
+        $name="kahlenberg"
+        $length="... km"
+        $drivetime="..."
+        $complexity="Einfach">
+      </inject>
+
       <p class="todo">
         TODO: Fahre die Route um gpx Datei zu überprüfen, mache mehr Fotos.
       </p>

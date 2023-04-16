@@ -1,20 +1,15 @@
 <inject header $(root)="..\"></inject>
-<body>
     <h1>Tagesroute: Heiligenkreuz</h1>
     <inject menu $(root)="..\" $active="trips"></inject>
 
     <div class="content">
-      <div class="route-core-data">
-        <p>
-          <inject draft></inject>
-          <a href="https://goo.gl/maps/abfmUSiSJPQnfZN59" target="_blank">Karte</a>
-          GPS: <a href="../gps/heiligenkreuz.gpx" target="_blank">GPX Datei</a>
-          <button type="button" onclick="navigator.clipboard.writeText(window.location.origin + '/gps/heiligenkreuz.gpx')">Copy Link</button>
-        </p>
-        <p>Strecke: <b>...</b></p>
-        <p>Fahrtzeit: <b>...</b></p>
-        <p>Gesamtzeit: <b>...</b></p>
-      </div>
+      <inject trip.details $map="https://goo.gl/maps/abfmUSiSJPQnfZN59"
+        $name="heiligenkreuz"
+        $length="89 km"
+        $drivetime="2 Stunden"
+        $complexity="Mittel">
+      </inject>
+
       <p class="todo">
         TODO: Fahre die Route um gpx Datei zu überprüfen, mache mehr Fotos.
       </p>

@@ -1,6 +1,5 @@
 <inject header $(root)=""></inject>
 
-  <body>
     <h1>Motorrad rund um Wien: Ausflüge</h1>
     <inject menu $(root)="" $active="trips"></inject>
 
@@ -9,37 +8,12 @@
         Alle meine Ausflüge beginnen beim Donauturm in Wien, da ich in der nähe wohne.
       </p>
 
-      <h2>
-        <a href="trip/kahlenberg.html">Kahlenberg</a>
-        <inject draft></inject>
-      </h2>
-      <p class="todo">
-        TODO: noch mal fahren um fotos zu sammeln.
-      </p>
-      <p>
-        Eine kleine runde für ein Paar Stunden.
-      </p>
+      <inject trip.listing $page="kahlenberg.html" $name="Kahlenberg" $draft="true" $text="Eine kleine runde für ein Paar Stunden."></inject>
 
-      <h2>
-        <a href="trip/tulln.html">Tulln über Wienerwald</a>
-      </h2>
-      <p class="todo">
-        TODO: noch mal fahren um fotos zu sammeln.
-      </p>
-      <p>
-        Etwas großere Tagesrunde.
-      </p>
+      <inject trip.listing $page="tulln.html" $name="Tulln" $text="Etwas großere Tagesrunde."></inject>
 
-      <h2>
-        <a href="trip/heiligenkreuz.html">Heiligenkreuz</a>
-        <inject draft></inject>
-      </h2>
-      <p class="todo">
-        TODO: Mal fahren um fotos zu sammeln.
-      </p>
-      <p>
-        Tagesausflug
-      </p>
-    </div>
+      <inject trip.listing $page="heiligenkreuz.html" $name="Heiligenkreuz" $text="Tagesausflug."></inject>
+
+      <inject trip.listing $page="durnstein.html" $name="Durnstein" $text="Marillenblute... oder einfach Straßen :)"></inject>
 
 <inject footer></inject>

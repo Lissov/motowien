@@ -9,21 +9,27 @@
     <link rel="icon" type="image/x-icon" href="..\images\motowien_icon.png">
     <link rel="stylesheet" href="..\styles.css">
   </head>
-<body>
+  <body>
     <h1>Tagesroute: Kahlenberg</h1>
     <div class="menu">
       
-      <a  href="..\index.html">Home</a>
-      <a class="active" href="..\trips.html">Routes</a>
-      <a  href="..\tech.html">Technologie</a>
+      <a  href="$(root)index.html">Home</a>
+      <a class="active" href="$(root)trips.html">Routes</a>
+      <a  href="$(root)tech.html">Technologie</a>
     </div>
     <div class="content">
-      <p>
-        <span class="draft-badge" title="Ich habe diese Route mit dieses GPX track noch nicht gefahren. Ich probiere und verbessere wann ich die Zeit habe..">Draft</span>
-        <a href="https://goo.gl/maps/QBXKhJS8s27w99936" target="_blank">Karte</a>
-        GPS: <a href="../gps/kahlenberg.gpx" target="_blank">GPX Datei</a>
-        <button type="button" onclick="navigator.clipboard.writeText(window.location.origin + '/gps/kahlenberg.gpx')">Copy Link</button>
-      </p>
+      <div class="route-core-data">
+        <p>
+          <span class="draft-badge" title="Ich habe diese Route mit dieses GPX track noch nicht gefahren. Ich probiere und verbessere wann ich die Zeit habe..">Draft</span>
+          <a href="https://goo.gl/maps/QBXKhJS8s27w99936" target="_blank">Karte</a>&nbsp;
+          <a href="../gps/kahlenberg.gpx" target="_blank">GPX Datei</a>
+          <button type="button" onclick="navigator.clipboard.writeText(window.location.origin + '/gps/kahlenberg.gpx')">Copy Link</button>
+        </p>
+        <p>Strecke: <b>... km</b></p>
+        <p>Fahrtzeit: <b>...</b></p>
+        <p>Schwierigkeit: <b>Einfach</b></p>
+      </div>
+
       <p class="todo">
         TODO: Fahre die Route um gpx Datei zu überprüfen, mache mehr Fotos.
       </p>
