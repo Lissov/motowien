@@ -9,7 +9,7 @@ body {
   font-size:    18px;
 }
 
-.content {
+.page-content {
   margin:             0 auto;
   max-width:          var(--max-width);
   background-color: #fcfcfc;
