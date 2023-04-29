@@ -90,3 +90,7 @@ h1 {
 .active {
   color:            chocolate;
 }
+
+h3 {
+  margin-top: 40px;
+}

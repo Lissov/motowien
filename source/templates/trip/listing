@@ -1,9 +1,9 @@
 <h2>
-  <a href="trip/$page">$name</a>
+  <a href="trip/{{$page}}">{{$name}}</a>
   <if $draft="true">
-  <span class="draft-badge" title="Ich habe diese Route mit dieses GPX track noch nicht gefahren. Ich probiere und verbessere wann ich die Zeit habe..">Draft</span>
+  <inject draft></inject>
   </if>
 </h2>
 <p>
-  $text
+  {{$text}}
 </p>
