@@ -13,8 +13,10 @@
     <p>
       {{$m.title}}
       <a href="{{$m.map}}" target="_blank">Karte</a>&nbsp;
-      <a href="../gps/{{$m.name}}.gpx" target="_blank">GPX Datei</a>
-      <button type="button" onclick="navigator.clipboard.writeText(window.location.origin + '/gps/{{$m.name}}.gpx')">Copy Link</button>
+      <if {{$m.name}}=""><else>
+        <a href="../gps/{{$m.name}}.gpx" target="_blank">GPX Datei</a>
+        <button type="button" onclick="navigator.clipboard.writeText(window.location.origin + '/gps/{{$m.name}}.gpx')">Copy Link</button>
+      </if>
     </p>
 
   </for>
