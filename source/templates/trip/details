@@ -8,15 +8,17 @@
       <a href="../gps/{{$name}}.gpx" target="_blank">GPX Datei</a>
       <button type="button" onclick="navigator.clipboard.writeText(window.location.origin + '/gps/{{$name}}.gpx')">Copy Link</button>
     </if>
-    <for $map of $maps>
-      <p>
-        {{$map.title}}
-        <a href="{{$map.name}}" target="_blank">Karte</a>&nbsp;
-        <a href="../gps/{{$map.name}}.gpx" target="_blank">GPX Datei</a>
-        <button type="button" onclick="navigator.clipboard.writeText(window.location.origin + '/gps/{{$map.name}}.gpx')">Copy Link</button>
-      </p>
-    </for>
   </p>
+  <for $m of $maps>
+    <p>
+      {{$m.title}}
+      <a href="{{$m.map}}" target="_blank">Karte</a>&nbsp;
+      <a href="../gps/{{$m.name}}.gpx" target="_blank">GPX Datei</a>
+      <button type="button" onclick="navigator.clipboard.writeText(window.location.origin + '/gps/{{$m.name}}.gpx')">Copy Link</button>
+    </p>
+
+  </for>
+  <if {{$calimoto}}=""><else><a href="{{$calimoto}}" target="_blank">Calimoto route</a></if>
   <p>Strecke: <b>{{$length}}</b></p>
   <p>Fahrtzeit: <b>{{$drivetime}}</b></p>
   <p>Schwierigkeit: <b>{{$complexity}}</b></p>

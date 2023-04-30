@@ -1,0 +1,26 @@
+<inject header $(root)="..\"></inject>
+    <h1>3-Tages Ausflug: Burgenland</h1>
+    <inject menu $(root)="..\" $active="trips"></inject>
+    <div class="content">
+
+      Mehrere teile.
+      <var $maps json>[
+        { title: 'Wien - Fischamend (26.5 km):', name: 'no_burgenland_1', map: 'https://goo.gl/maps/tXKpWtRf1mS984dW9' },
+        { title: 'Fischamend - Eisenstadt (61 km):', name: 'no_burgenland_2', map: 'https://goo.gl/maps/ntVrKDYYHLEca1177' },
+        { title: 'Eisenstadt - Wien (64 km):', name: 'no_burgenland_3', map: 'https://goo.gl/maps/Mjz4vroHyV15QR9i7' }
+      ]</var>
+
+      <inject trip.details $maps="{{$maps}}"
+        $draft="true"
+        $calimoto="https://m.calimoto.com/r/RnJIJVuJIk"
+        $length="153 km"
+        $drivetime="3 Stunden"
+        $complexity="Mittel">
+      </inject>
+      <p>
+        Leithagebirge, Eisenstadt 
+      </p>
+
+    </div>
+
+<inject footer></inject>
