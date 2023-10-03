@@ -21,6 +21,7 @@
 
   </for>
   <if {{$calimoto}}=""><else><a href="{{$calimoto}}" target="_blank">Calimoto route</a></if>
+  <if {{$kurviger}}=""><else><a href="{{$kurviger}}" target="_blank">Kurviger route</a></if>
   <p>Strecke: <b>{{$length}}</b></p>
   <p>Fahrtzeit: <b>{{$drivetime}}</b></p>
   <p>Schwierigkeit: <b>{{$complexity}}</b></p>
