@@ -94,3 +94,55 @@ h1 {
 h3 {
   margin-top: 40px;
 }
+
+.staatsbuergerschaft {
+  --block-padding: 12px;
+
+  ol {
+    padding-inline-start: var(--block-padding);
+  }
+
+  h2 {
+    color: gray;
+  }
+
+  ol > li > h3 {
+    color: red;
+    font-size: large;
+    margin-top: 48px;
+  }
+
+  .note {
+    font-style: italic;
+    margin-left: calc(-1 * var(--block-padding));
+    border-left: 10px solid gold;
+    padding-left: 20px;
+  }
+
+  .imgnote {
+    margin-left: calc(-1 * var(--block-padding));
+    border-left: 10px solid red;
+    color: red;
+    padding-left: 20px;
+    font-size: 80%;
+  }
+
+  .beispielfrage {
+    color: red;
+    h5 {
+      margin-top: 24px;
+      margin-bottom: -8px;
+    }
+    p {
+      font-style: italic;
+    }
+    ul {
+      list-style-type: none;
+      li:before
+      {
+        content: "\2610";
+        margin-right:5px;
+      }
+    }
+  }
+}
