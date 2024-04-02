@@ -96,7 +96,7 @@ h3 {
 }
 
 .staatsbuergerschaft {
-  --block-padding: 12px;
+  --block-padding: 15px;
 
   ol {
     padding-inline-start: var(--block-padding);
