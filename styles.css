@@ -95,6 +95,16 @@ h3 {
   margin-top: 40px;
 }
 
+.under-h3 {
+  margin-top: -18px;
+  margin-bottom: 17px;
+}
+
+.dates-hint {
+  font-style: italic;
+  color: gray;
+}
+
 .staatsbuergerschaft {
   --block-padding: 15px;
 
