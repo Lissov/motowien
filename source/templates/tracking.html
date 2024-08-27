@@ -1,0 +1,29 @@
+<div id="tracking_warning" class="popup-bottom">
+  <div class="tracking-inside">
+    Ich brauche Zahl der Benutzer. <a href="tech.html">Details</a><br/>
+    Bitte hilf mir und erlaube es.
+    <div class="buttons">
+      <button class="primary" onclick="window.selectTracking('true')">Erlauben</button>
+      <button onclick="window.selectTracking('anonymous')">Anonym</button>
+      <button onclick="window.selectTracking('false')">Verbieten</button>
+    </div>
+  </div>
+</div>
+<script>
+  var el = document.getElementById('tracking_warning');
+  window['selectTracking'] = (option) => {
+    var cid = localStorage.getItem('clientId');
+    if (option === 'true' && !cid) {
+      var clientId = '';
+      for (var i = 0; i < 20; i++) clientId += String.fromCharCode(97 + Math.floor(Math.random()*26));
+      localStorage.setItem('clientId', clientId);
+    }
+    localStorage.setItem('allowTracking', option);
+    el.classList.remove('popup-bottom-appear');
+    location.reload();
+  };
+  var at = localStorage.getItem('allowTracking');
+  if (!at) {
+    setTimeout(() => el.classList.add('popup-bottom-appear'), 1);
+  }
+</script>

@@ -156,3 +156,52 @@ h3 {
     }
   }
 }
+
+.popup-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  overflow: hidden;
+
+  height: 0px;
+  border: none;
+
+  .tracking-inside {
+    position: inherit;
+    left: 50%;
+    height: 100%;
+    margin-left: -250px;
+    border: 1px gray solid;
+    background-color: lightgray;
+    color: black;
+    padding: 12px 35px;
+  }
+  .buttons {
+    text-align: center;
+    margin-top: 6px;
+    button {
+      appearance: button;
+      backface-visibility: hidden;
+      border-radius: 6px;
+      border-width: 0;
+      box-sizing: border-box;
+      cursor: pointer;
+      outline: none;
+      touch-action: manipulation;
+      font-size: large;
+      padding: 6px 12px;
+    }
+    .primary {
+      margin: 0px 12px;
+      background-color: #415ef6;
+      color: #fff;
+    }
+  }
+
+  transition: 1s;
+}
+.popup-bottom-appear {
+  height: 120px;
+}
