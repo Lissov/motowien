@@ -147,8 +147,8 @@
     </div>
     <script>
       var t = localStorage.getItem('allowTracking');
-      if (!!t && t !== 'false') {
-        var cid = t === 'anonymous' ? t : localStorage.getItem('clientId');
+      if (t !== 'false') {
+        var cid = t === 'true' ? localStorage.getItem('clientId') : 'anonymous';
         var x = new XMLHttpRequest();
         x.open('GET', 'https://lissov.net/VisitorCount/Log?pageName=rbr.html&clientId=' + cid, true);
         x.send();

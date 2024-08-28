@@ -29,21 +29,19 @@
       <h3>Zahlen der Benutzer</h3>
       <p>
         Ich hätte gerne wissen, ob Leute (ind wie viel) meine Website sehen.
-        Dafür habe ich einfache Counter integriert.
+        Dafür habe ich einfache Counter integriert: wann jede Seite geöffnet ist, dies ist auf meinem Server logiert.
+        Wenn erlaubt, mit zufälliges Client ID.
         Dafür sind <b>keine</b> Personenbezogene Daten übermittelt oder gespeichert.
-        Es gibt drei Optionen:
+        Es gibt Optionen:
         <ul>
-          <li><b>Erlauben</b>: ein <u>zufälliges</u> Identifikator ist generiert und im Browser gespeichert, und ist beim öffnen jeder seite zu Server gesendet.
-            Das erlaubt mir die Zahl von Nutzer zu wissen, ohne dabei irgendwelche Personenbezogene Daten zu haben.
+          <li><b>Erlauben</b>: ein <u>zufälliges</u> Identifikator ist generiert und im Browser gespeichert, und ist dann zu Server gesendet.
+            Dieser Identifikator ist rein zufällig und ist nicht zum User, Hardware oder Software abhängig.
+            Das dient nur um Zahl von unikale Nutzer zu wissen, so dass ich dich von andere Nutzer unterscheiden kann.
             <b>Ich bitte, diese Option zu wählen.</b>
           </li>
           <li><b>Anonym</b>: dasselbe aber mit "anonymous" als ID.
             So kann ich die Nutzer nicht unterscheiden, also kann nicht wissen ob es mehre Leute sind oder einer vielmals die Seite anschaut.
             Aber besser als nichts.
-          </li>
-          <li><b>Verbieten</b>: gar keine infos sind am server gesendet.
-            Dann kann ich überhaubt nicht wissen, ob jemand meine Seite öffnet.
-            Das ist bedauerlich, aber ich will diese Option für meine Nutzer behalten.
           </li>
         </ul>
 
@@ -56,7 +54,6 @@
       var o = localStorage.getItem('allowTracking');
       var ot = document.getElementById('tracking-option');
       if (o === 'anonymous') ot.innerHTML = 'Du hast die Option gewählt: <b>Anonym</b>.'
-        else if (o === 'false') ot.innerHTML = 'Du hast die Option gewählt: <b>Verbieten</b>.'
         else if (o === 'true') ot.innerHTML = 'Du hast die Option gewählt: <b>Erlauben</b>. Danke!'
         else document.getElementById('tracking-option-change').style = 'display: none';
       var clientId = localStorage.getItem('clientId');
@@ -76,8 +73,8 @@
     </div>
     <script>
       var t = localStorage.getItem('allowTracking');
-      if (!!t && t !== 'false') {
-        var cid = t === 'anonymous' ? t : localStorage.getItem('clientId');
+      if (t !== 'false') {
+        var cid = t === 'true' ? localStorage.getItem('clientId') : 'anonymous';
         var x = new XMLHttpRequest();
         x.open('GET', 'https://lissov.net/VisitorCount/Log?pageName=tech.html&clientId=' + cid, true);
         x.send();
@@ -89,12 +86,11 @@
 
 <div id="tracking_warning" class="popup-bottom">
   <div class="tracking-inside">
-    Ich brauche Zahl der Benutzer. <a href="tech.html">Details</a><br/>
-    Bitte hilf mir und erlaube es.
+    Die Webseite logiert Zahl der Benutzer. <a href="tech.html">Mehr Info hier...</a><br/>
+    Bitte erlaube Tracking mit zufälliges Client ID.
     <div class="buttons">
       <button class="primary" onclick="window.selectTracking('true')">Erlauben</button>
-      <button onclick="window.selectTracking('anonymous')">Anonym</button>
-      <button onclick="window.selectTracking('false')">Verbieten</button>
+      <button onclick="window.selectTracking('anonymous')">Anonymes Tracking</button>
     </div>
   </div>
 </div>
@@ -102,17 +98,16 @@
   var el = document.getElementById('tracking_warning');
   window['selectTracking'] = (option) => {
     var cid = localStorage.getItem('clientId');
-    if (option === 'true' && !cid) {
+    if (!cid) {
       var clientId = '';
       for (var i = 0; i < 20; i++) clientId += String.fromCharCode(97 + Math.floor(Math.random()*26));
       localStorage.setItem('clientId', clientId);
     }
     localStorage.setItem('allowTracking', option);
-    el.classList.remove('popup-bottom-appear');
     location.reload();
   };
   var at = localStorage.getItem('allowTracking');
-  if (!at) {
+  if (!at || at === 'false') {
     setTimeout(() => el.classList.add('popup-bottom-appear'), 1);
   }
 </script>

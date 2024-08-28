@@ -1,8 +1,8 @@
 <script>
   <var ctx context></var>
   var t = localStorage.getItem('allowTracking');
-  if (!!t && t !== 'false') {
-    var cid = t === 'anonymous' ? t : localStorage.getItem('clientId');
+  if (t !== 'false') {
+    var cid = t === 'true' ? localStorage.getItem('clientId') : 'anonymous';
     var x = new XMLHttpRequest();
     x.open('GET', 'https://lissov.net/VisitorCount/Log?pageName={{ctx.FileName}}&clientId=' + cid, true);
     x.send();
