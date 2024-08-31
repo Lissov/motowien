@@ -23,12 +23,10 @@
       <p>Alle "anonyous" Nutzer, wo der Nutzer Client-ID Tracking nicht erlaubt hat, sind als 1 Nutzer gezahlt.</p>
     </div>
     <script>
-      var x = new XMLHttpRequest();
-      x.open('GET', 'https://lissov.net/api/visitors/stats', false);
-      x.onloadend = (res) => console.log(res);
-      x.send();
+      fetch('https://lissov.net/api/visitors/stats')
+        .then(x => {
+          console.log(x.json());
+        });
     </script>
 
 <inject footer></inject>
-
-<inject tracking></inject>
