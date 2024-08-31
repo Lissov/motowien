@@ -42,7 +42,7 @@
     <script>
       fetch('https://lissov.net/api/visitors/stats')
         .then(x => {
-          console.log(x.json());
+          x.json().then(s => console.log());
         });
     </script>
 
