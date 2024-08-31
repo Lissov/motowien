@@ -23,9 +23,15 @@
       <p>Alle "anonyous" Nutzer, wo der Nutzer Client-ID Tracking nicht erlaubt hat, sind als 1 Nutzer gezahlt.</p>
     </div>
     <script>
+      var st = (id, v) => document.getElementById(id).innerHTML = `<b>${v}</b>`;
       fetch('https://lissov.net/api/visitors/stats')
         .then(x => {
-          x.json().then(s => console.log());
+          x.json().then(u => {
+            st('count-all', u.totalCount);
+            st('count-all-user', u.totalUserCount);
+            st('count-24h', u.last24hCount);
+            st('count-24h-user', u.last24hUserCount);
+          });
         });
     </script>
 
