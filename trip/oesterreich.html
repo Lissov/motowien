@@ -205,7 +205,6 @@
 
 
       <h3>Tag 3: Grossglockner</h3>
-      <div class="dates-hint under-h3">02.08, Freitag</div>
       <div class="route-core-data">
         <p>
           <a href="https://maps.app.goo.gl/HDBR5ZkDMbsodW8W7" target="_blank">Karte</a>&nbsp;
@@ -287,7 +286,7 @@
       if (t !== 'false') {
         var cid = t === 'true' ? localStorage.getItem('clientId') : 'anonymous';
         var x = new XMLHttpRequest();
-        x.open('GET', 'https://lissov.net/VisitorCount/Log?pageName=oesterreich.html&clientId=' + cid, true);
+        x.open('GET', 'https://lissov.net/api/visitors/log?pageName=oesterreich.html&clientId=' + cid, true);
         x.send();
       }
     </script>

@@ -1,0 +1,34 @@
+<inject header $(root)=""></inject>
+
+    <h1>Motorrad rund um Wien: Nutzerzahl</h1>
+    <inject menu $(root)="" $active="tech"></inject>
+    <div class="content">
+      <h5>Insgesamt seit beginn der Messung</h5>
+      <p>
+        Besuche: <span id="count-all">Loading...</span>
+      </p>
+      <p>
+        Nutzer: <span id="count-all-user">Loading...</span>
+      </p>
+
+      <h5>Letzte 24 Stunden</h5>
+      <p>
+        Besuche: <span id="count-24h">Loading...</span>
+      </p>
+      <p>
+        Nutzer: <span id="count-24h-user">Loading...</span>
+      </p>
+
+      <br/>
+      <p>Alle "anonyous" Nutzer, wo der Nutzer Client-ID Tracking nicht erlaubt hat, sind als 1 Nutzer gezahlt.</p>
+    </div>
+    <script>
+      var x = new XMLHttpRequest();
+      x.open('GET', 'https://lissov.net/api/visitors/stats', false);
+      x.onloadend = (res) => console.log(res);
+      x.send();
+    </script>
+
+<inject footer></inject>
+
+<inject tracking></inject>

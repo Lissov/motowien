@@ -4,44 +4,50 @@
     <inject menu $(root)="" $active="tech"></inject>
     <div class="content">
       <p>
-        Diese Webseite ist auf pures statisches HTML und CSS gemacht. Ist minimalistisch klein und hoffentlich nicht all zu hässlich.
-        Ich nutze ein kleinen Engine um mit dem Templates dieses Website zu konstruiren.
-        Mehr details dazu in meinem <a href="https://github.com/Lissov/sitemplate" target="_blank">GitHub</a>.
+        Diese Webseite ist in purem, statischem HTML und CSS erstellt.
+        Sie ist minimalistisch und hoffentlich nicht allzu unansehnlich.
+        Ich nutze eine kleine Engine, um die Templates für diese Website zu erstellen.
+        Weitere Details dazu findest du auf meinem <a href="https://github.com/Lissov/sitemplate" target="_blank">GitHub</a>.
       </p>
 
-      <h3>Zahlen der Benutzer</h3>
+      <h3>Nutzerzahlen</h3>
       <p>
-        Ich hätte gerne wissen, ob Leute (ind wie viel) meine Website sehen.
-        Dafür habe ich einfache Counter integriert: wann jede Seite geöffnet ist, dies ist auf meinem Server logiert.
-        Wenn erlaubt, mit zufälliges Client ID.
-        Dafür sind <b>keine</b> Personenbezogene Daten übermittelt oder gespeichert.
-        Es gibt Optionen:
+        Ich würde gerne wissen, ob und wie viele Leute meine Website besuchen.
+        Dafür habe ich einen einfachen Zähler integriert, der registriert, wann jede Seite geöffnet wird.
+        Diese Informationen werden auf meinem Server protokolliert.
+        Wenn erlaubt, wird eine zufällige Client-ID verwendet.
+        Dabei werden keine personenbezogenen Daten übermittelt oder gespeichert.
+        Es gibt folgende Optionen:
         <ul>
-          <li><b>Erlauben</b>: ein <u>zufälliges</u> Identifikator ist generiert und im Browser gespeichert, und ist dann zu Server gesendet.
-            Dieser Identifikator ist rein zufällig und ist nicht zum User, Hardware oder Software abhängig.
-            Das dient nur um Zahl von unikale Nutzer zu wissen, so dass ich dich von andere Nutzer unterscheiden kann.
-            <b>Ich bitte, diese Option zu wählen.</b>
+          <li><b>Erlauben</b>: Ein <u>zufälliger</u> Identifikator wird generiert und im Browser gespeichert.
+            Dieser wird dann an den Server gesendet.
+            Der Identifikator ist rein zufällig und nicht mit dem Nutzer, der Hardware oder der Software verknüpft.
+            Er dient lediglich dazu, die Anzahl einzigartiger Nutzer zu erfassen, damit ich dich von anderen unterscheiden kann.
+            <b>Ich bitte dich, diese Option zu wählen.</b>
           </li>
-          <li><b>Anonym</b>: dasselbe aber mit "anonymous" als ID.
-            So kann ich die Nutzer nicht unterscheiden, also kann nicht wissen ob es mehre Leute sind oder einer vielmals die Seite anschaut.
-            Aber besser als nichts.
+          <li><b>Anonym</b>: Dasselbe, aber mit "anonymous" als ID.
+            Dadurch kann ich die Nutzer nicht unterscheiden und somit nicht wissen, ob es mehrere Personen sind oder eine Person die Seite mehrmals besucht.
+            Aber es ist besser als nichts.
           </li>
         </ul>
 
         <p id="tracking-option"></p>
-        <button id="tracking-option-change" onclick="localStorage.removeItem('allowTracking'); location.reload();">Wahl ändern</button>
+        <button id="tracking-option-change" onclick="localStorage.removeItem('allowTracking'); location.reload();">Option ändern</button>
         <p id="tracking-history"></p>
+        <p>
+          Aktuelle Nutzerzahl ist <a href="usage.html">hier</a>.
+        </p>
       </p>
     </div>
     <script>
       var o = localStorage.getItem('allowTracking');
       var ot = document.getElementById('tracking-option');
-      if (o === 'anonymous') ot.innerHTML = 'Du hast die Option gewählt: <b>Anonym</b>.'
-        else if (o === 'true') ot.innerHTML = 'Du hast die Option gewählt: <b>Erlauben</b>. Danke!'
+      if (o === 'anonymous') ot.innerHTML = 'Du hast die Option <b>Anonym</b> gewählt.'
+        else if (o === 'true') ot.innerHTML = 'Du hast die Option <b>Erlauben</b> gewählt. Danke!'
         else document.getElementById('tracking-option-change').style = 'display: none';
       var clientId = localStorage.getItem('clientId');
       if (!!clientId)
-        document.getElementById('tracking-history').innerHTML = `Du bist oder warst mit Identifier [${clientId}] logiert. Um die logs zu löschen, sende mir diese per EMail.`;
+        document.getElementById('tracking-history').innerHTML = `Du bist oder warst mit dem Identifikator [${clientId}] protokolliert. Um die Logs zu löschen, sende mir bitte eine E-Mail mit diesem Identifikator.`;
       else
         document.getElementById('tracking-history').style = 'display: none';
     </script>

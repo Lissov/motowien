@@ -56,7 +56,7 @@
       if (t !== 'false') {
         var cid = t === 'true' ? localStorage.getItem('clientId') : 'anonymous';
         var x = new XMLHttpRequest();
-        x.open('GET', 'https://lissov.net/VisitorCount/Log?pageName=heiligenkreuz.html&clientId=' + cid, true);
+        x.open('GET', 'https://lissov.net/api/visitors/log?pageName=heiligenkreuz.html&clientId=' + cid, true);
         x.send();
       }
     </script>

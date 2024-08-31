@@ -11,29 +11,40 @@
   </head>
   <body>
 
-    <h1>Motorrad rund um Wien</h1>
+    <h1>Motorrad rund um Wien: Nutzerzahl</h1>
     <div class="menu">
-      <a class="active" href="index.html">Home</a>
+      <a  href="index.html">Home</a>
       <a  href="trips.html">Routes</a>
-      <a  href="tech.html">Technologie</a>
+      <a class="active" href="tech.html">Technologie</a>
       <a  href="docs/stb.html">Staatsb.</a>
     </div>
     <div class="page-content">
     <div class="content">
+      <h5>Insgesamt seit beginn der Messung</h5>
       <p>
-        Ich bin Pavlo Lissov, in Ukraine geboren und wohne seit 2012 in Wien.
-        In 2021 habe ich Code 111 erhalten (Motorrad bis 125cc, österreichische equivalent zum A1), und dann in 2022 volle A-Führerschein gemacht.
-        Ich mag kleine Tagesausflüge, es gibt wirklich viele schöne straßen rund um Wien, die man in einem Tag genießen kann.
-        Auf diese Website werde ich die Strecken beschreiben, mit Fotos, Tipps und Routes für GPS. Meistens für mich selbst, aber vielleicht kann für andere auch interessant sein.
+        Besuche: <span id="count-all">Loading...</span>
       </p>
       <p>
-        Deutsch ist nicht meine Muttersprache, also verzeiht ihr bitte für viele Fehler.
-        Ich will Deutsch besser lernen, diese Seite ist auch ein versuch mehr Übung zu machen.
-        Als professioneller Software-Entwickler, nutze ich meistens Angular und andere moderne technologien, aber jetzt versuche ich möglichst einfache Website zu machen, auf reines HTML.
-        Bin gespannt, wie das alles mir gelingt.
-        Gerne schreibt mir so dass ich die Seite verbessern kann.
+        Nutzer: <span id="count-all-user">Loading...</span>
       </p>
+
+      <h5>Letzte 24 Stunden</h5>
+      <p>
+        Besuche: <span id="count-24h">Loading...</span>
+      </p>
+      <p>
+        Nutzer: <span id="count-24h-user">Loading...</span>
+      </p>
+
+      <br/>
+      <p>Alle "anonyous" Nutzer, wo der Nutzer Client-ID Tracking nicht erlaubt hat, sind als 1 Nutzer gezahlt.</p>
     </div>
+    <script>
+      var x = new XMLHttpRequest();
+      x.open('GET', 'https://lissov.net/api/visitors/stats', false);
+      x.onloadend = (res) => console.log(res);
+      x.send();
+    </script>
 
     </div>
     <div class="footer">
@@ -48,7 +59,7 @@
       if (t !== 'false') {
         var cid = t === 'true' ? localStorage.getItem('clientId') : 'anonymous';
         var x = new XMLHttpRequest();
-        x.open('GET', 'https://lissov.net/api/visitors/log?pageName=index.html&clientId=' + cid, true);
+        x.open('GET', 'https://lissov.net/api/visitors/log?pageName=usage.html&clientId=' + cid, true);
         x.send();
       }
     </script>
