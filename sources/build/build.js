@@ -41,8 +41,6 @@ for (const templatePath of templates) {
 
   // Define dynamic data for each page (modify as needed)
   const data = {
-      title: "Static Page - " + path.parse(templatePath).name,
-      content: "This is the content of " + path.relative(templatesDir, templatePath)
   };
 
   // Generate HTML
