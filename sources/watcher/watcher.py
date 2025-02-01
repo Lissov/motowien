@@ -4,7 +4,7 @@ import time
 
 # Set the path to the local repository
 repo_path = "/home/pi/dev/motowien"  # Change this to your repository path
-build_script = os.path.join(repo_path, "/sources/build/build.js")
+build_script_path = os.path.join(repo_path, "sources/build")
 
 def check_for_updates(repo_path):
     """Checks if there are new updates in the remote repository."""
@@ -37,11 +37,10 @@ def pull_latest_changes(repo_path):
         try:
             result = subprocess.run(["git", "-C", repo_path, "pull"], capture_output=True, text=True, check=True)
             print(result.stdout)
+            return True
         except subprocess.CalledProcessError as e:
             print(f"Error pulling from GitHub:\n{e.stderr}")
-
-import os
-import subprocess
+    return False
 
 def commit_and_push(repo_path, commit_message="Updated files"):
     """Commits all changes and pushes to the remote repository."""
@@ -77,21 +76,24 @@ def commit_and_push(repo_path, commit_message="Updated files"):
         print(f"❌ Error during git operation:\n{e.stderr}")
         return False
 
-def run_build_script(build_script):
+def run_build_script(build_script_path):
+    build_script = os.path.join(build_script_path, "build.js")
     if os.path.isfile(build_script):
         try:
-            result = subprocess.run(["node", build_script], capture_output=True, text=True, check=True)
+            result = subprocess.run(["node", build_script], cwd=build_script_path, capture_output=True, text=True, check=True)
             print(result.stdout)
             print("✔ Build completed successfully!")
+            return True
         except subprocess.CalledProcessError as e:
             print(f"❌ Error running build script:\n{e.stderr}")
     else:
         print(f"Error: build.js not found at {build_script}")
+    return False
 
 
 
 while True:
     if pull_latest_changes(repo_path):
-        run_build_script(build_script)
-        commit_and_push("Build for deployment")
+        if run_build_script(build_script_path):
+            commit_and_push(repo_path, "Build for deployment")
     time.sleep(60)
