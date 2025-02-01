@@ -1,0 +1,17 @@
+{{> doctype}}
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body>
+    <h1>{{heading}}</h1>
+    <p>{{content}}</p>
+    
+    <ul>
+        {{#each items}}
+            <li>{{this}}</li>
+        {{/each}}
+    </ul>
+</body>
+</html>
