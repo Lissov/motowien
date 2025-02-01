@@ -2,9 +2,9 @@ const fs = require("fs");
 const path = require("path");
 const Handlebars = require("handlebars");
 
-const templatesDir = "../source";
-const partialsDir = "../partials";
-const outputDir = "../outputs";
+const templatesDir = path.join("..", "source");
+const partialsDir = path.join("..", "partials");
+const outputDir = path.join("..", "outputs");
 
 function registerPartials(directory) {
   fs.readdirSync(directory).forEach(file => {
