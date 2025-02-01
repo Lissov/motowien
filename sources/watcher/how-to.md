@@ -11,3 +11,6 @@ Run and install python extension
 Copy contents of motowien.service. Check that directory is correct - depending on where was git cloned.
 `sudo systemctl enable motowien.service`
 `sudo systemctl start motowien.service`
+
+#Check the status of the service
+`sudo journalctl -u motowien.service -f`
