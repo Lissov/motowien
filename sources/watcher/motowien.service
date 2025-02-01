@@ -2,6 +2,8 @@
 Description=Watcher for Motowien changes
 
 [Service]
+Environment="SSH_AUTH_SOCK=/run/ssh-agent.sock"
+ExecStartPre=/usr/bin/ssh-agent -s > /run/ssh-agent.sock
 ExecStart=/usr/bin/python3 -u /home/pi/dev/motowien/sources/watcher/watcher.py
 WorkingDirectory=/home/pi/dev/motowien
 StandardOutput=inherit
