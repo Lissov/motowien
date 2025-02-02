@@ -1,26 +1,23 @@
-<inject header $(root)="..\"></inject>
-    <h1>2-Tage Ausflug ins Nordwesten</h1>
-    <inject menu $(root)="..\" $active="trips"></inject>
+{{> doctype}}
+<html lang="de">
+{{> header}}
+<body>
+  <h1>2-Tage Ausflug ins Nordwesten</h1>
+  {{> menu active='trips'}}
+  <div class="page-content">
     <div class="content">
 
-      <inject trip.details $map=""
-        $name=""
-        $length="XXXX km"
-        $drivetime="XXXX Stunden"
-        $complexity="Mittel">
-      </inject>
+      {{> trip-details
+        details=global.listings.westrunde_1
+      }}
       <p>
         Ich habe diese Runde ursprunglich teilweise mit MC Kitty gefahren als 1-Tag Ausflug. Dan habe länger gemacht und für 2 Tage angepasst.
       </p>
 
       <h3>Tag 1: Nach Westen</h3>
-      <inject trip.details $map="https://maps.app.goo.gl/aApGhWDfjerNgPW68"
-        $name="westrunde_1_1"
-        $length="186 km"
-        $drivetime="4 Stunden"
-        $complexity="Mittel"
-        $kurviger="https://kurv.gr/WzWr5">
-      </inject>
+      {{> trip-details
+        details=global.listings.westrunde_1.day1
+      }}
 
       <p class="route-map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m68!1m8!1m3!1d339944.2529147898!2d15.5500835!3d48.2679447!3m2!1i1024!2i768!4f13.1!4m57!3e0!4m5!1s0x476d06f6a9a48b3b%3A0x2cd0bab263e7514b!2sDanube%20Tower%2C%20Donauturmplatz%201%2C%201220%20Wien!3m2!1d48.240344699999994!2d16.4098739!4m3!3m2!1d48.2277123!2d16.3035311!4m5!1s0x476d0b5856ed31eb%3A0x5c4b109dc2ab3653!2sDopplerh%C3%BCtte!3m2!1d48.2944817!2d16.1607968!4m3!3m2!1d48.3096434!2d15.800970999999999!4m5!1s0x47727e35f101ada3%3A0x8dff0b0a4f469c73!2sZagging!3m2!1d48.26942!2d15.6483598!4m5!1s0x47726350f5055e2f%3A0x5c70d489be8d3835!2sGerolding!3m2!1d48.251369999999994!2d15.42062!4m5!1s0x477260ba9b1e8f85%3A0x4f86a209551c0b1e!2sSeiterndorf!3m2!1d48.27753!2d15.23339!4m5!1s0x4772592cfcd08763%3A0x64a16d3d4a9fd0e9!2sLaimbach%20am%20Ostrong!3m2!1d48.315929999999994!2d15.121939999999999!4m5!1s0x47724523a232409d%3A0xccb36d7463067ecb!2sYsperdorf!3m2!1d48.1984889!2d14.998785199999999!4m5!1s0x47724e1c4da11f73%3A0x5f3bfb781e3c7757!2sWellnesshotel%20Aum%C3%BChle%2C%20Panholz%2C%20Grein!3m2!1d48.261395!2d14.880629899999999!5e0!3m2!1sen!2sat!4v1695645976662!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -92,5 +89,9 @@
       </p-->
 
     </div>
+  </div>
 
-<inject footer></inject>
+  {{> footer}}
+  {{> counter}}
+</body>
+</html>

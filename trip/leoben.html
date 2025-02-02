@@ -2,27 +2,27 @@
   "http://www.w3.org/TR/html4/strict.dtd">
 
 <html lang="de">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>MotoWien</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="..\images\motowien_icon.png">
     <link rel="stylesheet" href="..\styles.css">
-  </head>
-  <body>
+</head>
+<body>
     <h1>Wochenende in Leoben</h1>
-    <div class="menu">
-      <a  href="..\index.html">Home</a>
-      <a class="active" href="..\trips.html">Routes</a>
-      <a  href="..\tech.html">Technologie</a>
-      <a  href="..\docs/stb.html">Staatsb.</a>
-    </div>
-    <div class="page-content">
+  <div class="menu">
+    <a  href="..\index.html">Home</a>
+    <a class="active" href="..\trips.html">Routes</a>
+    <a  href="..\tech.html">Technologie</a>
+  </div>
+  <div class="page-content">
 
     <div class="content">
       <div class="route-core-data">
         <p>
           <span class="draft-badge" title="Ich habe diese Route mit dieses GPX track noch nicht gefahren. Ich probiere und verbessere wann ich die Zeit habe..">Draft</span>
+          
         </p>
         <p>Strecke: <b> km</b></p>
         <p>Fahrtzeit: <b> Stunden</b></p>
@@ -67,6 +67,7 @@
       <h3>Tag 2: Leoben -> Wien</h3>
       <div class="route-core-data">
         <p>
+          <span class="draft-badge" title="Ich habe diese Route mit dieses GPX track noch nicht gefahren. Ich probiere und verbessere wann ich die Zeit habe..">Draft</span>
           <a href="https://maps.app.goo.gl/PxbPUfHmmsjwWQLGA" target="_blank">Karte</a>&nbsp;
         </p>
         <p>Strecke: <b>319 km</b></p>
@@ -91,26 +92,23 @@
           </li>
         </ul>
       </p>
+  </div>
 
-
-      
-    </div>
-    <div class="footer">
+  <div class="footer">
       <div class="footer-content">
-        <p>2023 &#169; Pavlo Lissov</p>
-        <p>Alle Rechte der Bilder liegen bei Pavlo Lissov</p>
-        <p>Kontakt: <a href="mailto: admin@lissov.net?subject=MotoWien">Send email</a></p>  
+          <p>2025 &#169; Pavlo Lissov</p>
+          <p>Alle Rechte der Bilder liegen bei Pavlo Lissov</p>
+          <p>Kontakt: <a href="mailto: admin@lissov.net?subject=MotoWien">Send email</a></p>  
       </div>
-    </div>
-    <script>
-      var t = localStorage.getItem('allowTracking');
-      if (t !== 'false') {
-        var cid = t === 'true' ? localStorage.getItem('clientId') : 'anonymous';
-        var x = new XMLHttpRequest();
-        x.open('GET', 'https://lissov.net/api/visitors/log?pageName=leoben.html&clientId=' + cid, true);
-        x.send();
-      }
-    </script>
-    
-  </body>
+  </div>
+  <script>
+    var t = localStorage.getItem('allowTracking');
+    if (t !== 'false') {
+      var cid = t === 'true' ? localStorage.getItem('clientId') : 'anonymous';
+      var x = new XMLHttpRequest();
+      x.open('GET', 'https://lissov.net/api/visitors/log?pageName=leoben.html&clientId=' + cid, true);
+      x.send();
+    }
+  </script>
+</body>
 </html>

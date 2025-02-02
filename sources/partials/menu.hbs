@@ -1,5 +1,5 @@
 <div class="menu">
-  <a {{#ifEquals active 'home'}}class="active"{{/ifEquals}} href="{{root}}index.html">Home</a>
-  <a {{#ifEquals active 'trips'}}class="active"{{/ifEquals}} href="{{root}}trips.html">Routes</a>
-  <a {{#ifEquals active 'tech'}}class="active"{{/ifEquals}} href="{{root}}tech.html">Technologie</a>
+  <a {{#ifEquals active 'home'}}class="active"{{/ifEquals}} href="{{context.root}}index.html">Home</a>
+  <a {{#ifEquals active 'trips'}}class="active"{{/ifEquals}} href="{{context.root}}trips.html">Routes</a>
+  <a {{#ifEquals active 'tech'}}class="active"{{/ifEquals}} href="{{context.root}}tech.html">Technologie</a>
 </div>

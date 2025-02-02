@@ -1,14 +1,14 @@
-<inject header $(root)="..\"></inject>
-    <h1>Tagesroute: Durnstein</h1>
-    <inject menu $(root)="..\" $active="trips"></inject>
-
+{{> doctype}}
+<html lang="de">
+{{> header}}
+<body>
+  <h1>Tagesroute: Durnstein</h1>
+  {{> menu active='trips'}}
+  <div class="page-content">
     <div class="content">
-      <inject trip.details $map="https://goo.gl/maps/Y5FyHCBQLRsYX7Uu7"
-        $name="durnstein"
-        $length="185 km"
-        $drivetime="4 Stunden"
-        $complexity="Mittel">
-      </inject>
+      {{> trip-details
+        details=global.listings.durnstein
+      }}
 
       <p class="todo">
         TODO: Fahre die Route um gpx Datei zu überprüfen, mache mehr Fotos.
@@ -52,5 +52,9 @@
       <p>
       </p>
     </div>
+  </div>
 
-<inject footer></inject>
+  {{> footer}}
+  {{> counter}}
+</body>
+</html>

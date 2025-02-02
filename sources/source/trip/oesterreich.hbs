@@ -1,18 +1,19 @@
-<inject header $(root)="..\"></inject>
-    <h1>Durch Österreich</h1>
-    <inject menu $(root)="..\" $active="trips"></inject>
+{{> doctype}}
+<html lang="de">
+{{> header}}
+<body>
+  <h1>Durch Österreich</h1>
+  {{> menu active='trips'}}
+  <div class="page-content">
 
     <div class="content">
       <p>
         <b>Eine Reise durch das ganze Land</b>
       </p>
 
-      <inject trip.details
-        $map="https://maps.app.goo.gl/nySFhyBDPg3SDR5Y7"
-        $length="1000km (1100 km)"
-        $drivetime="18 Stunden"
-        $complexity="Mittel">
-      </inject>
+      {{> trip-details
+        details=global.listings.oesterreich
+      }}
       <iframe class="route-image" src="https://www.google.com/maps/embed?pb=!1m73!1m12!1m3!1d1379011.942741628!2d11.685749838350393!3d47.54087990248472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m58!3e0!4m5!1s0x479b39b11ef7d1e9%3A0x88d808d3a42795c3!2s%C3%96sterreichische%20Bundesbahnen%20Autoreisezug!3m2!1d47.2403723!2d9.60397!4m5!1s0x479b4ce7fae1ee1f%3A0x5cc02e71f1af7dfd!2sL%C3%BCnersee%2C%20Vandans%2C%20Austria!3m2!1d47.0531826!2d9.752972399999999!4m5!1s0x479cfa7e6a446463%3A0xb386b892d0c6daa5!2sReutte%2C%20Austria!3m2!1d47.488789999999995!2d10.71865!4m5!1s0x479d6ecfe1f8ca73%3A0x9d201c7d281d9b0d!2sInnsbruck!3m2!1d47.2675322!2d11.3910349!4m3!3m2!1d47.0726312!2d12.755812899999999!4m5!1s0x477098286719883d%3A0x603ab975110c4569!2sDellach!3m2!1d46.78856!2d13.61559!4m5!1s0x4770eaeabddccb39%3A0x60652fe17ace5ba1!2sInnerkrems%2C%20Austria!3m2!1d46.968579999999996!2d13.725999999999999!4m5!1s0x4771a3b274d65f77%3A0x716ecee1be710020!2sHohentauern%2C%20Austria!3m2!1d47.4335843!2d14.4842765!4m4!1s0x477191903a259a4f%3A0xd9b9e395fa2aae13!3m2!1d47.5924367!2d14.706014699999999!4m5!1s0x476d06f6a9a48b3b%3A0x2cd0bab263e7514b!2sDanube%20Tower!3m2!1d48.2403397!2d16.4100505!5e0!3m2!1sen!2sit!4v1723323071715!5m2!1sen!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <p>
         In Wirklichkeit sind wir fast 1150 km gefahren.
@@ -51,13 +52,9 @@
       <h3>Nacht 1: Auto-reisezug Wien-Feldkirch</h3>
       <div class="dates-hint under-h3">Tag 0: 21:00 - Tag 1 8:00</div>
 
-      <inject trip.details
-        $map="https://maps.app.goo.gl/9ZrPh8t9XUnstSLE8"
-        $length="Kurz"
-        $drivetime="bis zum Bahnhof"
-        $complexity="Leicht"
-        $kurviger="https://kurv.gr/aVEWP">
-      </inject>
+      {{> trip-details
+        details=global.listings.oesterreich.day0
+      }}
       <iframe class="route-image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1330.266805911904!2d16.39032740237685!3d48.17706939023787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476da9bba78c93df%3A0x92e4605fa482205!2sAutoverladestelle%20Wien%20Hauptbahnhof!5e0!3m2!1sen!2sat!4v1718897390854!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
       <p>
@@ -77,13 +74,9 @@
 
 
       <h3>Tag 1: Feldkirch - Lüner See - Reutte</h3>
-      <inject trip.details
-        $map="https://maps.app.goo.gl/LcMVDQcKF7N467zT7"
-        $length="210 km"
-        $drivetime="5 Stunden"
-        $complexity="Mittel"
-        $kurviger="https://kurv.gr/hTFb3">
-      </inject>
+      {{> trip-details
+        details=global.listings.oesterreich.day1
+      }}
       <iframe class="route-image" src="https://www.google.com/maps/embed?pb=!1m54!1m12!1m3!1d86325.08069827297!2d10.592152072879763!3d47.457590662156555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m39!3e0!4m5!1s0x479b39c5b2b5b21f%3A0xb0c51e6dfc187b22!2s%C3%96BB%20Autoreisezug%2C%20Reichsstra%C3%9Fe%20155%2C%206800%20Feldkirch!3m2!1d47.2439415!2d9.606096899999999!4m5!1s0x479b4ce7fae1ee1f%3A0x5cc02e71f1af7dfd!2sL%C3%BCnersee%2C%20Vandans%2C%20Austria!3m2!1d47.0531826!2d9.752972399999999!4m5!1s0x479b5d89481b1e2f%3A0x9927700077b30987!2sHotel%20Tannahof!3m2!1d47.3248203!2d9.973583!4m3!3m2!1d47.272513!2d9.9072786!4m3!3m2!1d47.258784999999996!2d10.1828784!4m5!1s0x479cf127e07a13e9%3A0xcc66f1a9b3652338!2sPizzeria%20Ristorante%20Toscana%20Reutte!3m2!1d47.488505599999996!2d10.716075199999999!4m5!1s0x479cf69cae90b5f1%3A0x626194f044b6d085!2sAlpenmotel%20S%C3%A4uling%2C%20Oberpinswang!3m2!1d47.5309257!2d10.693256199999999!5e0!3m2!1sen!2sit!4v1723323747440!5m2!1sen!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <p>
         Das Ausladen der Motorräder geht zwar schnell, und sie werden vor der Autos ausgeladen, dennoch dauert es etwa 30 Minuten bis zu einer Stunde.
@@ -128,24 +121,15 @@
             Diese Alternative habe ich in der untenstehenden Karte markiert.</li>
         </ul>
       </p>
-      <inject trip.details
-        $draft="true"
-        $map="https://maps.app.goo.gl/zbh7DSs55vKqzosY9"
-        $length="211 km"
-        $drivetime="5 Stunden"
-        $complexity="Mittel">
-      </inject>
-
+      {{> trip-details
+        details=global.listings.oesterreich.day1_alternative
+      }}
 
 
       <h3>Tag 2: Innsbruck bis Kaprun</h3>
-      <inject trip.details
-        $map="https://maps.app.goo.gl/jodMRyhh7mJmejV89"
-        $length="242 km"
-        $drivetime="4.5 Stunden"
-        $complexity="Mittel"
-        $kurviger="https://kurv.gr/bVhHa">
-      </inject>
+      {{> trip-details
+        details=global.listings.oesterreich.day2
+      }}
       <iframe class="route-image" src="https://www.google.com/maps/embed?pb=!1m46!1m12!1m3!1d691781.0075154273!2d11.066560238165698!3d47.36765711643284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m31!3e0!4m5!1s0x479cf69cae90b5f1%3A0x626194f044b6d085!2sAlpenmotel%20S%C3%A4uling%2C%20Oberpinswang!3m2!1d47.5309257!2d10.693256199999999!4m3!3m2!1d47.3616311!2d10.8442115!4m5!1s0x479d6ecfe1f8ca73%3A0x9d201c7d281d9b0d!2sInnsbruck!3m2!1d47.2675322!2d11.3910349!4m3!3m2!1d47.2378304!2d12.082770799999999!4m3!3m2!1d47.2136455!2d12.167016799999999!4m5!1s0x47771b4abfb4d12d%3A0xee3adb0880b97b19!2sSchulstrasse%2015%2C%205710%20Kaprun!3m2!1d47.269673999999995!2d12.753634499999999!5e0!3m2!1sen!2sat!4v1724701120623!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <p>
         Nach einem Frühstück in Reutte fahren wir zwei Stunden nach Innsbruck.
@@ -181,13 +165,9 @@
       </p>
 
       <h3>Tag 3: Grossglockner (continue here)</h3>
-      <inject trip.details
-        $map="https://maps.app.goo.gl/HDBR5ZkDMbsodW8W7"
-        $name="oest_3"
-        $length="75 km"
-        $drivetime="2 Stunden"
-        $complexity="Mittel">
-      </inject>
+      {{> trip-details
+        details=global.listings.oesterreich.day3
+      }}
       <iframe class="route-image" src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d173571.9024088558!2d12.540274578520071!3d47.17624273168026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m5!1s0x4777076944774a83%3A0xde299a0e1b753457!2sPension%20Stubachblick%2C%20Kinostra%C3%9Fe%2C%20Uttendorf!3m2!1d47.2853176!2d12.5677109!4m3!3m2!1d47.072589699999995!2d12.7559054!5e0!3m2!1sen!2sat!4v1722324631506!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <p>
         Ab Kaprun, kommt man in weniger als 30 Minuten zu Mautstelle, und dann geniesst man die Großglocknerstraße.
@@ -209,15 +189,13 @@
         Sonnst könnten wir noch am nächsten Tag die Straße noch Mal durchfahren.
       </p>
 
+
+
       <h3>Tag 4: Kärnten und Steiermark</h3>
       <div class="dates-hint under-h3">03.08, Samstag</div>
-      <inject trip.details
-        $map="https://maps.app.goo.gl/Qc2sj72AL4939QYs9"
-        $name="oest_4"
-        $length="279 km"
-        $drivetime="5 Stunden"
-        $complexity="Mittel">
-      </inject>
+      {{> trip-details
+        details=(json '{ "map": "https://maps.app.goo.gl/Qc2sj72AL4939QYs9", "gpx": "oest_4", "length": "279 km", "drivetime": "5 Stunden", "complexity": "Mittel" }')
+      }}
       <iframe class="route-image" src="https://www.google.com/maps/embed?pb=!1m48!1m12!1m3!1d348102.8095983566!2d13.299334591773164!3d47.02937459376142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m33!3e0!4m3!3m2!1d47.072589699999995!2d12.7559054!4m5!1s0x47709824284ab233%3A0x5d1b75f6bb2fdfc8!2sStrandbad%20Dellach%20am%20Millst%C3%A4ttersee%2C%20Dellach!3m2!1d46.7872564!2d13.613686999999999!4m3!3m2!1d46.8756464!2d13.863285099999999!4m5!1s0x4770c0644855b645%3A0x10bc76fc3242f523!2sBiosph%C3%A4renpark-Zentrum%20Gasthof%20Nockalmhof%2C%20Innerkrems!3m2!1d46.9541834!2d13.726834499999999!4m5!1s0x47708d4a352e2cb9%3A0xf9697a7a5c3b820f!2sTurracher%20H%C3%B6he!3m2!1d46.914443999999996!2d13.875!4m5!1s0x4771b02e0ff3de6d%3A0xbf836eae754ea4c9!2su.%20Walcher-Siedlung%2011%2C%208763%20M%C3%B6derbrugg!3m2!1d47.2844584!2d14.4811234!5e0!3m2!1sen!2sat!4v1722323004712!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <p>
         In 2 Stunden (etwas mehr mit Foto-Pausen) erreicht man Strandbad am Millstättersee, wo man baden und mittagessen kann.
@@ -240,14 +218,16 @@
 
       <h3>Tag 5: Weg nach Wien</h3>
       <div class="dates-hint under-h3">04.08, Sonntag</div>
-      <inject trip.details
-        $map="https://maps.app.goo.gl/KXRn8BVUvFToTFDE6"
-        $name="oest_5"
-        $length="280 km"
-        $drivetime="5.5 Stunden"
-        $complexity="Mittel"
-        $kurviger="https://kurv.gr/vWhu9">
-      </inject>
+      {{> trip-details
+        details=(json '{
+          "map": "https://maps.app.goo.gl/KXRn8BVUvFToTFDE6",
+          "kurviger": "https://kurv.gr/vWhu9",
+          "gpx": "oest_5",
+          "length": "280 km",
+          "drivetime": "5.5 Stunden",
+          "complexity": "Mittel"
+        }')
+      }}
       <iframe class="route-image" src="https://www.google.com/maps/embed?pb=!1m71!1m12!1m3!1d686601.4913523078!2d14.77010861358344!3d47.76133520768105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m56!3e0!4m5!1s0x4771b02e0ff3de6d%3A0xbf836eae754ea4c9!2su.%20Walcher-Siedlung%2011%2C%208763%20M%C3%B6derbrugg!3m2!1d47.2844584!2d14.4811234!4m4!1s0x477191903a259a4f%3A0xd9b9e395fa2aae13!3m2!1d47.5924367!2d14.706014699999999!4m5!1s0x477219ac2db5b889%3A0x44ea8e3263b4b473!2sLunzer%20See!3m2!1d47.853732099999995!2d15.0515727!4m5!1s0x47720df7e3328c77%3A0x633aa667388b66f4!2sWinterbach!3m2!1d47.949889999999996!2d15.26485!4m5!1s0x476df58bf5ae695b%3A0x28453701b4275b25!2zVMO8cm5pdHo!3m2!1d47.9292622!2d15.483129!4m5!1s0x476d91b87f60cd4f%3A0x81a92c2c96fa837d!2sBernau%2C%20Lilienfeld%20District%2C%20Lower%20Austria!3m2!1d48.053869999999996!2d15.80233!4m5!1s0x476d973d8dca2d9f%3A0xb5c3c7c58460775e!2sSankt%20Corona%20am%20Sch%C3%B6pfl!3m2!1d48.065599999999996!2d15.92281!4m3!3m2!1d48.1307999!2d16.1140328!4m3!3m2!1d48.075632299999995!2d16.163514199999998!4m5!1s0x476d06f6a9a48b3b%3A0x2cd0bab263e7514b!2sDanube%20Tower!3m2!1d48.2403397!2d16.4100505!5e0!3m2!1sen!2sat!4v1722323106957!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <p>
         Zuerst ist es 1 Stunde bis Lunzer See, wo man gut baden und Kaffee trinken kann.
@@ -260,4 +240,9 @@
       </p>
 
     </div>
-<inject footer></inject>
+  </div>
+
+  {{> footer}}
+  {{> counter}}
+</body>
+</html>

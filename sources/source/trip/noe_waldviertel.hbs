@@ -1,26 +1,24 @@
-<inject header $(root)="..\"></inject>
+{{> doctype}}
+<html lang="de">
+{{> header}}
+<body>
     <h1>3-Tages Ausflug: Niederösterreich Waldviertel</h1>
-    <inject menu $(root)="..\" $active="trips"></inject>
+  {{> menu active='trips'}}
+  <div class="page-content">
     <div class="content">
 
-      <inject trip.details $map=""
-        $name=""
-        $length="460 km"
-        $drivetime="9 Stunden"
-        $complexity="Mittel">
-      </inject>
+      {{> trip-details
+        details=global.listings.noe_waldviertel
+      }}
       <p>
         Ich habe die Route zu den Hotels, die ich gefunden habe, angepasst.
         Normalerweise kann man in der Gegend ziemlich einfach und flexibel eine Übernachtung finden und die Route entsprechend adaptieren.
       </p>
 
       <h3>Tag 1: Weg durch Weinviertel</h3>
-      <inject trip.details $map="https://goo.gl/maps/9UX5Ad6YryWzQpX48"
-        $name="no_waldv_1"
-        $length="155 km"
-        $drivetime="3 Stunden"
-        $complexity="Mittel">
-      </inject>
+      {{> trip-details
+        details=global.listings.noe_waldviertel.day1
+      }}
 
       <p class="route-map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m60!1m8!1m3!1d84515.95177497015!2d15.3314348!3d48.5500271!3m2!1i1024!2i768!4f13.1!4m49!3e0!4m5!1s0x476d06f6a9a48b3b%3A0x2cd0bab263e7514b!2sDanube%20Tower%2C%20Donauturmplatz%201%2C%201220%20Wien!3m2!1d48.240344699999994!2d16.4098739!4m3!3m2!1d48.382546!2d16.2519991!4m3!3m2!1d48.4448602!2d16.2391121!4m3!3m2!1d48.4840733!2d16.2039215!4m5!1s0x476d692b744b2f3b%3A0xc9ec1d02fca0eaf6!2sMozarts%20Pinkelstein%2C%20Alte%20Poststra%C3%9Fe%2C%20Raschala!3m2!1d48.5435425!2d16.0894993!4m3!3m2!1d48.432636099999996!2d15.900938499999999!4m3!3m2!1d48.4608467!2d15.7238519!4m5!1s0x47729841aa3c82e5%3A0x40097572de62a20!2sGars%20am%20Kamp!3m2!1d48.598928099999995!2d15.6622395!4m5!1s0x4772945f50a8b09b%3A0x20ce98eff29acb44!2sKrumau%20am%20Kamp!3m2!1d48.5887129!2d15.4490375!4m3!3m2!1d48.5840232!2d15.3323731!5e0!3m2!1sen!2sat!4v1682786865675!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -54,15 +52,9 @@
 
       <h3>Tag 2: Rundfahrt zum Vergnügen mit viele Besichtigungen</h3>
       <p>Ich habe mehr Checkpoints als Google an eine Karte erlaubt, deshalb habe ich zu zwei geteilt.</p>
-      <var $wvMaps json>[
-          { title: 'Ottenstein zu Weitra:', name: 'no_waldv_2_1', map: 'https://goo.gl/maps/jRZMBxQrT6FUaiWA7' },
-          { title: 'Weitra to Horn:', name: 'no_waldv_2_2', map: 'https://goo.gl/maps/GxfqW4UCTqgmmjK47' }
-        ]</var>
-      <inject trip.details $maps="{{$wvMaps}}"
-        $length="185 km"
-        $drivetime="3 Stunden"
-        $complexity="Mittel">
-      </inject>
+      {{> trip-details
+        details=global.listings.noe_waldviertel.day2
+      }}
 
       <p class="route-map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m72!1m12!1m3!1d1316.6188515604458!2d14.893386363230016!3d48.70093745890767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m57!3e0!4m3!3m2!1d48.584142299999996!2d15.3323281!4m5!1s0x4772e938ba870d4d%3A0x4e3e9550399f233a!2sMitterreith%20b.Zwettl%20Kapelle!3m2!1d48.606953!2d15.256424899999999!4m5!1s0x4772e8be93e62f65%3A0x7ef150767f4ae331!2sZwettl%20Stift%2C%203910!3m2!1d48.6168915!2d15.200137199999999!4m5!1s0x4772faea7d7af663%3A0x36899d396c19f58e!2sBurg%20Rappottenstein%2C%20Rappottenstein!3m2!1d48.5120966!2d15.087961499999999!4m5!1s0x4772fc95bbbe59c3%3A0xe4e8d12e918ef484!2sWiesensfeld!3m2!1d48.52274!2d14.9873899!4m5!1s0x4772fc48eadec527%3A0x4436a1a9164f8543!2sArbesbach!3m2!1d48.493449399999996!2d14.9527232!4m5!1s0x47730370b79de46f%3A0x5ceb4d299229fb54!2sLiebenau!3m2!1d48.531525699999996!2d14.805409899999999!4m5!1s0x477305173dc94777%3A0x3540c90968f51391!2sGugu!3m2!1d48.55504!2d14.73266!4m5!1s0x47731f227ce1d053%3A0x40097572de62840!2sWeitra%2C%203970!3m2!1d48.700897399999995!2d14.8973836!4m3!3m2!1d48.7008868!2d14.893407999999999!5e0!3m2!1sen!2sat!4v1682788037622!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -105,12 +97,9 @@
 
 
       <h3>Tag 3 - Weg zurück</h3>
-      <inject trip.details $map="https://goo.gl/maps/w9nQBeiREbSv64hf8"
-        $name="no_waldv_3"
-        $length="100 km"
-        $drivetime="2 Stunden"
-        $complexity="Leicht">
-      </inject>
+      {{> trip-details
+        details=global.listings.noe_waldviertel.day3
+      }}
       <p class="route-map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m64!1m12!1m3!1d42451.085162257295!2d16.063557489207945!3d48.31837374984569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m49!3e0!4m3!3m2!1d48.672258!2d15.6543307!4m5!1s0x4772a1fbb4ea5857%3A0x630c7049bc5f286f!2sReinprechtsp%C3%B6lla!3m2!1d48.612629999999996!2d15.76133!4m5!1s0x47729efb7f7d862d%3A0x9f84cf871d08e80f!2sKlein-Burgstall!3m2!1d48.5579311!2d15.764396399999999!4m3!3m2!1d48.5259717!2d15.8516499!4m3!3m2!1d48.4881763!2d15.8619299!4m3!3m2!1d48.4209859!2d15.936793999999999!4m3!3m2!1d48.362682799999995!2d16.0338522!4m5!1s0x476d73e2562f57a9%3A0x42080c72e89f108a!2sHauptpl.%2C%203430%20Tulln%20an%20der%20Donau!3m2!1d48.330908699999995!2d16.0509517!4m3!3m2!1d48.2641281!2d16.3001152!4m5!1s0x476d06f6a9a48b3b%3A0x2cd0bab263e7514b!2sDonauturm%2C%20Donauturmplatz%2C%20Vienna!3m2!1d48.240344699999994!2d16.4098739!5e0!3m2!1sen!2sat!4v1682793162913!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </p>
@@ -120,5 +109,9 @@
       </p>
 
     </div>
+  </div>
 
-<inject footer></inject>
+  {{> footer}}
+  {{> counter}}
+</body>
+</html>

@@ -1,14 +1,14 @@
-<inject header $(root)="..\"></inject>
-    <h1>Tagesroute: Kahlenberg</h1>
-    <inject menu $(root)="..\" $active="trips"></inject>
+{{> doctype}}
+<html lang="de">
+{{> header}}
+<body>
+  <h1>Tagesroute: Kahlenberg</h1>
+  {{> menu active='trips'}}
+  <div class="page-content">
     <div class="content">
-      <inject trip.details $map="https://goo.gl/maps/QBXKhJS8s27w99936"
-        $draft="true"
-        $name="kahlenberg"
-        $length="... km"
-        $drivetime="..."
-        $complexity="Einfach">
-      </inject>
+      {{> trip-details
+        details=global.listings.kahlenberg
+      }}
 
       <p class="todo">
         TODO: Fahre die Route um gpx Datei zu überprüfen, mache mehr Fotos.
@@ -40,5 +40,9 @@
         Dann geht es einfach über die Brigittenauerbrücke, wo man noch Mal bis 80 km/h Gas geben darf. Und gleich endet die Route.
       </p>
     </div>
+  </div>
 
-<inject footer></inject>
+  {{> footer}}
+  {{> counter}}
+</body>
+</html>

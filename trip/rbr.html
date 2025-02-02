@@ -2,22 +2,21 @@
   "http://www.w3.org/TR/html4/strict.dtd">
 
 <html lang="de">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>MotoWien</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="..\images\motowien_icon.png">
     <link rel="stylesheet" href="..\styles.css">
-  </head>
-  <body>
-    <h1>Ausflug: Red-Bull-Ring</h1>
-    <div class="menu">
-      <a  href="..\index.html">Home</a>
-      <a class="active" href="..\trips.html">Routes</a>
-      <a  href="..\tech.html">Technologie</a>
-      <a  href="..\docs/stb.html">Staatsb.</a>
-    </div>
-    <div class="page-content">
+</head>
+<body>
+  <h1>Ausflug: Red-Bull-Ring</h1>
+  <div class="menu">
+    <a  href="..\index.html">Home</a>
+    <a class="active" href="..\trips.html">Routes</a>
+    <a  href="..\tech.html">Technologie</a>
+  </div>
+  <div class="page-content">
 
     <div class="content">
       <div class="route-core-data">
@@ -136,24 +135,23 @@
         Dann zum Klausen-Leopoldsdorf. Die schnelle Strecke fährt via Sulz, und dann ab Sparbach ist es sinnlos via Autobahn zurück ins Wien zu kommen.
         Wenn man mehr Zeit hat, dann ist es schöner via Pressbaum zu Mauerbach zu fahren und noch einige kurvige Strecke am Abend zu genießen.
       </p>
-      
-    </div>
-    <div class="footer">
+  </div>
+
+  <div class="footer">
       <div class="footer-content">
-        <p>2023 &#169; Pavlo Lissov</p>
-        <p>Alle Rechte der Bilder liegen bei Pavlo Lissov</p>
-        <p>Kontakt: <a href="mailto: admin@lissov.net?subject=MotoWien">Send email</a></p>  
+          <p>2025 &#169; Pavlo Lissov</p>
+          <p>Alle Rechte der Bilder liegen bei Pavlo Lissov</p>
+          <p>Kontakt: <a href="mailto: admin@lissov.net?subject=MotoWien">Send email</a></p>  
       </div>
-    </div>
-    <script>
-      var t = localStorage.getItem('allowTracking');
-      if (t !== 'false') {
-        var cid = t === 'true' ? localStorage.getItem('clientId') : 'anonymous';
-        var x = new XMLHttpRequest();
-        x.open('GET', 'https://lissov.net/api/visitors/log?pageName=rbr.html&clientId=' + cid, true);
-        x.send();
-      }
-    </script>
-    
-  </body>
+  </div>
+  <script>
+    var t = localStorage.getItem('allowTracking');
+    if (t !== 'false') {
+      var cid = t === 'true' ? localStorage.getItem('clientId') : 'anonymous';
+      var x = new XMLHttpRequest();
+      x.open('GET', 'https://lissov.net/api/visitors/log?pageName=rbr.html&clientId=' + cid, true);
+      x.send();
+    }
+  </script>
+</body>
 </html>

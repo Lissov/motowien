@@ -1,14 +1,15 @@
-<inject header $(root)="..\"></inject>
-    <h1>Tagesroute: Heiligenkreuz</h1>
-    <inject menu $(root)="..\" $active="trips"></inject>
+{{> doctype}}
+<html lang="de">
+{{> header}}
+<body>
+  <h1>Tagesroute: Heiligenkreuz</h1>
+  {{> menu active='trips'}}
+  <div class="page-content">
 
     <div class="content">
-      <inject trip.details $map="https://goo.gl/maps/abfmUSiSJPQnfZN59"
-        $name="heiligenkreuz"
-        $length="89 km"
-        $drivetime="2 Stunden"
-        $complexity="Mittel">
-      </inject>
+      {{> trip-details
+        details=global.listings.heiligenkreuz
+      }}
 
       <p class="todo">
         TODO: Fahre die Route um gpx Datei zu überprüfen, mache mehr Fotos.
@@ -21,5 +22,9 @@
         Nur die Strecke zurück über Autobahn wenig interessant. Besser was anderes zu finden.
       </p>
     </div>
+  </div>
 
-<inject footer></inject>
+  {{> footer}}
+  {{> counter}}
+</body>
+</html>

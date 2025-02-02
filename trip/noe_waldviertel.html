@@ -2,27 +2,24 @@
   "http://www.w3.org/TR/html4/strict.dtd">
 
 <html lang="de">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>MotoWien</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="..\images\motowien_icon.png">
     <link rel="stylesheet" href="..\styles.css">
-  </head>
-  <body>
+</head>
+<body>
     <h1>3-Tages Ausflug: Niederösterreich Waldviertel</h1>
-    <div class="menu">
-      <a  href="..\index.html">Home</a>
-      <a class="active" href="..\trips.html">Routes</a>
-      <a  href="..\tech.html">Technologie</a>
-      <a  href="..\docs/stb.html">Staatsb.</a>
-    </div>
-    <div class="page-content">
+  <div class="menu">
+    <a  href="..\index.html">Home</a>
+    <a class="active" href="..\trips.html">Routes</a>
+    <a  href="..\tech.html">Technologie</a>
+  </div>
+  <div class="page-content">
     <div class="content">
 
       <div class="route-core-data">
-        <p>
-        </p>
         <p>Strecke: <b>460 km</b></p>
         <p>Fahrtzeit: <b>9 Stunden</b></p>
         <p>Schwierigkeit: <b>Mittel</b></p>
@@ -78,8 +75,6 @@
       <p>Ich habe mehr Checkpoints als Google an eine Karte erlaubt, deshalb habe ich zu zwei geteilt.</p>
       <div class="route-core-data">
         <p>
-        </p>
-        <p>
           Ottenstein zu Weitra:
           <a href="https://goo.gl/maps/jRZMBxQrT6FUaiWA7" target="_blank">Karte</a>&nbsp;
           <a href="../gps/no_waldv_2_1.gpx" target="_blank">GPX Datei</a>
@@ -91,7 +86,6 @@
           <a href="../gps/no_waldv_2_2.gpx" target="_blank">GPX Datei</a>
           <button type="button" onclick="navigator.clipboard.writeText(window.location.origin + '/gps/no_waldv_2_2.gpx')">Copy Link</button>
         </p>
-        
         <p>Strecke: <b>185 km</b></p>
         <p>Fahrtzeit: <b>3 Stunden</b></p>
         <p>Schwierigkeit: <b>Mittel</b></p>
@@ -157,24 +151,23 @@
       </p>
 
     </div>
+  </div>
 
-    </div>
-    <div class="footer">
+  <div class="footer">
       <div class="footer-content">
-        <p>2023 &#169; Pavlo Lissov</p>
-        <p>Alle Rechte der Bilder liegen bei Pavlo Lissov</p>
-        <p>Kontakt: <a href="mailto: admin@lissov.net?subject=MotoWien">Send email</a></p>  
+          <p>2025 &#169; Pavlo Lissov</p>
+          <p>Alle Rechte der Bilder liegen bei Pavlo Lissov</p>
+          <p>Kontakt: <a href="mailto: admin@lissov.net?subject=MotoWien">Send email</a></p>  
       </div>
-    </div>
-    <script>
-      var t = localStorage.getItem('allowTracking');
-      if (t !== 'false') {
-        var cid = t === 'true' ? localStorage.getItem('clientId') : 'anonymous';
-        var x = new XMLHttpRequest();
-        x.open('GET', 'https://lissov.net/api/visitors/log?pageName=noe_waldviertel.html&clientId=' + cid, true);
-        x.send();
-      }
-    </script>
-    
-  </body>
+  </div>
+  <script>
+    var t = localStorage.getItem('allowTracking');
+    if (t !== 'false') {
+      var cid = t === 'true' ? localStorage.getItem('clientId') : 'anonymous';
+      var x = new XMLHttpRequest();
+      x.open('GET', 'https://lissov.net/api/visitors/log?pageName=noe_waldviertel.html&clientId=' + cid, true);
+      x.send();
+    }
+  </script>
+</body>
 </html>

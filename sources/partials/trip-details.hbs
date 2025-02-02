@@ -1,0 +1,27 @@
+<div class="route-core-data">
+  {{#ifOr3 details.draft details.map details.gpx}}
+  <p>
+    {{#ifEquals details.draft "true"}}{{> draft}}
+    {{/ifEquals}}{{#if details.map}}<a href="{{details.map}}" target="_blank">Karte</a>&nbsp;{{/if}}
+    {{#if details.gpx}}
+    <a href="../gps/{{details.gpx}}.gpx" target="_blank">GPX Datei</a>
+    <button type="button" onclick="navigator.clipboard.writeText(window.location.origin + '/gps/{{details.gpx}}.gpx')">Copy Link</button>
+    {{/if}}
+  </p>
+  {{/ifOr3}}
+  {{#each details.maps}}
+  <p>
+    {{title}}
+    <a href="{{map}}" target="_blank">Karte</a>&nbsp;
+    {{#if gpx}}
+    <a href="../gps/{{gpx}}.gpx" target="_blank">GPX Datei</a>
+    <button type="button" onclick="navigator.clipboard.writeText(window.location.origin + '/gps/{{gpx}}.gpx')">Copy Link</button>
+    {{/if}}
+  </p>
+  {{/each}}
+  {{#if details.calimoto}}<a href="{{details.calimoto}}" target="_blank">Calimoto route</a>
+  {{/if}}{{#if details.kurviger}}<a href="{{details.kurviger}}" target="_blank">Kurviger route</a>
+  {{/if}}<p>Strecke: <b>{{details.length}}</b></p>
+  <p>Fahrtzeit: <b>{{details.drivetime}}</b></p>
+  <p>Schwierigkeit: <b>{{details.complexity}}</b></p>
+</div>

@@ -2,23 +2,21 @@
   "http://www.w3.org/TR/html4/strict.dtd">
 
 <html lang="de">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>MotoWien</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="..\images\motowien_icon.png">
     <link rel="stylesheet" href="..\styles.css">
-  </head>
-  <body>
-    <h1>Ausflug: Grossglockner Hochalpenstrasse</h1>
-    <div class="menu">
-      <a  href="..\index.html">Home</a>
-      <a class="active" href="..\trips.html">Routes</a>
-      <a  href="..\tech.html">Technologie</a>
-      <a  href="..\docs/stb.html">Staatsb.</a>
-    </div>
-    <div class="page-content">
-
+</head>
+<body>
+  <h1>Ausflug: Grossglockner Hochalpenstrasse</h1>
+  <div class="menu">
+    <a  href="..\index.html">Home</a>
+    <a class="active" href="..\trips.html">Routes</a>
+    <a  href="..\tech.html">Technologie</a>
+  </div>
+  <div class="page-content">
     <div class="content">
       <div class="route-core-data">
         <p>
@@ -145,24 +143,23 @@
         Von Millstatt geht über den Bergpass Turracher Hohe in die Richtung Red-Bull-Ring, von Judenburg bis Bruck-an-der-Mur hat man keinen wirklichen Wahl, Autobahn macht Sinn hier.
         Dann geht es via Mariazell. Wer Lust hat, kann via Pottenstein ein bisschen interessanter fahren, aber nach 4 Stunden Fahrtzeit die einfache gerade Landstrasse Hainfeld-Kaumberg-Altenmarkt-Alland scheint auch richtig.
       </p>
+  </div>
 
-    </div>
-    <div class="footer">
+  <div class="footer">
       <div class="footer-content">
-        <p>2023 &#169; Pavlo Lissov</p>
-        <p>Alle Rechte der Bilder liegen bei Pavlo Lissov</p>
-        <p>Kontakt: <a href="mailto: admin@lissov.net?subject=MotoWien">Send email</a></p>  
+          <p>2025 &#169; Pavlo Lissov</p>
+          <p>Alle Rechte der Bilder liegen bei Pavlo Lissov</p>
+          <p>Kontakt: <a href="mailto: admin@lissov.net?subject=MotoWien">Send email</a></p>  
       </div>
-    </div>
-    <script>
-      var t = localStorage.getItem('allowTracking');
-      if (t !== 'false') {
-        var cid = t === 'true' ? localStorage.getItem('clientId') : 'anonymous';
-        var x = new XMLHttpRequest();
-        x.open('GET', 'https://lissov.net/api/visitors/log?pageName=grossglockner.html&clientId=' + cid, true);
-        x.send();
-      }
-    </script>
-    
-  </body>
+  </div>
+  <script>
+    var t = localStorage.getItem('allowTracking');
+    if (t !== 'false') {
+      var cid = t === 'true' ? localStorage.getItem('clientId') : 'anonymous';
+      var x = new XMLHttpRequest();
+      x.open('GET', 'https://lissov.net/api/visitors/log?pageName=grossglockner.html&clientId=' + cid, true);
+      x.send();
+    }
+  </script>
+</body>
 </html>

@@ -1,0 +1,24 @@
+{{> doctype}}
+<html lang="de">
+{{> header root=''}}
+
+<body>
+  <h1>Motorrad rund um Wien: Ausflüge</h1>
+  {{> menu root=root active='trips'}}
+  <div class="page-content">
+
+    <div class="content">
+      <p>
+        Alle meine Ausflüge beginnen beim Donauturm in Wien, da ich in der nähe wohne.
+      </p>
+
+      {{#each global.listings}}
+      {{> trip-listing trip=this}}
+
+      {{/each}}
+  </div>
+
+  {{> footer}}
+  {{> counter}}
+</body>
+</html>

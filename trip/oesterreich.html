@@ -2,22 +2,21 @@
   "http://www.w3.org/TR/html4/strict.dtd">
 
 <html lang="de">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>MotoWien</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="..\images\motowien_icon.png">
     <link rel="stylesheet" href="..\styles.css">
-  </head>
-  <body>
-    <h1>Durch Österreich</h1>
-    <div class="menu">
-      <a  href="..\index.html">Home</a>
-      <a class="active" href="..\trips.html">Routes</a>
-      <a  href="..\tech.html">Technologie</a>
-      <a  href="..\docs/stb.html">Staatsb.</a>
-    </div>
-    <div class="page-content">
+</head>
+<body>
+  <h1>Durch Österreich</h1>
+  <div class="menu">
+    <a  href="..\index.html">Home</a>
+    <a class="active" href="..\trips.html">Routes</a>
+    <a  href="..\tech.html">Technologie</a>
+  </div>
+  <div class="page-content">
 
     <div class="content">
       <p>
@@ -162,7 +161,6 @@
       </div>
 
 
-
       <h3>Tag 2: Innsbruck bis Kaprun</h3>
       <div class="route-core-data">
         <p>
@@ -238,7 +236,7 @@
         Das Wetter ist auch wichtig. Uns hat das Regen am zweiten Tag erwischt, deshalb haben wir in der früh weiter ins Kärnten gefahren.
         Sonnst könnten wir noch am nächsten Tag die Straße noch Mal durchfahren.
       </p>
-      
+
 
 
       <h3>Tag 4: Kärnten und Steiermark</h3>
@@ -298,23 +296,23 @@
       </p>
 
     </div>
-    </div>
-    <div class="footer">
+  </div>
+
+  <div class="footer">
       <div class="footer-content">
-        <p>2023 &#169; Pavlo Lissov</p>
-        <p>Alle Rechte der Bilder liegen bei Pavlo Lissov</p>
-        <p>Kontakt: <a href="mailto: admin@lissov.net?subject=MotoWien">Send email</a></p>  
+          <p>2025 &#169; Pavlo Lissov</p>
+          <p>Alle Rechte der Bilder liegen bei Pavlo Lissov</p>
+          <p>Kontakt: <a href="mailto: admin@lissov.net?subject=MotoWien">Send email</a></p>  
       </div>
-    </div>
-    <script>
-      var t = localStorage.getItem('allowTracking');
-      if (t !== 'false') {
-        var cid = t === 'true' ? localStorage.getItem('clientId') : 'anonymous';
-        var x = new XMLHttpRequest();
-        x.open('GET', 'https://lissov.net/api/visitors/log?pageName=oesterreich.html&clientId=' + cid, true);
-        x.send();
-      }
-    </script>
-    
-  </body>
+  </div>
+  <script>
+    var t = localStorage.getItem('allowTracking');
+    if (t !== 'false') {
+      var cid = t === 'true' ? localStorage.getItem('clientId') : 'anonymous';
+      var x = new XMLHttpRequest();
+      x.open('GET', 'https://lissov.net/api/visitors/log?pageName=oesterreich.html&clientId=' + cid, true);
+      x.send();
+    }
+  </script>
+</body>
 </html>

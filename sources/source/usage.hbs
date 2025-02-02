@@ -1,7 +1,10 @@
-<inject header $(root)=""></inject>
-
-    <h1>Motorrad rund um Wien: Nutzerzahl</h1>
-    <inject menu $(root)="" $active="tech"></inject>
+{{> doctype}}
+<html lang="de">
+{{> header}}
+<body>
+  <h1>Motorrad rund um Wien: Nutzerzahl</h1>
+  {{> menu active='tech'}}
+  <div class="page-content">
     <div class="content">
       <h5>Insgesamt seit beginn der Messung</h5>
       <p>
@@ -35,4 +38,9 @@
         });
     </script>
 
-<inject footer></inject>
+  </div>
+{{> footer}}
+{{> counter}}
+
+</body>
+</html>

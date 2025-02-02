@@ -1,9 +1,0 @@
-<h2>
-  <a href="trip/{{$page}}">{{$name}}</a>
-  <if $draft="true">
-  <inject draft></inject>
-  </if>
-</h2>
-<p>
-  {{$text}}
-</p>

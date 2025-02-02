@@ -1,0 +1,268 @@
+{
+  "listings": {
+    "oesterreich": {
+      "page": "oesterreich.html", "name": "Österreich", "text": "Durch ganzes Land.",
+      "map": "https://maps.app.goo.gl/nySFhyBDPg3SDR5Y7",
+      "length": "1000km (1100 km)",
+      "drivetime": "18 Stunden",
+      "complexity": "Mittel",
+      "day0": {
+        "map": "https://maps.app.goo.gl/9ZrPh8t9XUnstSLE8",
+        "kurviger": "https://kurv.gr/aVEWP",
+        "length": "Kurz",
+        "drivetime": "bis zum Bahnhof",
+        "complexity": "Leicht"
+      },
+      "day1": {
+        "map": "https://maps.app.goo.gl/LcMVDQcKF7N467zT7",
+        "kurviger": "https://kurv.gr/hTFb3",
+        "length": "210 km",
+        "drivetime": "5 Stunden",
+        "complexity": "Mittel"
+      },
+      "day1_alternative": {
+        "draft": "true",
+        "map": "https://maps.app.goo.gl/zbh7DSs55vKqzosY9",
+        "length": "211 km",
+        "drivetime": "5 Stunden",
+        "complexity": "Mittel"
+      },
+      "day2": {
+        "map": "https://maps.app.goo.gl/jodMRyhh7mJmejV89",
+        "kurviger": "https://kurv.gr/bVhHa",
+        "length": "242 km",
+        "drivetime": "4.5 Stunden",
+        "complexity": "Mittel"
+      },
+      "day3": {
+        "map": "https://maps.app.goo.gl/HDBR5ZkDMbsodW8W7",
+        "gpx": "oest_3",
+        "length": "75 km",
+        "drivetime": "2 Stunden",
+        "complexity": "Mittel"
+      },
+      "day4": "in the html directly",
+      "day5": "in the html directly"
+    },
+
+    "leoben": {
+      "page": "leoben.html", "name": "Leoben", "draft": "true", "text": "Wochenende in Leoben.",
+      "length": " km",
+      "drivetime": " Stunden",
+      "complexity": "Mittel",
+      "day1": {
+        "map": "https://maps.app.goo.gl/K5aVsvFSgsUcPrMD6",
+        "draft": "true", 
+        "gpx": "leoben_1",
+        "length": "262 km",
+        "drivetime": "4.5 Stunden",
+        "complexity": "Mittel"
+      },
+      "day2": {
+        "map": "https://maps.app.goo.gl/PxbPUfHmmsjwWQLGA",
+        "draft": "true", 
+        "length": "319 km",
+        "drivetime": "5.5 Stunden",
+        "complexity": "Mittel"
+      }
+    },
+
+    "rbr": {
+      "page": "rbr.html", "name": "Red-Bull-Ring", "text": "Ausflüg zum Event am Ring.",
+      "map": "https://maps.app.goo.gl/H4KKXMnwi4VvNUTu6",
+      "length": "550 km",
+      "drivetime": "10 Stunden",
+      "complexity": "Mittel",
+      "day1": {
+        "map": "https://maps.app.goo.gl/69byT8Td5q8otqPc6",
+        "gpx": "rbr_1",
+        "length": "214 km",
+        "drivetime": "4 Stunden",
+        "complexity": "Mittel"
+      },
+      "day2": {
+        "map": "https://maps.app.goo.gl/nvTNcmYHrAvkpvde8",
+        "length": "72 km (36 km zweimal)",
+        "drivetime": "1-2 Stunden (zweimal 25 Min via Autobahn oder 45 ohne)",
+        "complexity": "Leicht"
+      },
+      "day3": {
+        "map": "https://maps.app.goo.gl/cTAFB2XVvG23Gtu6A",
+        "gpx": "rbr_3",
+        "length": "266 km",
+        "drivetime": "5 Stunden",
+        "complexity": "Mittel"
+      }
+    },
+
+    "grossglockner": {
+      "page": "grossglockner.html", "name": "Grossglockner", "draft": "true", "text": "Traumreise.",
+      "map": "https://maps.app.goo.gl/H4KKXMnwi4VvNUTu6",
+      "length": "928 km",
+      "drivetime": "16 Stunden",
+      "complexity": "Schwer",
+      "day1": {
+        "map": "https://maps.app.goo.gl/amwCrVRYqscbvRow8",
+        "draft": "true", 
+        "gpx": "grossglockner_1",
+        "length": "280 km",
+        "drivetime": "4.5 Stunden",
+        "complexity": "Mittel"
+      },
+      "day2": {
+        "map": "https://maps.app.goo.gl/AGwaRKLKwRRN1vYu9",
+        "draft": "true", 
+        "gpx": "grossglockner_2",
+        "length": "169 km",
+        "drivetime": "3.5 Stunden",
+        "complexity": "Mittel"
+      },
+      "day3": {
+        "map": "https://maps.app.goo.gl/EPDBb8nttL8gxsfT7",
+        "draft": "true", 
+        "gpx": "grossglockner_3",
+        "length": "90 km",
+        "drivetime": "1.5 Stunden",
+        "complexity": "Leicht"
+      },
+      "day4": {
+        "map": "https://maps.app.goo.gl/ucvE3smg2sMVa9tN68",
+        "draft": "true", 
+        "gpx": "grossglockner_4",
+        "length": "389 km",
+        "drivetime": "6 Stunden",
+        "complexity": "Schwer"
+      }
+    },
+
+    "graz": { "page": "graz.html", "name": "Graz", "draft": "true", "text": "Tagesausflug ins Graz.",
+      "part1": {
+        "map": "https://maps.app.goo.gl/uT3ZMdRbLACR3cX8A",
+        "gpx": "graz",
+        "length": "157 km + Autobahn von Wien",
+        "drivetime": "3 Stunden",
+        "complexity": "Mittel",
+        "kurviger": "https://kurv.gr/DE5Gx"
+      },
+      "part2": {
+        "map": "https://maps.app.goo.gl/JBvFHZTcUCdXVZPLA",
+        "gpx": "graz",
+        "length": "204 km",
+        "drivetime": "3 Stunden",
+        "complexity": "Mittel",
+        "kurviger": "https://kurv.gr/DE5Gx"
+      }
+    },
+
+    "westrunde_1": {
+      "page": "westrunde_1.html", "name": "Westrunde für 2 Tage", "draft": "true",
+      "text": "2-Tages Runde entlang der Donau, sehr schöne und interessante Straßen.",
+      "length": "XXXX km",
+      "drivetime": "XXXX Stunden",
+      "complexity": "Mittel",
+      "day1": {
+        "map": "https://maps.app.goo.gl/aApGhWDfjerNgPW68",
+        "kurviger": "https://kurv.gr/WzWr5",
+        "gpx": "westrunde_1_1",
+        "length": "186 km",
+        "drivetime": "4 Stunden",
+        "complexity": "Mittel"
+      }
+    },
+
+    "schneeberg": {
+      "page": "schneeberg.html", "name": "Schneeberg via Leithagebirge", "text": "Lange aber sehr schöne Runde.",
+      "map": "https://goo.gl/maps/JEAe2zAL5BUmd3aa6",
+      "gpx": "schneeberg",
+      "calimoto": "https://calimoto.com/calimotour/leithagebirge-schneeberg-r-Eiz5l8bA2a",
+      "length": "282 km",
+      "drivetime": "6 Stunden",
+      "complexity": "Mittel lang"
+    },
+
+    "noe_waldviertel": {
+      "page": "noe_waldviertel.html", "name": "NÖ Waldviertel", "text": "3 Tages Route.",
+      "length": "460 km",
+      "drivetime": "9 Stunden",
+      "complexity": "Mittel",
+      "day1": {
+        "map": "https://goo.gl/maps/9UX5Ad6YryWzQpX48",
+        "gpx": "no_waldv_1",
+        "length": "155 km",
+        "drivetime": "3 Stunden",
+        "complexity": "Mittel"
+      },
+      "day2": {
+        "maps": [
+          { "title": "Ottenstein zu Weitra:", "gpx": "no_waldv_2_1", "map": "https://goo.gl/maps/jRZMBxQrT6FUaiWA7" },
+          { "title": "Weitra to Horn:", "gpx": "no_waldv_2_2", "map": "https://goo.gl/maps/GxfqW4UCTqgmmjK47" }
+        ],
+        "length": "185 km",
+        "drivetime": "3 Stunden",
+        "complexity": "Mittel"
+      },
+      "day3": {
+        "map": "https://goo.gl/maps/w9nQBeiREbSv64hf8",
+        "gpx": "no_waldv_3",
+        "length": "100 km",
+        "drivetime": "2 Stunden",
+        "complexity": "Leicht"
+      }
+    },
+
+    "burgenland": {
+      "page": "burgenland.html", "name": "Burgenland", "text": "Plan für Leithagebirge.",
+      "maps": [
+        { "title": "Wien - Fischamend (26.5 km):", "map": "https://goo.gl/maps/tXKpWtRf1mS984dW9" },
+        { "title": "Fischamend - Eisenstadt (61 km):", "map": "https://goo.gl/maps/ntVrKDYYHLEca1177" },
+        { "title": "Eisenstadt - Wien (64 km):", "map": "https://goo.gl/maps/Mjz4vroHyV15QR9i7" }
+      ],
+      "calimoto": "https://calimoto.com/calimotour/vienna-eisenstadt-r-b1ecV87cJZ",
+      "length": "153 km",
+      "drivetime": "3 Stunden",
+      "complexity": "Mittel",
+      "alternative": {
+        "calimoto": "https://calimoto.com/calimotour/leithagebirge-r-jErKqug82O",
+        "length": "196 km",
+        "drivetime": "4 Stunden",
+        "complexity": "Mittel"
+      }
+    },
+
+    "kahlenberg": {
+      "page": "kahlenberg.html", "name": "Kahlenberg", "draft": "true", "text": "Eine kleine Runde für ein Paar Stunden.",
+      "map": "https://goo.gl/maps/QBXKhJS8s27w99936",
+      "gpx": "kahlenberg",
+      "length": "... km",
+      "drivetime": "...",
+      "complexity": "Einfach"
+    },
+
+    "tulln": {
+      "page": "tulln.html", "name": "Tulln", "text": "Etwas großere Tagesrunde.",
+      "map": "https://goo.gl/maps/Vo6QSTWQzKdUm6Fi6",
+      "gpx": "tulln",
+      "length": "84 km",
+      "drivetime": "2 Stunden 10 Minuten",
+      "complexity": "Einfach"
+    },
+
+    "heiligenkreuz": {
+      "page": "heiligenkreuz.html", "name": "Heiligenkreuz", "text": "Tagesausflug.",
+      "map": "https://goo.gl/maps/abfmUSiSJPQnfZN59",
+      "gpx": "heiligenkreuz",
+      "length": "89 km",
+      "drivetime": "2 Stunden",
+      "complexity": "Mittel"
+    },
+
+    "durnstein": {
+      "page": "durnstein.html", "name": "Durnstein", "text": "Marillenblute... oder einfach Straßen :)",
+      "map": "https://goo.gl/maps/Y5FyHCBQLRsYX7Uu7",
+      "gpx": "durnstein",
+      "length": "185 km",
+      "drivetime": "4 Stunden",
+      "complexity": "Mittel"
+    }
+  }
+}

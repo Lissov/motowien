@@ -1,15 +1,14 @@
-<inject header $(root)="..\"></inject>
-    <h1>Ausflug: Grossglockner Hochalpenstrasse</h1>
-    <inject menu $(root)="..\" $active="trips"></inject>
-
+{{> doctype}}
+<html lang="de">
+{{> header}}
+<body>
+  <h1>Ausflug: Grossglockner Hochalpenstrasse</h1>
+  {{> menu active='trips'}}
+  <div class="page-content">
     <div class="content">
-      <inject trip.details
-        $map="https://maps.app.goo.gl/H4KKXMnwi4VvNUTu6"
-        $draft="true"
-        $length="928 km"
-        $drivetime="16 Stunden"
-        $complexity="Schwer">
-      </inject>
+      {{> trip-details
+        details=global.listings.grossglockner
+      }}
 
       <p>
         Ich habe ein Traum, Grossglockner zu besteigen.
@@ -40,14 +39,9 @@
       
 
       <h3>Tag 1: Wien zum Halstätter Gegend</h3>
-      <inject trip.details
-        $map="https://maps.app.goo.gl/amwCrVRYqscbvRow8"
-        $draft="true"
-        $name="grossglockner_1"
-        $length="280 km"
-        $drivetime="4.5 Stunden"
-        $complexity="Mittel">
-      </inject>
+      {{> trip-details
+        details=global.listings.grossglockner.day1
+      }}
     
       <p>
         <iframe class="route-image" src="https://www.google.com/maps/embed?pb=!1m52!1m12!1m3!1d685029.4840027794!2d14.471735001481509!3d47.880332584993845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m37!3e0!4m5!1s0x476d06f6a9a48b3b%3A0x2cd0bab263e7514b!2sDonauturm%2C%20Donauturmplatz%2C%20Vienna!3m2!1d48.2403397!2d16.4100505!4m5!1s0x476dbb4e9d5e48fd%3A0xa2b71c3799ff055d!2sShell%2C%20Hauptstra%C3%9Fe%2C%20Heiligenkreuz%20im%20Wienerwald!3m2!1d48.0563231!2d16.1282695!4m5!1s0x476d8bce00267e15%3A0x40097572de62ee0!2sTraisen!3m2!1d48.049133499999996!2d15.6084632!4m5!1s0x477219ac2db5b889%3A0x44ea8e3263b4b473!2sLunzer%20See!3m2!1d47.853732099999995!2d15.0515727!4m5!1s0x477191c0cb4d4e69%3A0xaf65ff138f8cd3d6!2sHochleiten!3m2!1d47.59182!2d14.704089999999999!4m5!1s0x477146b9856ec53f%3A0x50ff4ce3d42feeee!2sArchkogl!3m2!1d47.61819!2d13.82766!5e0!3m2!1sen!2sat!4v1717535243748!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -59,14 +53,9 @@
       </p>
 
       <h3>Tag 2: Grossglockner Hochalpenstrasse</h3>
-      <inject trip.details
-        $map="https://maps.app.goo.gl/AGwaRKLKwRRN1vYu9"
-        $draft="true"
-        $name="grossglockner_2"
-        $length="169 km"
-        $drivetime="3.5 Stunden"
-        $complexity="Mittel">
-      </inject>
+      {{> trip-details
+        details=global.listings.grossglockner.day2
+      }}
       <iframe class="route-image" src="https://www.google.com/maps/embed?pb=!1m34!1m12!1m3!1d346091.20836113836!2d12.970196143324541!3d47.337043532171776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m19!3e0!4m5!1s0x477146b9856ec53f%3A0x50ff4ce3d42feeee!2s8993%20Archkogl!3m2!1d47.61819!2d13.82766!4m5!1s0x4771366f6e414663%3A0x16c165596a26c1ad!2sHallstatt!3m2!1d47.5622342!2d13.649261699999998!4m5!1s0x477714b80bd1c68b%3A0xc5bbdfac45035761!2zRiBKIEjDtmhlLCA5ODQ0!3m2!1d47.0562943!2d12.785188!5e0!3m2!1sen!2sat!4v1717537955319!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <p>
         Man kann in Hallstatt oder am Gosausee Frühstucken.
@@ -75,14 +64,9 @@
 
 
       <h3>Tag 3: Ein bisschen zurück</h3>
-      <inject trip.details
-        $map="https://maps.app.goo.gl/EPDBb8nttL8gxsfT7"
-        $draft="true"
-        $name="grossglockner_3"
-        $length="90 km"
-        $drivetime="1.5 Stunden"
-        $complexity="Leicht">
-      </inject>
+      {{> trip-details
+        details=global.listings.grossglockner.day3
+      }}
       <iframe class="route-image" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d174484.23475634385!2d13.012152524791334!3d46.89650009941089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x477714b80bd1c68b%3A0xc5bbdfac45035761!2zRiBKIEjDtmhlLCA5ODQ0!3m2!1d47.0562943!2d12.785188!4m5!1s0x4770bd44d844a99b%3A0x5595eecd23d40344!2sMillstatt!3m2!1d46.8044638!2d13.568725899999999!5e0!3m2!1sen!2sat!4v1717537224859!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <p>
         Falls wir zum <b>Gletscher</b> gehen wollen, bleibt nicht so viel Zeit.
@@ -95,14 +79,9 @@
       
 
       <h3>Tag 4: Nach Hause</h3>
-      <inject trip.details
-        $map="https://maps.app.goo.gl/ucvE3smg2sMVa9tN68"
-        $draft="true"
-        $name="grossglockner_4"
-        $length="389 km"
-        $drivetime="6 Stunden"
-        $complexity="Schwer">
-      </inject>
+      {{> trip-details
+        details=global.listings.grossglockner.day4
+      }}
       <iframe class="route-image" src="https://www.google.com/maps/embed?pb=!1m42!1m8!1m3!1d689955.639975911!2d14.3481895!3d47.5066799!3m2!1i1024!2i768!4f13.1!4m31!3e0!4m5!1s0x4770bd44d844a99b%3A0x5595eecd23d40344!2sMillstatt!3m2!1d46.8044638!2d13.568725899999999!4m5!1s0x47708d4a352e2cb9%3A0xf9697a7a5c3b820f!2sTurracher%20H%C3%B6he!3m2!1d46.914443999999996!2d13.875!4m5!1s0x477206cc830dcfc1%3A0x56b9a90ae2ace698!2sMariazell!3m2!1d47.7702441!2d15.314876499999999!4m5!1s0x476dbb4e9d5e48fd%3A0xa2b71c3799ff055d!2sShell%2C%20Hauptstra%C3%9Fe%2C%20Heiligenkreuz%20im%20Wienerwald!3m2!1d48.0563231!2d16.1282695!4m5!1s0x476d06f6a9a48b3b%3A0x2cd0bab263e7514b!2sDanube%20Tower%2C%20Donauturmplatz%201%2C%201220%20Wien!3m2!1d48.2403397!2d16.4100505!5e0!3m2!1sen!2sat!4v1717538060133!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <p>
         Jetzt bleibt ziemlich lange strecke zurück nach Wien.
@@ -114,5 +93,9 @@
         Von Millstatt geht über den Bergpass Turracher Hohe in die Richtung Red-Bull-Ring, von Judenburg bis Bruck-an-der-Mur hat man keinen wirklichen Wahl, Autobahn macht Sinn hier.
         Dann geht es via Mariazell. Wer Lust hat, kann via Pottenstein ein bisschen interessanter fahren, aber nach 4 Stunden Fahrtzeit die einfache gerade Landstrasse Hainfeld-Kaumberg-Altenmarkt-Alland scheint auch richtig.
       </p>
+  </div>
 
-<inject footer></inject>
+  {{> footer}}
+  {{> counter}}
+</body>
+</html>

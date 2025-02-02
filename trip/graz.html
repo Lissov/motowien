@@ -2,22 +2,21 @@
   "http://www.w3.org/TR/html4/strict.dtd">
 
 <html lang="de">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>MotoWien</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="..\images\motowien_icon.png">
     <link rel="stylesheet" href="..\styles.css">
-  </head>
-  <body>
-    <h1>1-Tage Ausflug nach Graz</h1>
-    <div class="menu">
-      <a  href="..\index.html">Home</a>
-      <a class="active" href="..\trips.html">Routes</a>
-      <a  href="..\tech.html">Technologie</a>
-      <a  href="..\docs/stb.html">Staatsb.</a>
-    </div>
-    <div class="page-content">
+</head>
+<body>
+  <h1>1-Tage Ausflug nach Graz</h1>
+  <div class="menu">
+    <a  href="..\index.html">Home</a>
+    <a class="active" href="..\trips.html">Routes</a>
+    <a  href="..\tech.html">Technologie</a>
+  </div>
+  <div class="page-content">
     <div class="content">
 
       <span class="draft-badge" title="Ich habe diese Route mit dieses GPX track noch nicht gefahren. Ich probiere und verbessere wann ich die Zeit habe..">Draft</span>
@@ -41,10 +40,6 @@
       <p class="route-map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m60!1m12!1m3!1d345734.6036638232!2d15.501849987900345!3d47.39142625649572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m45!3e0!4m5!1s0x476dd2872645bb47%3A0x313b15ef8cc7d761!2sBad%20Erlach!3m2!1d47.7272183!2d16.2144358!4m3!3m2!1d47.676290699999996!2d16.2059054!4m3!3m2!1d47.6509621!2d16.1835705!4m3!3m2!1d47.463068799999995!2d16.142562299999998!4m3!3m2!1d47.4090736!2d15.9642764!4m3!3m2!1d47.4061714!2d15.8809504!4m3!3m2!1d47.2571442!2d15.779662199999999!4m3!3m2!1d47.2305905!2d15.789067699999999!4m3!3m2!1d47.0588335!2d15.5268435!4m5!1s0x476e3582245b12df%3A0x2e5902a7941baedf!2sPizzeria%20Restaurante%20Santa%20Catharina%2C%20Sporgasse%2C%20Graz!3m2!1d47.0731912!2d15.4397533!5e0!3m2!1sen!2sat!4v1696326018041!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </p>
-
-      <p>
-      </p>
-
 
       <h3>Teil 2: Weg nach Hause</h3>
       <div class="route-core-data">
@@ -98,24 +93,23 @@
       </p-->
 
     </div>
+  </div>
 
-    </div>
-    <div class="footer">
+  <div class="footer">
       <div class="footer-content">
-        <p>2023 &#169; Pavlo Lissov</p>
-        <p>Alle Rechte der Bilder liegen bei Pavlo Lissov</p>
-        <p>Kontakt: <a href="mailto: admin@lissov.net?subject=MotoWien">Send email</a></p>  
+          <p>2025 &#169; Pavlo Lissov</p>
+          <p>Alle Rechte der Bilder liegen bei Pavlo Lissov</p>
+          <p>Kontakt: <a href="mailto: admin@lissov.net?subject=MotoWien">Send email</a></p>  
       </div>
-    </div>
-    <script>
-      var t = localStorage.getItem('allowTracking');
-      if (t !== 'false') {
-        var cid = t === 'true' ? localStorage.getItem('clientId') : 'anonymous';
-        var x = new XMLHttpRequest();
-        x.open('GET', 'https://lissov.net/api/visitors/log?pageName=graz.html&clientId=' + cid, true);
-        x.send();
-      }
-    </script>
-    
-  </body>
+  </div>
+  <script>
+    var t = localStorage.getItem('allowTracking');
+    if (t !== 'false') {
+      var cid = t === 'true' ? localStorage.getItem('clientId') : 'anonymous';
+      var x = new XMLHttpRequest();
+      x.open('GET', 'https://lissov.net/api/visitors/log?pageName=graz.html&clientId=' + cid, true);
+      x.send();
+    }
+  </script>
+</body>
 </html>

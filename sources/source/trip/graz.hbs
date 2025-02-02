@@ -1,6 +1,10 @@
-<inject header $(root)="..\"></inject>
-    <h1>1-Tage Ausflug nach Graz</h1>
-    <inject menu $(root)="..\" $active="trips"></inject>
+{{> doctype}}
+<html lang="de">
+{{> header}}
+<body>
+  <h1>1-Tage Ausflug nach Graz</h1>
+  {{> menu active='trips'}}
+  <div class="page-content">
     <div class="content">
 
       <span class="draft-badge" title="Ich habe diese Route mit dieses GPX track noch nicht gefahren. Ich probiere und verbessere wann ich die Zeit habe..">Draft</span>
@@ -9,30 +13,18 @@
       </p>
 
       <h3>Teil 1 - nach Graz</h3>
-      <inject trip.details $map="https://maps.app.goo.gl/uT3ZMdRbLACR3cX8A"
-        $name="graz"
-        $length="157 km + Autobahn von Wien"
-        $drivetime="3 Stunden"
-        $complexity="Mittel"
-        $kurviger="https://kurv.gr/DE5Gx">
-      </inject>
+      {{> trip-details
+        details=global.listings.graz.part1
+      }}
 
       <p class="route-map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m60!1m12!1m3!1d345734.6036638232!2d15.501849987900345!3d47.39142625649572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m45!3e0!4m5!1s0x476dd2872645bb47%3A0x313b15ef8cc7d761!2sBad%20Erlach!3m2!1d47.7272183!2d16.2144358!4m3!3m2!1d47.676290699999996!2d16.2059054!4m3!3m2!1d47.6509621!2d16.1835705!4m3!3m2!1d47.463068799999995!2d16.142562299999998!4m3!3m2!1d47.4090736!2d15.9642764!4m3!3m2!1d47.4061714!2d15.8809504!4m3!3m2!1d47.2571442!2d15.779662199999999!4m3!3m2!1d47.2305905!2d15.789067699999999!4m3!3m2!1d47.0588335!2d15.5268435!4m5!1s0x476e3582245b12df%3A0x2e5902a7941baedf!2sPizzeria%20Restaurante%20Santa%20Catharina%2C%20Sporgasse%2C%20Graz!3m2!1d47.0731912!2d15.4397533!5e0!3m2!1sen!2sat!4v1696326018041!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </p>
 
-      <p>
-      </p>
-
-
       <h3>Teil 2: Weg nach Hause</h3>
-      <inject trip.details $map="https://maps.app.goo.gl/JBvFHZTcUCdXVZPLA"
-        $name="graz"
-        $length="204 km"
-        $drivetime="3 Stunden"
-        $complexity="Mittel"
-        $kurviger="https://kurv.gr/DE5Gx">
-      </inject>
+      {{> trip-details
+        details=global.listings.graz.part2
+      }}
       <p class="route-map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m50!1m12!1m3!1d172644.94175238878!2d15.766510989799777!3d47.45918026562656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m35!3e0!4m5!1s0x476e3582245b12df%3A0x2e5902a7941baedf!2sPizzeria%20Restaurante%20Santa%20Catharina%2C%20Sporgasse%2C%20Graz!3m2!1d47.0731912!2d15.4397533!4m5!1s0x476e45f95bee76a3%3A0x40097572de68610!2sMitterdorf%20an%20der%20Raab!3m2!1d47.1703585!2d15.6149446!4m5!1s0x476e728c1b1eff45%3A0x705f467c960f8343!2sRatten!3m2!1d47.4845748!2d15.7214087!4m3!3m2!1d47.6149415!2d15.9763554!4m5!1s0x476dd9df13451fa3%3A0x5960562af233810f!2sSch%C3%B6nstadl!3m2!1d47.651599999999995!2d15.9941999!4m5!1s0x476d06f6a9a48b3b%3A0x2cd0bab263e7514b!2sDonauturm%2C%20Donauturmplatz%2C%20Vienna!3m2!1d48.240344699999994!2d16.4098739!5e0!3m2!1sen!2sat!4v1696327126807!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </p>
@@ -73,5 +65,9 @@
       </p-->
 
     </div>
+  </div>
 
-<inject footer></inject>
+  {{> footer}}
+  {{> counter}}
+</body>
+</html>
