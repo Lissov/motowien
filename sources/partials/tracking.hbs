@@ -1,0 +1,27 @@
+<div id="tracking_warning" class="popup-bottom">
+  <div class="tracking-inside">
+    Die Webseite logiert Zahl der Benutzer. <a href="tech.html">Mehr Info hier...</a><br/>
+    Bitte erlaube Tracking mit zufälliges Client ID.
+    <div class="buttons">
+      <button class="primary" onclick="window.selectTracking('true')">Erlauben</button>
+      <button onclick="window.selectTracking('anonymous')">Anonymes Tracking</button>
+    </div>
+  </div>
+</div>
+<script>
+  var el = document.getElementById('tracking_warning');
+  window['selectTracking'] = (option) => {
+    var cid = localStorage.getItem('clientId');
+    if (!cid) {
+      var clientId = '';
+      for (var i = 0; i < 20; i++) clientId += String.fromCharCode(97 + Math.floor(Math.random()*26));
+      localStorage.setItem('clientId', clientId);
+    }
+    localStorage.setItem('allowTracking', option);
+    location.reload();
+  };
+  var at = localStorage.getItem('allowTracking');
+  if (!at || at === 'false') {
+    setTimeout(() => el.classList.add('popup-bottom-appear'), 1);
+  }
+</script>
