@@ -1,6 +1,11 @@
 :root {
-  --small-margin-side: 16px;
-  --max-width: 800px;
+  --small-margin-side:  16px;
+  --max-width:          800px;
+  --headfoot-bg:        #4e7bbd;
+  --menu-bg:            #8ba8d3;
+  --menu-a:             white;
+  --menu-h:             #678dc6;
+  --menu-click:         #4977bb;
 }
 
 body {
@@ -12,20 +17,23 @@ body {
 .page-content {
   margin:             0 auto;
   max-width:          var(--max-width);
-  background-color: #fcfcfc;
+  background-color:   #fcfcfc;
 }
 
 h1 {
-  background-color: lightsteelblue;
+  background-color:   var(--headfoot-bg);
+  color:              orange;
+  text-shadow:        black 2px 2px 3px;
   margin:             0;
   padding:            24px;
   text-align:         center;
 }
 
 .footer {
-  background-color: lightsteelblue;
+  background-color:   var(--headfoot-bg);
   font-size:          smaller;
   padding:            16px;
+  color:              white;
 }
 .footer-content {
   margin:             auto;
@@ -37,19 +45,37 @@ h1 {
 }
 
 .menu {
-  text-align:       center;
-  background-color: lightgray;
-  padding: 8px;
+  text-align:           center;
+  background-color:     var(--menu-bg);
+}
+.menu div {
+  display:              inline-block;
+  padding:              8px;
+  &:hover {
+    background-color:   var(--menu-h);
+  }
+  &:active {
+    background-color:   var(--menu-click);
+  }
+  &.active {
+    color:              orange;
+    background-color:   var(--menu-a);
+    a {
+      color:            darkorange;
+    }
+  }
 }
 .menu a {
-  font-size:        1.5em;
-  margin:           8px;
+  font-size:            1.5em;
+  &.active {
+    color:              white;
+  }
 }
 .menu a:link {
-  text-decoration:  none;
+  text-decoration:    none;
 }
 .menu a:hover {
-  text-decoration:  underline;
+  text-decoration:    none;
 }
 
 .todo {
@@ -85,10 +111,6 @@ h1 {
   border:             1px solid darkgray;
   background-color: lightgray;
   padding:            8px;
-}
-
-.active {
-  color:            chocolate;
 }
 
 h3 {
