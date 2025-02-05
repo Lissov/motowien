@@ -1,0 +1,42 @@
+{{> doctype}}
+<html lang="de">
+{{> header}}
+<body>
+  <h1>Schweiz ab Feldkirch (Autoreisezug)</h1>
+  {{> menu active='trips'}}
+  <div class="page-content">
+    <div class="content">
+
+      <span class="draft-badge" title="Ich habe diese Route mit dieses GPX track noch nicht gefahren. Ich probiere und verbessere wann ich die Zeit habe..">Draft</span>
+      <p>
+        Entwurf, zum Planen
+      </p>
+
+
+      <h3>Tag 0 - zum Autoreisezug</h3>
+      {{> trip-details
+        details=json('{
+      }}
+
+      <p class="route-map">
+      </p>
+
+      <h3>Tag 1: Irgendwo zum Zürich</h3>
+      {{> trip-details
+        details=json('{}')
+      }}
+      <p class="route-map">
+
+      </p>
+
+      <p>
+        Der erste Rundfahrtstag beginnt mit dem ...
+      </p>
+
+    </div>
+  </div>
+
+  {{> footer}}
+  {{> counter}}
+</body>
+</html>
