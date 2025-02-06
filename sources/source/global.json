@@ -1,6 +1,7 @@
 {
   "listings": {
     "schweiz": {
+      "draft": "true",
       "page": "schweiz.html",
       "name": "Schweiz",
       "text": "Kleine Runde in Nordosten Schweiz ab Feldkirchen Bahnhof (Autoreisezug).",
