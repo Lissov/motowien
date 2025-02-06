@@ -1,5 +1,11 @@
 {
   "listings": {
+    "schweiz": {
+      "page": "schweiz.html",
+      "name": "Schweiz",
+      "text": "Kleine Runde in Nordosten Schweiz ab Feldkirchen Bahnhof (Autoreisezug).",
+      "drivetime": "1500 km (5 Tagen)" 
+    },
     "oesterreich": {
       "page": "oesterreich.html", "name": "Österreich", "text": "Durch ganzes Land.",
       "map": "https://maps.app.goo.gl/nySFhyBDPg3SDR5Y7",
