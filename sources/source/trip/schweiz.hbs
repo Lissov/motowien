@@ -9,17 +9,21 @@
 
       <span class="draft-badge" title="Ich habe diese Route mit dieses GPX track noch nicht gefahren. Ich probiere und verbessere wann ich die Zeit habe..">Draft</span>
       <p>
-        Entwurf, zum Planen
+        Entwurf, zum Planen.
+      </p>
+      <p>
+        <b>WICHTIG</b>: Manche Bergpässe sind im Winter geschlossen, und Google vermeidet gesperrte Routen.
+        Wenn du die Karte im Winter ansiehst, kann sie daher völlig verrückt sein.
+        Kurviger zeigt das deutlich besser.
       </p>
 
       <p>
         Plan:<ul>
           <li>Nacht 1: Zug nach Feldkirch.</li>
           <li>Tag 1: Appenzell, Säntis, Zürichsee (Schloss Au), Luzern</li>
-          <li>Tag 2: </li>
-          <li>Tag 3: </li>
-          <li>Tag 4: </li>
-          <li>Tag 5: </li>
+          <li>Tag 2: Luzern bis Rheinwald</li>
+          <li>Tag 3: Stelvio Pass</li>
+          <li>Tag 4: Davos und Vaduz</li>
           <li>Nacht 5: Zug nach Wien</li>
         </ul> 
       </p>
@@ -27,88 +31,159 @@
         Ungefährer Plan in <a href="https://kurv.gr/rZm2b">Kurviger</a>
         und <a href="https://maps.app.goo.gl/9qVnUTKdan7NFZvC9?g_st=ic">Google Maps</a>
       </p>
-
-      <h3>Tag 0 - zum Autoreisezug</h3>
-      {{> trip-details
-        details=(json '{}')
-      }}
-
-      <p class="route-map">
+      
+      <p>
+        <a href="https://www.nightjet.com/de/angebote/automotorrad/in-oesterreich">Fahrplan von ÖBB Reisezug.</a>
       </p>
 
+
+      <h3>Nacht 1: Auto-reisezug Wien-Feldkirch</h3>
+      <div class="dates-hint under-h3">Tag 0: 21:00 - Tag 1 8:00</div>
+      {{> trip-details
+        details=(json '{
+          "map": "https://maps.app.goo.gl/9ZrPh8t9XUnstSLE8",
+          "kurviger": "https://kurv.gr/aVEWP",
+          "length": "Kurz",
+          "drivetime": "bis zum Bahnhof",
+          "complexity": "Leicht"
+        }')
+      }}
+      <iframe class="route-image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1330.266805911904!2d16.39032740237685!3d48.17706939023787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476da9bba78c93df%3A0x92e4605fa482205!2sAutoverladestelle%20Wien%20Hauptbahnhof!5e0!3m2!1sen!2sat!4v1718897390854!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
       <h3>Tag 1: Feldkirch - Luzern</h3>
+      <div class="dates-hint under-h3">Tag 1</div>
       {{> trip-details
         details=(json '{ 
           "kurviger": "https://kurv.gr/FJwMZ",
-          "map": "https://maps.app.goo.gl/sQYakUmU4FPDDKzHA?g_st=ic",
+          "map": "https://maps.app.goo.gl/tt878RxAJkGYmdH36",
           "length": "200 km",
           "drivetime": "4 Stunden"
         }')
       }}
       <p class="route-map">
-
+        <iframe src="https://www.google.com/maps/embed?pb=!1m66!1m12!1m3!1d679.5936320009206!2d8.307698462389201!3d47.05250300760725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m51!3e0!4m3!3m2!1d47.2431317!2d9.605628!4m3!3m2!1d47.331634099999995!2d9.4076683!4m5!1s0x479b27bccf5a9c3d%3A0xfbbffd25e34d5750!2sParkplatz%20der%20S%C3%A4ntis-Schwebebahn!3m2!1d47.2569957!2d9.3206431!4m4!2sFischmarktplatz!3m2!1d47.2255125!2d8.8156254!4m3!3m2!1d47.213803999999996!2d8.701043!4m5!1s0x479aaf3b1e0193fd%3A0x92c011601da0c478!2sSeepark%20Parkhaus%20Horgen!3m2!1d47.253996199999996!2d8.6187262!4m5!1s0x479aaaf738cc1aad%3A0x48a3941c23105640!2sParkplatz%20unterer%20Postplatz!3m2!1d47.167761999999996!2d8.5153151!4m3!3m2!1d47.0644825!2d8.523473599999999!4m4!1s0x478fff3ef63f44bb%3A0x9a558e89a7dffca2!3m2!1d47.0816638!2d8.4340873!4m5!1s0x478ffb9f280350ad%3A0xd29dc199d880212a!2sHotel%20Des%20Alpes!3m2!1d47.0521702!2d8.3074126!5e0!3m2!1sen!2sat!4v1738964327429!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </p>
 
       <p>
-        Gleich fahren wir ins Schweiz, Richtung Appenzell.
-        Dann zum Parkplatz Schwägalp.
+        Der Zug kommt in Feldkirch um 7:53 an. Gleich nach dem Abladen fahren wir in die Schweiz, Richtung Appenzell.
+        Es dauert etwa 45 Minuten bis Appenzell.
+        Dort können wir in der schönen Altstadt frühstücken.
       </p>
       <p>
-        Ab Schwägalp finden wir Wanderroute zum Säntis-Blick.
-        Da gibt es Seilbahn, Laternliweg, Schaukäserei... also etwas passend soll es sein.
+        Die nächste Destination ist Schwägalp, in etwa 30 Minuten.
+        Dort können wir am Säntis-Schwebebahn-Parkplatz parken und ein wenig spazieren.
+        Es gibt eine Seilbahn, den Laternliweg, eine Schaukäserei ... also werden wir sicher etwas Passendes mit Säntis-Blick finden.
       </p>
       <p>
-        Weiter geht's zum Zürichsee und über Rapperswill-Hurden Brücke.
-        Neben die Straße gibt es alten Holzbrücke.
-        Ich hoffe, der Wef und Gegend sollen spektakulär sein.
+        Weiter geht’s zum Zürichsee und über die Rapperswil-Hurden-Brücke (oder vielleicht einen Damm?).
+        Neben der Straße gibt es eine alte Holzbrücke.
+        Auf jeden Fall soll es malerisch sein.
       </p>
       <p>
-        Nächste Stopp ist Halbinsel Au.
-        Da gibt es ein Schloss, weiß nicht ob man dem besichtigen darf.
-        Auf jeden Fall gibt es am See viele Badestrände, da werden wir sicher baden.
+        Der nächste Stopp könnte die Halbinsel Au sein.
+        Dort gibt es ein schönes Schloss, aber ich bin mir nicht sicher, ob man es besichtigen darf oder ob man überhaupt dorthin fahren kann – und ob es wirklich etwas Interessantes zu sehen gibt.
+        Falls nicht, ist gleich daneben der Seepark Horden – perfekt zum Baden.
       </p>
       <p>
-        Weiter fahren wir ins Luzern, wo wir übernachten.
-        Luzern hat schöne Altstadt und berühmte Holzbrücke.
+        Weiter geht die Fahrt nach Zug und dann entlang des Ostufer des Zugersees.
+        Von dort ist es nicht mehr weit bis Luzern, wo wir irgendwo in der Stadt übernachten können.
       </p>
 
 
       <h3>Tag 2: Luzern - Rheinwald</h3>
       {{> trip-details
         details=(json '{ 
-          "kurviger": "https://kurv.gr/QvvTz",
-          "map": "",
+          "kurviger": "https://kurv.gr/FeZKa",
+          "map": "https://maps.app.goo.gl/brfNpv6wzdajX6EX7",
           "length": "300 km",
-          "drivetime": "5 Stunden"
+          "drivetime": "6 Stunden"
         }')
       }}
       <p class="route-map">
-
+        <iframe src="https://www.google.com/maps/embed?pb=!1m63!1m12!1m3!1d701115.684375029!2d8.156804224955426!3d46.65178491777102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m48!3e0!4m5!1s0x478ffa2a79547379%3A0xaef02ad1409952af!2sLuzern%2C%20Switzerland!3m2!1d47.050168199999995!2d8.3093072!4m5!1s0x478ffeae3a409b37%3A0xa93f8f89fc355d12!2sAdligenswil!3m2!1d47.071186!2d8.3647405!4m3!3m2!1d46.994304799999995!2d8.479095!4m5!1s0x47854fa78e60e643%3A0xb421658e7574f8fe!2sStoosbahnen%2C%206430%20Schwyz%2C%20Switzerland!3m2!1d46.9912603!2d8.673320799999999!4m5!1s0x47856d7bbafed167%3A0x82366ecb07293390!2sOberalp%20Pass!3m2!1d46.6583992!2d8.671018!4m3!3m2!1d46.6554443!2d8.7056547!4m4!1s0x478511b4fdd2bb2b%3A0x41418ffa8fb8fdd9!3m2!1d46.5622633!2d8.8014082!4m3!3m2!1d46.224793999999996!2d9.0426925!4m5!1s0x4784f10d0d5173b1%3A0x1d40346f12a67588!2sHotel!3m2!1d46.5529806!2d9.3230758!5e0!3m2!1sen!2sat!4v1738967542245!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </p>
 
       <p>
-        Schwyz - Stoosbahnen, wo wir einmal waren.
+        Dieser Tag könnte zu lang werden.
+        Es wäre möglicherweise besser, ihn aufzuteilen.
       </p>
 
       <p>
-        Oberalppass, Lukmanierpass.
+        Wir starten entlang der Vierwaldstättersee und erreichen den Stoos-Bergmassiv, wo wir schon einmal mit der Seilbahn waren.
+        Ich bin mir nicht sicher, ob wir die Mythen-Berge oder Stoos besuchen sollen – momentan habe ich beide in der Kurviger-Route.
+        Aber wir müssen uns entscheiden, denn beide schaffen wir nicht.
       </p>
-
       <p>
-        Zum Rheinwald - man kann Autobahn nehmen, dirch Tunnels wird wesentlich schneller.
-        Dann brauchen wir Hotel irgendwo.
+        Dann geht es weiter über kurvige Hochgebirgspässe – den Oberalppass (2044 m) und den Lukmanierpass (1915 m).
+      </p>
+      <p>
+        Von dort fahren wir über Lumino und den San-Bernardino-Pass ins Rheinwald.
+        Schon die Namen lassen erahnen, dass wir hier bereits im italienisch geprägten Teil der Schweiz sind.
+      </p>
+      <p>
+        Ich muss noch schauen, ob ich dort ein passendes Hotel finde.
+        Drei Pässe an einem Tag sind eigentlich zu viel, und am nächsten Tag erwartet uns der größte Pass von allen.
+        Deshalb könnten wir den San Bernardino einfach weglassen – über die Autobahn und durch den Tunnel wäre es wesentlich schneller und einfacher.
       </p>
 
       <h3>Tag 3: Stelvio</h3>
       {{> trip-details
         details=(json '{ 
           "kurviger": "https://kurv.gr/kNnr6",
-          "map": "",
+          "map": "https://maps.app.goo.gl/rYpy6S6eh8V1KwXn6",
           "length": "220 km",
           "drivetime": "4.5 Stunden"
         }')
       }}
-      
+      <p class="route-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m46!1m12!1m3!1d175702.2385303235!2d9.994521053446535!3d46.52102549167702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m31!3e0!4m5!1s0x4784f10d0d5173b1%3A0x1d40346f12a67588!2sHotel!3m2!1d46.5529806!2d9.3230758!4m5!1s0x478482076dc01a7b%3A0x279fdbbd3ec97825!2sSankt%20Moritz%2C%20Switzerland!3m2!1d46.4907973!2d9.8355079!4m5!1s0x4783bcd26898182f%3A0x3281368df0cee78c!2sTirano%2C%20Province%20of%20Sondrio%2C%20Italy!3m2!1d46.2161872!2d10.169931199999999!4m5!1s0x47830f7446b301db%3A0x932b43a63d97f711!2sBormio%2C%20Province%20of%20Sondrio%2C%20Italy!3m2!1d46.468531299999995!2d10.371804!4m5!1s0x47832223bb692ab5%3A0x42c547ac9d417eaa!2sGlorenza%2C%20Autonomous%20Province%20of%20Bolzano%20%E2%80%93%20South%20Tyrol%2C%20Italy!3m2!1d46.6706!2d10.5529306!5e0!3m2!1sen!2sat!4v1738971724731!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </p>
+      <p>
+        Google Maps zeigt den Stelvio-Pass nur im Sommer auf der Karte. 🙂
+
+      </p>
+      <p>
+        Zuerst fahren wir an Silvaplana vorbei, durch St. Moritz und dann weiter nach Italien bis Bormio.
+      </p>
+      <p>
+        Der Stelvio-Pass liegt zwar in Italien, darf aber auf so einer Reise auf keinen Fall fehlen.
+      </p>
+      <p>
+        Danach können wir irgendwo in Italien übernachten.
+      </p>
+
+
+      <h3>Tag 4: Davos, Liechtenstein, Feldkirch</h3>
+      {{> trip-details
+        details=(json '{ 
+          "kurviger": "https://kurv.gr/mDMzL",
+          "map": "https://maps.app.goo.gl/FybeFdV7jbsZ1rJL7",
+          "length": "165 km",
+          "drivetime": "4 Stunden"
+        }')
+      }}
+
+      <p class="route-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m38!1m12!1m3!1d349261.73076815647!2d9.700354289941739!3d46.851420542548176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m23!3e0!4m5!1s0x47832223bb692ab5%3A0x42c547ac9d417eaa!2sGlorenza%2C%20Autonomous%20Province%20of%20Bolzano%20%E2%80%93%20South%20Tyrol%2C%20Italy!3m2!1d46.6706!2d10.5529306!4m3!3m2!1d46.799707399999996!2d9.8320758!4m5!1s0x479b31665c517ef3%3A0x5143d97dca1b7b82!2sVaduz%2C%20Liechtenstein!3m2!1d47.141084299999996!2d9.5210732!4m5!1s0x479b399f89964143%3A0x466fc7d5164541a1!2sFeldkirch%20Bahnhof%2C%20Bahnhofstra%C3%9Fe%2C%20Feldkirch!3m2!1d47.2410906!2d9.6038151!5e0!3m2!1sen!2sat!4v1738972122009!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </p>
+
+      <p>
+        Der Zug startet um 22:27, also wollen wir bis 19:00 Uhr in Feldkirch sein, damit wir etwas Reserve haben und das Abendessen in Ruhe genießen können.
+      </p>
+      <p>
+        Zuerst fahren wir nach Davos über den Flüelapass (2383 m).
+        Ich wollte schon immer die Stadt der Weltregierung sehen. 🙂
+      </p>
+      <p>
+        Danach gibt es eigentlich nur eine Straße nach Vaduz (Liechtenstein).
+        Wir vermeiden die Autobahn und nehmen die schönere Route.
+        Dort haben wir noch Zeit für ein bisschen Sightseeing.
+      </p>
+      <p>
+        Von dort ist es nicht mehr weit bis Feldkirch – der Zug nach Wien wartet!
+      </p>
+
     </div>
   </div>
 
