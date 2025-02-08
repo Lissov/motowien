@@ -23,5 +23,5 @@
   {{/if}}{{#if details.kurviger}}<a href="{{details.kurviger}}" target="_blank">Kurviger route</a>
   {{/if}}<p>Strecke: <b>{{details.length}}</b></p>
   <p>Fahrtzeit: <b>{{details.drivetime}}</b></p>
-  <p>Schwierigkeit: <b>{{details.complexity}}</b></p>
+  {{#if details.complexity}}<p>Schwierigkeit: <b>{{details.complexity}}</b></p>{{/if}}
 </div>
