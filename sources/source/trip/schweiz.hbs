@@ -11,6 +11,15 @@
       <p>
         Entwurf, zum Planen.
       </p>
+      {{> trip-details
+        details=(json '{
+          "map": "https://maps.app.goo.gl/9qVnUTKdan7NFZvC9?g_st=ic",
+          "kurviger": "https://kurv.gr/rZm2b",
+          "length": "900 km",
+          "drivetime": "18 Stunden",
+          "complexity": "Mittel"
+        }')
+      }}
       <p>
         <b>WICHTIG</b>: Manche Bergpässe sind im Winter geschlossen, und Google vermeidet gesperrte Routen.
         Wenn du die Karte im Winter ansiehst, kann sie daher völlig verrückt sein.
