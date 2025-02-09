@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const Handlebars = require("handlebars");
 const helpers = require("./js/handlebars.js");
-const { registerPartials, getTemplates, getData, clean } = require("./js/templating.js");
+const { registerPartials, getTemplates, getData, clean, generate } = require("./js/templating.js");
 const { getRelativePathBack } = require("./js/helpers.js");
 helpers.registerHelpers();
 
@@ -23,28 +23,18 @@ for (const templatePath of templates) {
   console.log('Processing template: ' + templatePath);
   const templateSource = fs.readFileSync(templatePath, "utf8");
   const template = Handlebars.compile(templateSource);
-  const templateData = getData(templatePath);
 
-  // Define dynamic data for each page (modify as needed)
+  const templateData = getData(templatePath);
   const data = {
     context: {
       fileName: fileName,
-      root: getRelativePathBack(relativePath),
+      relativePathDe: relativePath,
+      rootDe: getRelativePathBack(relativePath),
     },
     global: global,
     data: templateData
   };
 
-  // Generate HTML
-  const outputHtml = template(data);
-
-  // Compute output path while preserving subfolder structure
-  const outputFilePath = path.join(outputDir, relativePath);
-
-  // Ensure subdirectories exist in outputs
-  fs.mkdirSync(path.dirname(outputFilePath), { recursive: true });
-
-  // Write the output HTML file
-  fs.writeFileSync(outputFilePath, outputHtml);
-  console.log(`Generated: ${outputFilePath}`);
+  generate(template, data, outputDir, relativePath, 'de');
+  generate(template, data, outputDir, relativePath, 'uk');
 }

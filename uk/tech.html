@@ -1,10 +1,39 @@
-{{> doctype}}
+<!doctype html public "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+
 <html lang="de">
-{{> header root=''}}
+<head>
+    <meta charset="utf-8">
+    <title>МотоВідень</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="..\images\motowien_icon.png">
+    <link rel="stylesheet" href="..\styles.css">
+</head>
 
 <body>
-  <h1>{{#lang "de"}}Motorrad rund um Wien: Technologie{{else}}Технології{{/lang}}</h1>
-  {{> menu active='tech'}}
+  <h1>Технології</h1>
+  <div class="menu-container">
+    <div class="language"></div>
+    <div class="menu">
+      <div >
+        <a href="..\uk\index.html">Home</a>
+      </div><div >
+        <a href="..\uk\trips.html">Routes</a>
+      </div><div class="active">
+        <a href="..\uk\tech.html">Technologie</a>
+      </div>
+    </div>
+    <div class="language">
+      <a class="flag flag-de" href="..\tech.html">
+        <div class="de-top"></div>
+        <div class="de-middle"></div>
+        <div class="de-bottom"></div>
+      </a>
+      <a class="flag flag-uk" href="..\uk\tech.html">
+        <div class="uk-top"></div>
+        <div class="uk-bottom"></div>
+      </a>  </div>
+  </div>
   <div class="page-content">
     <div class="content">
       <p>
@@ -84,9 +113,49 @@
     </script>
   </div>
 
-  {{> footer}}
-  {{> counter}}
+  <div class="footer">
+      <div class="footer-content">
+          <p>2025 &#169; Pavlo Lissov</p>
+          <p>Alle Rechte der Bilder liegen bei Pavlo Lissov</p>
+          <p>Kontakt: <a href="mailto: admin@lissov.net?subject=MotoWien">Send email</a></p>  
+      </div>
+  </div>
+  <script>
+    var t = localStorage.getItem('allowTracking');
+    if (t !== 'false') {
+      var cid = t === 'true' ? localStorage.getItem('clientId') : 'anonymous';
+      var x = new XMLHttpRequest();
+      x.open('GET', 'https://lissov.net/api/visitors/log?pageName=tech.html&clientId=' + cid, true);
+      x.send();
+    }
+  </script>
 </body>
 </html>
 
-{{> tracking}}
+<div id="tracking_warning" class="popup-bottom">
+  <div class="tracking-inside">
+    Die Webseite logiert Zahl der Benutzer. <a href="tech.html">Mehr Info hier...</a><br/>
+    Bitte erlaube Tracking mit zufälliges Client ID.
+    <div class="buttons">
+      <button class="primary" onclick="window.selectTracking('true')">Erlauben</button>
+      <button onclick="window.selectTracking('anonymous')">Anonymes Tracking</button>
+    </div>
+  </div>
+</div>
+<script>
+  var el = document.getElementById('tracking_warning');
+  window['selectTracking'] = (option) => {
+    var cid = localStorage.getItem('clientId');
+    if (!cid) {
+      var clientId = '';
+      for (var i = 0; i < 20; i++) clientId += String.fromCharCode(97 + Math.floor(Math.random()*26));
+      localStorage.setItem('clientId', clientId);
+    }
+    localStorage.setItem('allowTracking', option);
+    location.reload();
+  };
+  var at = localStorage.getItem('allowTracking');
+  if (!at || at === 'false') {
+    setTimeout(() => el.classList.add('popup-bottom-appear'), 1);
+  }
+</script>

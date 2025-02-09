@@ -1,9 +1,9 @@
 {{> doctype}}
-<html lang="de">
+<html lang="{{this.lang}}">
 {{> header}}
 
 <body>
-  <h1>Motorrad rund um Wien</h1>
+  <h1>{{#lang "de"}}Motorrad rund um Wien{{else}}Мотоциклом навколо Відня{{/lang}}</h1>
   {{> menu active='home'}}
   <div class="page-content">
     <div class="content">

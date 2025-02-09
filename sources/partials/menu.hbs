@@ -1,9 +1,17 @@
-<div class="menu">
-  <div {{#ifEquals active 'home'}}class="active"{{/ifEquals}}>
-    <a href="{{context.root}}index.html">Home</a>
-  </div><div {{#ifEquals active 'trips'}}class="active"{{/ifEquals}}>
-    <a href="{{context.root}}trips.html">Routes</a>
-  </div><div {{#ifEquals active 'tech'}}class="active"{{/ifEquals}}>
-    <a href="{{context.root}}tech.html">Technologie</a>
+<div class="menu-container">
+  <div class="language"></div>
+  <div class="menu">
+    <div {{#ifEquals active 'home'}}class="active"{{/ifEquals}}>
+      <a href="{{link "index.html"}}">Home</a>
+    </div><div {{#ifEquals active 'trips'}}class="active"{{/ifEquals}}>
+      <a href="{{link "trips.html"}}">Routes</a>
+    </div><div {{#ifEquals active 'tech'}}class="active"{{/ifEquals}}>
+      <a href="{{link "tech.html"}}">Technologie</a>
+    </div>
+  </div>
+  <div class="language">
+    {{>flag language="de"}}
+
+    {{>flag language="uk"}}
   </div>
 </div>

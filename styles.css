@@ -45,9 +45,14 @@ h1 {
   padding:          16px;
 }
 
+.menu-container {
+  display:              flex;
+  justify-content:      space-between;
+  background-color:     var(--menu-bg);
+  width:                100%;
+}
 .menu {
   text-align:           center;
-  background-color:     var(--menu-bg);
 }
 .menu div {
   display:              inline-block;
@@ -132,58 +137,6 @@ h3 {
   color: gray;
 }
 
-.staatsbuergerschaft {
-  --block-padding: 15px;
-
-  ol {
-    padding-inline-start: var(--block-padding);
-  }
-
-  h2 {
-    color: gray;
-  }
-
-  ol > li > h3 {
-    color: red;
-    font-size: large;
-    margin-top: 48px;
-  }
-
-  .note {
-    font-style: italic;
-    margin-left: calc(-1 * var(--block-padding));
-    border-left: 10px solid gold;
-    padding-left: 20px;
-  }
-
-  .imgnote {
-    margin-left: calc(-1 * var(--block-padding));
-    border-left: 10px solid red;
-    color: red;
-    padding-left: 20px;
-    font-size: 80%;
-  }
-
-  .beispielfrage {
-    color: red;
-    h5 {
-      margin-top: 24px;
-      margin-bottom: -8px;
-    }
-    p {
-      font-style: italic;
-    }
-    ul {
-      list-style-type: none;
-      li:before
-      {
-        content: "\2610";
-        margin-right:5px;
-      }
-    }
-  }
-}
-
 .popup-bottom {
   position: absolute;
   bottom: 0;
@@ -231,4 +184,63 @@ h3 {
 }
 .popup-bottom-appear {
   height: 120px;
+}
+
+
+.language {
+  width:                100px;
+  display:              flex;
+  align-items:          center;
+}
+
+/* FLAGS */
+.flag {
+  width:                40px;
+  height:               40px;
+  overflow:             hidden;  /* Ensures child divs don’t overflow */
+  position:             relative;
+  display:              inline-block;
+  &:hover {
+    box-shadow:        black 0 0 4px;
+  }
+  &:active {
+    box-shadow:        white 0 0 5px;
+  }
+}
+.flag-de {
+  border-radius:        50%; /*50% 20% 20% 50%;*/
+  margin-right:         10px;
+}
+.flag-uk {
+  border-radius:        50% /*20% 50% 50% 20%*/;
+  margin-right:         5px;
+}
+
+.uk-top {
+  background: #0056B9; /* Blue color */
+  width:      100%;
+  height:     50%;
+  position:   absolute;
+  top:        0;
+}
+
+.uk-bottom {
+  background: #FFD800; /* Yellow color */
+  width:      100%;
+  height:     50%;
+  position:   absolute;
+  bottom:     0;
+}
+
+.de-top, .de-middle, .de-bottom {
+  width:      100%;
+  height:     34%;  /* Each stripe takes 1/3 of the circle, but don't cut bottom because of rounding */
+}
+
+.de-top, .de-bottom {
+  background: #C8102E; /* Red stripes */
+}
+
+.de-middle {
+  background: white; /* White stripe */
 }
