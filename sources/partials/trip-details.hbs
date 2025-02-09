@@ -21,7 +21,7 @@
   {{/each}}
   {{#if details.calimoto}}<a href="{{details.calimoto}}" target="_blank">{{#lang "de"}}Calimoto route{{else}}Маршрут Calimoto{{/lang}}</a>
   {{/if}}{{#if details.kurviger}}<a href="{{details.kurviger}}" target="_blank">{{#lang "de"}}Kurviger route{{else}}Маршрут Kurviger{{/lang}}</a>
-  {{/if}}<p>{{#lang "de"}}Strecke{{else}}Довжина{{/lang}}: <b>{{details.length}}</b></p>
-  <p>{{#lang "de"}}Fahrtzeit{{else}}Час їзди{{/lang}}: <b>{{details.drivetime}}</b></p>
-  {{#if details.complexity}}<p>{{#lang "de"}}Schwierigkeit{{else}}Складність{{/lang}}: <b>{{details.complexity}}</b></p>{{/if}}
+  {{/if}}<p>{{#lang "de"}}Strecke{{else}}Довжина{{/lang}}: <b>{{translate details.length}}</b></p>
+  <p>{{#lang "de"}}Fahrtzeit{{else}}Час їзди{{/lang}}: <b>{{translate details.drivetime}}</b></p>
+  {{#if details.complexity}}<p>{{#lang "de"}}Schwierigkeit{{else}}Складність{{/lang}}: <b>{{translate details.complexity}}</b></p>{{/if}}
 </div>

@@ -16,6 +16,22 @@ module.exports.registerHelpers = function() {
     return (argC == this.lang) ? options.fn(this) : (!!options?.inverse ? options.inverse(this) : "");
   });
 
+  Handlebars.registerHelper('translate', function(value, options) {
+    switch (this.lang) {
+      case 'uk': return value
+                          .replace('km', 'км')
+                          .replace('Stunden', 'годин')
+                          .replace('Einfach', 'легкий')
+                          .replace('Mittel', 'середній')
+                          .replace('Schwer', 'важкий')
+                          ;
+      case 'de':
+      default:
+        return value;
+    }
+  });
+  
+
   Handlebars.registerHelper('link', function(url, options) {
     const l = !!options.hash.lang ? options.hash.lang : this.lang;
     const root = l === 'de' ? this.context.root : this.context.root + l + "\\";
