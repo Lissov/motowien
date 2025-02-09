@@ -72,7 +72,7 @@ module.exports.clean = function(directory) {
 
 module.exports.generate = function(template, data, outputDir, relativePath, lang) {
     data.lang = lang; // switch language
-    data.context.root = lang === 'de' ? data.context.rootDe : path.join(data.context.rootDe, "..\\");
+    data.context.root = lang === 'de' ? data.context.rootDe : (data.context.rootDe + "..\\");
 
     // Generate HTML
     const outputHtml = template(data);
