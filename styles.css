@@ -3,9 +3,10 @@
   --max-width:          800px;
   --headfoot-bg:        #4e7bbd;
   --menu-bg:            #8ba8d3;
-  --menu-a:             white;
   --menu-h:             #678dc6;
   --menu-click:         #4977bb;
+  --content-bg:         #fcfcfc;
+  --menu-a:             var(--content-bg);
 }
 
 body {
@@ -17,7 +18,7 @@ body {
 .page-content {
   margin:             0 auto;
   max-width:          var(--max-width);
-  background-color:   #fcfcfc;
+  background-color:   var(--content-bg);
 }
 
 h1 {
