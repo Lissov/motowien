@@ -19,6 +19,7 @@ const global = getData(path.join(templatesDir, "global.json"));
 for (const templatePath of templates) {
   const relativePath = path.relative(templatesDir, templatePath).replace(/\.hbs$/, ".html");
   var fileName = relativePath.replace(/^.*[\\/]/, '');
+  const pathEscaped = relativePath.replaceAll("/", "\\");
 
   console.log('Processing template: ' + templatePath);
   const templateSource = fs.readFileSync(templatePath, "utf8");
@@ -28,8 +29,8 @@ for (const templatePath of templates) {
   const data = {
     context: {
       fileName: fileName,
-      relativePathDe: relativePath,
-      rootDe: getRelativePathBack(relativePath),
+      relativePathDe: pathEscaped,
+      rootDe: getRelativePathBack(pathEscaped),
     },
     global: global,
     data: templateData
