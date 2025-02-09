@@ -2,11 +2,11 @@
   <div class="language"></div>
   <div class="menu">
     <div {{#ifEquals active 'home'}}class="active"{{/ifEquals}}>
-      <a href="{{link "index.html"}}">Home</a>
+      <a href="{{link "index.html"}}">{{#lang "de"}}Home{{else}}Старт{{/lang}}</a>
     </div><div {{#ifEquals active 'trips'}}class="active"{{/ifEquals}}>
-      <a href="{{link "trips.html"}}">Routes</a>
+      <a href="{{link "trips.html"}}">{{#lang "de"}}Routes{{else}}Маршрути{{/lang}}</a>
     </div><div {{#ifEquals active 'tech'}}class="active"{{/ifEquals}}>
-      <a href="{{link "tech.html"}}">Technologie</a>
+      <a href="{{link "tech.html"}}">{{#lang "de"}}Technologie{{else}}Технології{{/lang}}</a>
     </div>
   </div>
   <div class="language">

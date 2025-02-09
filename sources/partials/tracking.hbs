@@ -1,10 +1,11 @@
 <div id="tracking_warning" class="popup-bottom">
   <div class="tracking-inside">
-    Die Webseite logiert Zahl der Benutzer. <a href="tech.html">Mehr Info hier...</a><br/>
-    Bitte erlaube Tracking mit zufälliges Client ID.
+    {{#lang "de"}}Die Webseite logiert Zahl der Benutzer.{{else}}Цей вебсайт рахує кількість відвідувачів.{{/lang}}
+    <a href="{{link "tech.html"}}">{{#lang "de"}}Mehr Info hier...{{else}}Детальніше тут...{{/lang}}</a><br/>
+    {{#lang "de"}}Bitte erlaube Tracking mit zufälliges Client ID.{{else}}Будь ласка, дозвольте логувати з випадковим ідентифікатором.{{/lang}}
     <div class="buttons">
-      <button class="primary" onclick="window.selectTracking('true')">Erlauben</button>
-      <button onclick="window.selectTracking('anonymous')">Anonymes Tracking</button>
+      <button class="primary" onclick="window.selectTracking('true')">{{#lang "de"}}Erlauben{{else}}Дозволити{{/lang}}</button>
+      <button onclick="window.selectTracking('anonymous')">{{#lang "de"}}Anonymes Tracking{{else}}Анонімне логування{{/lang}}</button>
     </div>
   </div>
 </div>

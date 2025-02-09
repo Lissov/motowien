@@ -2,26 +2,26 @@
   {{#ifOr3 details.draft details.map details.gpx}}
   <p>
     {{#ifEquals details.draft "true"}}{{> draft}}
-    {{/ifEquals}}{{#if details.map}}<a href="{{details.map}}" target="_blank">Karte</a>&nbsp;{{/if}}
+    {{/ifEquals}}{{#if details.map}}<a href="{{details.map}}" target="_blank">{{#lang "de"}}Karte{{else}}Карта{{/lang}}</a>&nbsp;{{/if}}
     {{#if details.gpx}}
-    <a href="../gps/{{details.gpx}}.gpx" target="_blank">GPX Datei</a>
-    <button type="button" onclick="navigator.clipboard.writeText(window.location.origin + '/gps/{{details.gpx}}.gpx')">Copy Link</button>
+    <a href="../gps/{{details.gpx}}.gpx" target="_blank">{{#lang "de"}}GPX Datei{{else}}GPX файл{{/lang}}</a>
+    <button type="button" onclick="navigator.clipboard.writeText(window.location.origin + '/gps/{{details.gpx}}.gpx')">{{#lang "de"}}Copy Link{{else}}Скопіювати{{/lang}}</button>
     {{/if}}
   </p>
   {{/ifOr3}}
   {{#each details.maps}}
   <p>
     {{title}}
-    <a href="{{map}}" target="_blank">Karte</a>&nbsp;
+    <a href="{{map}}" target="_blank">{{#lang "de"}}Karte{{else}}Карта{{/lang}}</a>&nbsp;
     {{#if gpx}}
-    <a href="../gps/{{gpx}}.gpx" target="_blank">GPX Datei</a>
-    <button type="button" onclick="navigator.clipboard.writeText(window.location.origin + '/gps/{{gpx}}.gpx')">Copy Link</button>
+    <a href="../gps/{{gpx}}.gpx" target="_blank">{{#lang "de"}}GPX Datei{{else}}GPX файл{{/lang}}</a>
+    <button type="button" onclick="navigator.clipboard.writeText(window.location.origin + '/gps/{{gpx}}.gpx')">{{#lang "de"}}Copy Link{{else}}Скопіювати{{/lang}}</button>
     {{/if}}
   </p>
   {{/each}}
-  {{#if details.calimoto}}<a href="{{details.calimoto}}" target="_blank">Calimoto route</a>
-  {{/if}}{{#if details.kurviger}}<a href="{{details.kurviger}}" target="_blank">Kurviger route</a>
-  {{/if}}<p>Strecke: <b>{{details.length}}</b></p>
-  <p>Fahrtzeit: <b>{{details.drivetime}}</b></p>
-  {{#if details.complexity}}<p>Schwierigkeit: <b>{{details.complexity}}</b></p>{{/if}}
+  {{#if details.calimoto}}<a href="{{details.calimoto}}" target="_blank">{{#lang "de"}}Calimoto route{{else}}Маршрут Calimoto{{/lang}}</a>
+  {{/if}}{{#if details.kurviger}}<a href="{{details.kurviger}}" target="_blank">{{#lang "de"}}Kurviger route{{else}}Маршрут Kurviger{{/lang}}</a>
+  {{/if}}<p>{{#lang "de"}}Strecke{{else}}Довжина{{/lang}}: <b>{{details.length}}</b></p>
+  <p>{{#lang "de"}}Fahrtzeit{{else}}Час їзди{{/lang}}: <b>{{details.drivetime}}</b></p>
+  {{#if details.complexity}}<p>{{#lang "de"}}Schwierigkeit{{else}}Складність{{/lang}}: <b>{{details.complexity}}</b></p>{{/if}}
 </div>
