@@ -1,1 +1,25 @@
-Natürlich mag ich nicht nur mit dem Motorrad reisen. Hier sind die Pläne für Auto, Wohnmobil und andere Touren.
+{{> doctype}}
+<html lang="de">
+{{> header root=''}}
+
+<body>
+  <h1>{{#lang "de"}}Reisen ohne Motorrad{{else}}Туризм без мотоциклу{{/lang}}</h1>
+  {{> menu root=root active='travel'}}
+  <div class="page-content">
+
+    <div class="content">
+      <p>
+        Ich reise gern auch ohne Motorrad.
+        Hier kommen meine Reisen mit dem Auto, Wohnmobil oder öffentlichen Verkehr..
+      </p>
+
+      {{#each global.tourism}}
+      {{> trip-listing trip=this}}
+
+      {{/each}}
+  </div>
+
+  {{> footer}}
+  {{> counter}}
+</body>
+</html>
