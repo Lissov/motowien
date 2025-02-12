@@ -1,0 +1,76 @@
+<!doctype html public "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>MotoWien</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="images\motowien_icon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>Reisen ohne Motorrad</h1>
+  <div class="menu-container">
+    <div class="language"></div>
+    <div class="menu">
+      <div >
+        <a href="index.html">Home</a>
+      </div><div >
+        <a href="trips.html">Routes</a>
+      </div><div class="active">
+        <a href="travel.html">Reisen</a>
+      </div><div >
+        <a href="tech.html">Technologie</a>
+      </div>
+    </div>
+    <div class="language">
+      <a class="flag flag-de" href="travel.html"
+        title="Sprache auf Deutsch wechseln">
+        <div class="de-top"></div>
+        <div class="de-middle"></div>
+        <div class="de-bottom"></div>
+      </a>
+      <a class="flag flag-uk" href="uk\travel.html"
+        title="Перейти на українську мову">
+        <div class="uk-top"></div>
+        <div class="uk-bottom"></div>
+      </a>
+    </div>
+  </div>
+  <div class="page-content">
+
+    <div class="content">
+      <p>
+        Ich reise gern auch ohne Motorrad.
+        Hier kommen meine Reisen mit dem Auto, Wohnmobil oder öffentlichen Verkehr..
+      </p>
+
+      <h2>
+        <a href="trip/denmark.html">Dänemark mit Wohnmobil</a>
+      </h2>
+      <p>
+        Marillenblute... oder einfach Straßen :)
+      </p>
+
+  </div>
+
+  <div class="footer">
+      <div class="footer-content">
+          <p>2025 &#169; Pavlo Lissov</p>
+          <p>Alle Rechte der Bilder liegen bei Pavlo Lissov</p>
+          <p>Kontakt: <a href="mailto: admin@lissov.net?subject=MotoWien">E-Mail senden</a></p>  
+      </div>
+  </div>
+  <script>
+    var t = localStorage.getItem('allowTracking');
+    if (t !== 'false') {
+      var cid = t === 'true' ? localStorage.getItem('clientId') : 'anonymous';
+      var x = new XMLHttpRequest();
+      x.open('GET', 'https://lissov.net/api/visitors/log?pageName=travel.html&clientId=' + cid, true);
+      x.send();
+    }
+  </script>
+</body>
+</html>
