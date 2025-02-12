@@ -273,8 +273,8 @@
     }
   },
   "tourism": {
-    "denmark_wm": {
-      "page": "denmark_wm.html",
+    "denmark": {
+      "page": "denmark.html",
       "name": "Dänemark mit Wohnmobil", 
       "text": "Marillenblute... oder einfach Straßen :)",
       "map": "",
