@@ -271,5 +271,16 @@
       "drivetime": "4 Stunden",
       "complexity": "Mittel"
     }
+  },
+  "tourism": {
+    "denmark_wm": {
+      "page": "denmark_wm.html",
+      "name": "Dänemark mit Wohnmobil", 
+      "text": "Marillenblute... oder einfach Straßen :)",
+      "map": "",
+      "length": "",
+      "drivetime": "",
+      "complexity": "Einfach"
+    }
   }
 }
