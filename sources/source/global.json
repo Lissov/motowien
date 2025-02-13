@@ -274,7 +274,7 @@
   },
   "tourism": {
     "denmark": {
-      "page": "denmark.html",
+      "page": "travel\\denmark.html",
       "name": "Dänemark", 
       "text": "Mit einem Wohnmobil etwa 2 Wochen",
       "map": "",

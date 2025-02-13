@@ -12,9 +12,8 @@
     </div>
   </div>
   <div class="language">
-    {{>flag language="de"}}
-
-    {{>flag language="uk"}}
+    {{#ifEquals lang "uk"}}{{>flag language="de"}}{{/ifEquals}}
+    {{#ifEquals lang "de"}}{{>flag language="uk"}}{{/ifEquals}}
 
   </div>
 </div>
