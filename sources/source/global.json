@@ -12,7 +12,7 @@
       "page": "sudtirol.html",
       "name": "sudtirol",
       "text": "Von Feldkirch durch Südtirol nach Hause",
-      drivetime: "1000 km"
+      "drivetime": "1000 km"
     },
     "oesterreich": {
       "page": "oesterreich.html", "name": "Österreich", "text": "Durch ganzes Land.",
