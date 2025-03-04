@@ -7,6 +7,13 @@
       "text": "Kleine Runde in Nordosten Schweiz ab Feldkirchen Bahnhof (Autoreisezug).",
       "drivetime": "1500 km (5 Tagen)" 
     },
+    "sudtirol": {
+      "draft": "true",
+      "page": "sudtirol.html",
+      "name": "sudtirol",
+      "text": "Von Feldkirch durch Südtirol nach Hause",
+      drivetime: "1000 km"
+    },
     "oesterreich": {
       "page": "oesterreich.html", "name": "Österreich", "text": "Durch ganzes Land.",
       "map": "https://maps.app.goo.gl/nySFhyBDPg3SDR5Y7",
