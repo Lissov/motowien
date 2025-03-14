@@ -2,14 +2,18 @@
 Website about motorcycle tours around Vienna
 
 # deployment
-To deploy commit to master.
+To deploy commit to `main`.
 
-# new approach with sitemplate
-See `sitemplate` documentation for details
-## to clean:
-run source/clean.bat
-## to build (clean and build)
-run source/build.bat
+# new approach with `handlebars`
+All sources are in `build`.
+## To build
+`cd source\build`
+`npm install`
+
+`node build.js`
+
+## Test:
+Open `C:/my/dev/motowien/index.html` in browser (just open `index.html` from explorer)
 
 # structure
 /source             <- source html for sitemplate

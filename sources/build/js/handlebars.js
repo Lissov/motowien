@@ -13,7 +13,7 @@ module.exports.registerHelpers = function() {
 
   Handlebars.registerHelper('lang', function(arg1, options) {
     const argC = arg1.toLowerCase() === 'ua' ? 'uk' : arg1.toLowerCase();
-    return (argC == this.lang) ? options.fn(this) : (!!options?.inverse ? options.inverse(this) : "");
+    return (argC == (this.this?.lang || this.lang)) ? options.fn(this) : (!!options?.inverse ? options.inverse(this) : "");
   });
 
   Handlebars.registerHelper('translate', function(value, options) {

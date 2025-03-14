@@ -13,7 +13,7 @@
       </p>
 
       {{#each global.listings}}
-      {{> trip-listing trip=this}}
+      {{> trip-listing trip=this this=@root}}
 
       {{/each}}
   </div>

@@ -176,10 +176,18 @@
       "complexity": "Mittel",
       "day1": {
         "map": "https://maps.app.goo.gl/aApGhWDfjerNgPW68",
-        "kurviger": "https://kurv.gr/WzWr5",
+        "kurviger": "https://kurv.gr/D69sc",
         "gpx": "westrunde_1_1",
         "length": "186 km",
         "drivetime": "4 Stunden",
+        "complexity": "Mittel"
+      },
+      "day2": {
+        "map": "https://kurv.gr/ef6hw",
+        "kurviger": "https://kurv.gr/ef6hw",
+        "gpx": "",
+        "length": "221 km",
+        "drivetime": "4.5 Stunden",
         "complexity": "Mittel"
       }
     },
