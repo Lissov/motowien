@@ -14,6 +14,13 @@
       "text": "Von Feldkirch durch Südtirol nach Hause",
       "drivetime": "1000 km"
     },
+    "krumlov": {
+      "draft": "true",
+      "page": "krumlov.html",
+      "name": "Cesky Krumlov",
+      "text": "2-3 Tage Runde zum Czechische Republik: Cesky Krumlov",
+      "drivetime": "1000 km"
+    },
     "oesterreich": {
       "page": "oesterreich.html", "name": "Österreich", "text": "Durch ganzes Land.",
       "map": "https://maps.app.goo.gl/nySFhyBDPg3SDR5Y7",
