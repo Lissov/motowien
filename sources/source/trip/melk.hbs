@@ -1,0 +1,46 @@
+{{> doctype}}
+<html lang="de">
+{{> header}}
+<body>
+  <h1>Melk Shifffahrt</h1>
+  {{> menu active='trips'}}
+  <div class="page-content">
+
+    <div class="content">
+      <p>
+        Tagesausflug nach Melk zum Schiffahrt.
+      </p>
+
+      <h2>Hin</h2>
+      {{> trip-details
+        details=global.listings.melk.part1
+      }}
+
+      <p>
+        <iframe class="route-image" src="https://www.google.com/maps/embed?pb=!1m48!1m12!1m3!1d51309.33013098877!2d15.985550746406041!3d48.33590376252598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m33!3e0!4m5!1s0x476d06f6a9a48b3b%3A0x2cd0bab263e7514b!2sDanube%20Tower%2C%20Donauturmplatz%201%2C%201220%20Wien!3m2!1d48.2403397!2d16.4100505!4m5!1s0x476d0b22c5095573%3A0xca32125486c75baa!2sTulbingerkogel%2C%203001!3m2!1d48.27301!2d16.152899899999998!4m3!3m2!1d48.2966626!2d15.967069899999998!4m5!1s0x476d7ff7febfc5eb%3A0x9ec1f143ceaaf04f!2sHerzogenburg!3m2!1d48.2869872!2d15.6921489!4m3!3m2!1d48.2497889!2d15.419924!4m5!1s0x4772643ee173e4b1%3A0x5e43955dc4627102!2sDDSG%20Blue%20Danube%20Schiffahrt%20GmbH%2C%20Kolomaniau%201%20Rollf%C3%A4hrestra%C3%9Fe%20Hafenspitz%2C%203390%20Melk!3m2!1d48.2330164!2d15.3282773!5e0!3m2!1sen!2sat!4v1745756088171!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </p>
+      <p>
+        Ganz gemütlich via Tulbinerkogel.
+      </p>
+
+
+      <h2>Zurück</h2>
+
+      {{> trip-details
+        details=global.listings.melk.part2
+      }}
+
+      <p>
+        <iframe class="route-image" src="https://www.google.com/maps/embed?pb=!1m52!1m12!1m3!1d21339.521726527393!2d16.09407981067739!3d48.04383745741528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m37!3e0!4m5!1s0x4772643ee173e4b1%3A0x5e43955dc4627102!2sDDSG%20Blue%20Danube%20Schiffahrt%20GmbH%2C%20Kolomaniau%201%20Rollf%C3%A4hrestra%C3%9Fe%20Hafenspitz%2C%203390%20Melk!3m2!1d48.2330164!2d15.3282773!4m5!1s0x47727b58024859b7%3A0xee84c976967930ab!2sUmbach!3m2!1d48.23918!2d15.4383!4m3!3m2!1d48.2196249!2d15.4801045!4m3!3m2!1d48.1850473!2d15.713408399999999!4m3!3m2!1d48.1229805!2d15.8134111!4m5!1s0x476dbb4e4107d0a5%3A0xad175dd1c1e3324b!2sHeiligenkreuz!3m2!1d48.0560359!2d16.128318699999998!4m5!1s0x476d06f6a9a48b3b%3A0x2cd0bab263e7514b!2sDanube%20Tower%2C%20Donauturmplatz%201%2C%201220%20Wien!3m2!1d48.2403397!2d16.4100505!5e0!3m2!1sen!2sat!4v1745757000332!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </p>
+      <p>
+        Zurück ein bisschen andere Strecke, südlich.
+      </p>
+
+    </div>
+  </div>
+
+  {{> footer}}
+  {{> counter}}
+</body>
+</html>

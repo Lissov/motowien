@@ -66,6 +66,30 @@
       "day5": "in the html directly"
     },
 
+    "melk": {
+      "draft": "true",
+      "page": "melk.html",
+      "name": "Melk",
+      "text": "Schiffahrt Melk-Krems-Melk.",
+      "drivetime": "250 km",
+      "part1": {
+        "map": "https://maps.app.goo.gl/V9SU97sYzJtjk6wx5",
+        "kurviger": "https://kurv.gr/3FCC5",
+        "gpx": "melk1",
+        "length": "110 km",
+        "drivetime": "2 Stunden",
+        "complexity": "Leicht"
+      },
+      "part2": {
+        "map": "https://maps.app.goo.gl/M8Ux82AXgDAAP4k46",
+        "kurviger": "https://kurv.gr/dPacq",
+        "gpx": "melk2",
+        "length": "120 km",
+        "drivetime": "2.5 Stunden",
+        "complexity": "Mittel"
+      }
+    },
+
     "leoben": {
       "page": "leoben.html", "name": "Leoben", "draft": "true", "text": "Wochenende in Leoben.",
       "length": " km",
