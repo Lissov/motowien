@@ -17,6 +17,7 @@ module.exports.registerHelpers = function() {
   });
 
   Handlebars.registerHelper('translate', function(value, options) {
+    if (!value) return value; // If value is empty, return it as is
     switch (this.lang) {
       case 'uk': return value
                           .replace('km', 'км')
