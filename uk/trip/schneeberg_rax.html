@@ -1,0 +1,93 @@
+<!doctype html public "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>МотоВідень</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="..\..\images\motowien_icon.png">
+    <link rel="stylesheet" href="..\..\styles.css">
+</head>
+<body>
+  <h1>Pucjberg am Schneeberg und Rax</h1>
+  <div class="menu-container">
+    <div class="language"></div>
+    <div class="menu">
+      <div >
+        <a href="..\..\uk\index.html">Старт</a>
+      </div><div class="active">
+        <a href="..\..\uk\trips.html">Маршрути</a>
+      </div><div >
+        <a href="..\..\uk\travel.html">Туризм</a>
+      </div><div >
+        <a href="..\..\uk\tech.html">Технології</a>
+      </div>
+    </div>
+    <div class="language">
+      <a class="flag flag-de" href="..\..\trip\schneeberg_rax.html"
+    title="Sprache auf Deutsch wechseln">
+    <div class="de-top"></div>
+    <div class="de-middle"></div>
+    <div class="de-bottom"></div>
+  </a>
+      
+  
+    </div>
+  </div>
+  <div class="page-content">
+    <div class="content">
+
+      <div class="route-core-data">
+        <p>
+          <a href="https://maps.app.goo.gl/yymeFA7ZaBLsVVH56" target="_blank">Карта</a>&nbsp;
+          <a href="../gps/rax_schneeberg.gpx" target="_blank">GPX файл</a>
+          <button type="button" onclick="navigator.clipboard.writeText(window.location.origin + '/gps/rax_schneeberg.gpx')">Скопіювати</button>
+        </p>
+        <a href="https://kurv.gr/qN6M3" target="_blank">Маршрут Kurviger</a>
+        <p>Довжина: <b>270 км</b></p>
+        <p>Час їзди: <b>5 годин</b></p>
+        <p>Складність: <b>середній</b></p>
+      </div>
+      <p>
+        <iframe class="route-image" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </p>
+      <p>
+        Heiligenkreuz, Mayerling, Puchberg am Schneeberg, Rax, Kalte Kuchl, St. Corona, Mauerbach. 
+      </p>
+
+      <p>
+        Gute aber ziemlich lange Route.
+      </p>
+
+      <p>
+        
+      </p>
+      <p>
+      </p>
+      <p>
+      </p>
+      <p>
+      </p>
+
+    </div>
+  </div>
+
+  <div class="footer">
+      <div class="footer-content">
+          <p>2025 &#169; Павло Ліссов</p>
+          <p>Всі права на зображення і фотографії належать Павлу Ліссову</p>
+          <p>Контакт: <a href="mailto: admin@lissov.net?subject=MotoWien">Надіслати листа</a></p>  
+      </div>
+  </div>
+  <script>
+    var t = localStorage.getItem('allowTracking');
+    if (t !== 'false') {
+      var cid = t === 'true' ? localStorage.getItem('clientId') : 'anonymous';
+      var x = new XMLHttpRequest();
+      x.open('GET', 'https://lissov.net/api/visitors/log?pageName=schneeberg_rax.html&clientId=' + cid, true);
+      x.send();
+    }
+  </script>
+</body>
+</html>
