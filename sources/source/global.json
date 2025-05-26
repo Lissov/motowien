@@ -1,5 +1,16 @@
 {
   "listings": {
+    "schneeberg_rax": {
+      "page": "schneeberg_rax.html", "name": "Rax und Schneeberg",
+      "text": "Kulinarik-Runde zu Schneeberg und Rax. Gut für eine gemütliche Runde mit Beifahrer.",
+      "map": "https://goo.gl/maps/JEAe2zAL5BUmd3aa6",
+      "gpx": "rax_schneeberg",
+      "kurviger": "",
+      "length": "",
+      "drivetime": "",
+      "complexity": "Mittel"
+    }
+
     "schweiz": {
       "draft": "true",
       "page": "schweiz.html",
