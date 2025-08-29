@@ -41,5 +41,9 @@ module.exports.registerHelpers = function() {
 
   Handlebars.registerHelper('json', function(context) {
     return JSON.parse(context);
-});
+  });
+
+  Handlebars.registerHelper('setVar', function(varName, varValue, options) {
+    options.data.root[varName] = varValue;
+  });
 }
