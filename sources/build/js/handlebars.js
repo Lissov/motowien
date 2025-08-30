@@ -48,8 +48,8 @@ module.exports.registerHelpers = function() {
   });
   
   Handlebars.registerHelper('addDays', function(day, delta, options) {
-    const days = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag'];
+    const days = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag'];
     const i = days.indexOf(day);
-    return days[(i + delta) % 4] || ('incorrect ' + (i + delta) + " : " + ((i + delta) % 4));
+    return days[(i + delta) % 7];
   });
 }
