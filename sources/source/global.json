@@ -11,6 +11,13 @@
       "complexity": "Mittel"
     },
 
+    "schweiz2": {
+      "draft": "true",
+      "page": "schweiz2.html",
+      "name": "Schweiz ohne Stelvio",
+      "text": "Kleine Runde in Nordosten Schweiz ab Feldkirchen Bahnhof (Autoreisezug).",
+      "drivetime": "800 km (4 Tagen)" 
+    },
     "schweiz": {
       "draft": "true",
       "page": "schweiz.html",
