@@ -46,4 +46,10 @@ module.exports.registerHelpers = function() {
   Handlebars.registerHelper('setVar', function(varName, varValue, options) {
     options.data.root[varName] = varValue;
   });
+  
+  Handlebars.registerHelper('addDays', function(day, delta, options) {
+    const days = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag'];
+    const i = days.indexOf(day);
+    return days[i + delta];
+  });
 }
