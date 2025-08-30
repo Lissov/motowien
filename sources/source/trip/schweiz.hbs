@@ -1,6 +1,7 @@
 {{> doctype}}
 <html lang="de">
 {{> header}}
+{{setVar "start" "Mittwoch"}}
 <body>
   <h1>{{#lang "de"}}Schweiz ab Feldkirch (Autoreisezug){{else}}Швейцарія (Від автопоїзда Фельдкірха){{/lang}}</h1>
   {{> menu active='trips'}}
@@ -64,7 +65,7 @@
 
 
       <h3 id="n1">Nacht 1: Auto-reisezug Wien-Feldkirch</h3>
-      <div class="dates-hint under-h3">Tag 0 (Donnerstag): 21:00 - Tag 1 8:00</div>
+      <div class="dates-hint under-h3">{{start}} 21:00 - Tag 1 8:00</div>
       {{> trip-details
         details=(json '{
           "map": "https://maps.app.goo.gl/9ZrPh8t9XUnstSLE8",
