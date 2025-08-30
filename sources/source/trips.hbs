@@ -12,10 +12,11 @@
         Alle meine Ausflüge beginnen beim Donauturm in Wien, da ich in der nähe wohne.
       </p>
 
-      {{#each global.listings}}
-      {{> trip-listing trip=this this=@root}}
-
-      {{/each}}
+      <div class="route-cards">
+        {{#each global.listings}}
+        {{> trip-listing trip=this this=@root}}
+        {{/each}}
+      </div>
   </div>
 
   {{> footer}}

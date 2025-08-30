@@ -102,6 +102,55 @@ h1 {
   vertical-align:     top;
 }
 
+/* Route cards in trips */
+.route-cards {
+  /*display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: flex-start;
+  margin: 2rem 0;*/
+}
+
+.route-card {
+  /* background: #fff; */
+  border: 1px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  /*min-height: 100px;*/
+  /*display: flex;
+  flex-direction: column;
+  justify-content: space-between;*/
+  transition: box-shadow 0.2s;
+
+  h3 {
+    margin-top: 0.3rem;
+    margin-bottom: 0.2rem;
+    text-align: left;
+  }
+}
+
+.route-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+
+.route-meta {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.2em;
+  font-size: 0.8em;
+  font-style: italic;
+  color: #666;
+  margin-top: auto;
+  padding-top: 0.1em;
+  border-top: 1px solid #eee;
+}
+
+/* End of route cards in trips */
+
+
+
 .route-image {
   max-width:          100%;
   margin-left:        auto;
