@@ -50,6 +50,6 @@ module.exports.registerHelpers = function() {
   Handlebars.registerHelper('addDays', function(day, delta, options) {
     const days = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag'];
     const i = days.indexOf(day);
-    return days[(i + delta) % days.Length] || 'incorrect';
+    return days[(i + delta) % 7] || 'incorrect ' + (i + delta) + " : " + ((i + delta) % 7));
   });
 }
