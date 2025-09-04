@@ -1,15 +1,3 @@
-<!--h2>
-  <a href="trip/{{trip.page}}">{{trip.name}}</a>
-
-  {{#ifEquals trip.draft "true"}}
-  {{> draft}}
-  
-  {{/ifEquals}}
-</h2>
-<p>
-  {{trip.text}}
-</p-->
-
 <div class="route-card">
   <h3><a href="trip/{{trip.page}}">{{trip.name}}</a>
     {{#ifEquals trip.draft "true"}}
@@ -19,6 +7,6 @@
   <p>{{trip.text}}</p>
   <div class="route-meta">
     {{#if this.length}}<span>{{translate this.length}}</span>{{/if}}
-    <span>{{translate this.drivetime}}</span>
+    <span>⏱ {{translate this.drivetime}}</span>
   </div>
 </div>
