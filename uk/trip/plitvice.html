@@ -1,0 +1,102 @@
+<!doctype html public "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>МотоВідень</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="..\..\images\motowien_icon.png">
+    <link rel="stylesheet" href="..\..\styles.css">
+</head>
+
+<body>
+  <h1>Плітвіцькі Озера</h1>
+  <div class="menu-container">
+    <div class="language"></div>
+    <div class="menu">
+      <div >
+        <a href="..\..\uk\index.html">Старт</a>
+      </div><div class="active">
+        <a href="..\..\uk\trips.html">Маршрути</a>
+      </div><div >
+        <a href="..\..\uk\travel.html">Туризм</a>
+      </div><div >
+        <a href="..\..\uk\tech.html">Технології</a>
+      </div>
+    </div>
+    <div class="language">
+      <a class="flag flag-de" href="..\..\trip\plitvice.html"
+    title="Sprache auf Deutsch wechseln">
+    <div class="de-top"></div>
+    <div class="de-middle"></div>
+    <div class="de-bottom"></div>
+  </a>
+      
+  
+    </div>
+  </div>
+  <div class="page-content">
+    <div class="content">
+
+        <span class="draft-badge" title="Це чорновик маршруту або принаймні GPX-треку, який я ще не їздив. При нагоді перевірю і покращу опис...">Чорновик</span>
+      <p>
+        Приблизний план.
+      </p>
+      <div class="route-core-data">
+        <a href="https://kurv.gr/JRthq" target="_blank">Маршрут Kurviger</a>
+        <p>Довжина: <b>1400 км</b></p>
+        <p>Час їзди: <b>18 годин</b></p>
+        
+      </div>
+
+      <p></p>
+      <p>
+        План:<ul>
+          <li><a href="#n1"></a></li>
+        </ul> 
+      </p>
+      
+      <h3>Wichtiges</h3>
+        Geschwindigkeit in Kroatien: 
+        <ul>
+          <li>Ortsgebiet: 50 km/h.</li>
+          <li>Außerorts: 90 km/h.</li>
+          <li>Schnellstraße: 110 km/h.</li>
+          <li>Autobahn: 130 km/h.</li>
+        </ul>
+        Vignette bezahlt am Autobahnen.
+      </p>
+
+      <h3 id="n1">Tag 1: </h3>
+      <div class="dates-hint under-h3">Samstag</div>
+      <div class="route-core-data">
+        
+      </div>
+      <p class="route-map">
+      </p>
+
+      <h3 id="t1">Tag 2: </h3>
+      <div class="dates-hint under-h3">Sonntag</div>
+   
+    </div>
+  </div>
+
+  <div class="footer">
+      <div class="footer-content">
+          <p>2025 &#169; Павло Ліссов</p>
+          <p>Всі права на зображення і фотографії належать Павлу Ліссову</p>
+          <p>Контакт: <a href="mailto: admin@lissov.net?subject=MotoWien">Надіслати листа</a></p>  
+      </div>
+  </div>
+  <script>
+    var t = localStorage.getItem('allowTracking');
+    if (t !== 'false') {
+      var cid = t === 'true' ? localStorage.getItem('clientId') : 'anonymous';
+      var x = new XMLHttpRequest();
+      x.open('GET', 'https://lissov.net/api/visitors/log?pageName=plitvice.html&clientId=' + cid, true);
+      x.send();
+    }
+  </script>
+</body>
+</html>
