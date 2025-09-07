@@ -11,6 +11,14 @@
       "complexity": "Mittel"
     },
 
+    "plitvice": {
+      "draft": "true",
+      "page": "plitvice.html",
+      "name": "Plitvicer Seen",
+      "text": "Tour ins Kroatien tum Pritvicer Seen und Adriatik Küste.",
+      "length": "1400 km",
+      "drivetime": "5 Tagen" 
+    },
     "schweiz2": {
       "draft": "true",
       "page": "schweiz2.html",
