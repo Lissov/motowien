@@ -1,0 +1,64 @@
+{{> doctype}}
+<html lang="de">
+{{> header}}
+{{setVar "start" "Samstag"}}
+<body>
+  <h1>{{#lang "de"}}Plitvicer Seen{{else}}Плітвіцькі Озера{{/lang}}</h1>
+  {{> menu active='trips'}}
+  <div class="page-content">
+    <div class="content">
+
+      {{> draft}}
+      <p>
+        {{#lang "de"}}Entwurf, zum Planen.{{else}}Приблизний план.{{/lang}}
+      </p>
+      {{> trip-details
+        details=(json '{
+          "map": "",
+          "kurviger": "https://kurv.gr/JRthq",
+          "length": "1400 km",
+          "drivetime": "18 Stunden"
+        }')
+      }}
+
+      <p></p>
+      <p>
+        {{#lang "de"}}Plan{{else}}План{{/lang}}:<ul>
+          <li><a href="#n1">{{#lang "de"}}Tag 1:{{else}}{{/lang}}</a></li>
+        </ul> 
+      </p>
+      
+      <h3>Wichtiges</h3>
+        Geschwindigkeit in Kroatien: 
+        <ul>
+          <li>Ortsgebiet: 50 km/h.</li>
+          <li>Außerorts: 90 km/h.</li>
+          <li>Schnellstraße: 110 km/h.</li>
+          <li>Autobahn: 130 km/h.</li>
+        </ul>
+        Vignette bezahlt am Autobahnen.
+      </p>
+
+      <h3 id="n1">Tag 1: </h3>
+      <div class="dates-hint under-h3">{{addDays start 0}}</div>
+      {{> trip-details
+        details=(json '{
+          "map": "",
+          "kurviger": "",
+          "length": "",
+          "drivetime": ""
+        }')
+      }}
+      <p class="route-map">
+      </p>
+
+      <h3 id="t1">Tag 2: </h3>
+      <div class="dates-hint under-h3">{{addDays start 1}}</div>
+   
+    </div>
+  </div>
+
+  {{> footer}}
+  {{> counter}}
+</body>
+</html>
