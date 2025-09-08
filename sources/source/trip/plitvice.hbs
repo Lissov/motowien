@@ -13,28 +13,27 @@
         {{#lang "de"}}Entwurf, zum Planen.{{else}}Приблизний план.{{/lang}}
       </p>
       {{> trip-details details=global.listings.plitvice}}
-      {{> trip-details
-        details=(json '{
-          "map": "https://maps.app.goo.gl/k3hYiTCoZ5FByxU47",
-          "kurviger": "https://kurv.gr/JRthq",
-          "length": "1250 km",
-          "drivetime": "18 Stunden"
-        }')
-      }}
 
       <p class="route-map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m70!1m12!1m3!1d2813685.905557404!2d12.559997087318536!3d46.47365494823786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m55!3e0!4m5!1s0x476d06f6a9a48b3b%3A0x2cd0bab263e7514b!2sDonauturm%2C%20Donauturmplatz%2C%20Wien!3m2!1d48.2403397!2d16.4100505!4m5!1s0x476f0fc5d4fdef7d%3A0xd87fee9e3bcddb62!2sPfarrkirche%20Straden%2C%20Straden!3m2!1d46.8059277!2d15.8707897!4m3!3m2!1d45.763186999999995!2d15.912851999999999!4m5!1s0x47616784a5c87ea9%3A0x400ad50862bc3b0!2sPlitvi%C4%8Dka%20Jezera%2C%20Croatia!3m2!1d44.8820957!2d15.6233311!4m5!1s0x47639984a6ae8e53%3A0xee12096298e326b4!2sSenj!3m2!1d44.9930145!2d14.900241999999999!4m5!1s0x4764a12517aabe2d%3A0x373c6f383dcbb670!2sRijeka!3m2!1d45.3270631!2d14.442176!4m3!3m2!1d46.2283203!2d14.0235016!4m5!1s0x477a8e1dd7139961%3A0x400f81c823fec50!2sBled%2C%204260%2C%20Slovenia!3m2!1d46.368326599999996!2d14.1145798!4m3!3m2!1d46.4173526!2d14.5289004!4m5!1s0x476d06f6a9a48b3b%3A0x2cd0bab263e7514b!2sDonauturm%2C%20Donauturmplatz%2C%20Vienna!3m2!1d48.2403397!2d16.4100505!5e0!3m2!1sen!2sat!4v1757283649478!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </p>
       <p>
         {{#lang "de"}}Plan{{else}}План{{/lang}}:<ul>
-          <li><a href="#t1">{{#lang "de"}}Tag 1: Wien - Zagreb{{else}}{{/lang}}</a></li>
-          <li><a href="#t2">{{#lang "de"}}Tag 2: Plitvicer Seen{{else}}{{/lang}}</a></li>
-          <li><a href="#t3">{{#lang "de"}}Tag 3: Adriatische Küste{{else}}{{/lang}}</a></li>
-          <li><a href="#t4">{{#lang "de"}}Tag 4: Bohinj und Bled{{else}}{{/lang}}</a></li>
-          <li><a href="#t5">{{#lang "de"}}Tag 5: Zurück nach Wien{{else}}{{/lang}}</a></li>
+          <li><a href="#t1">{{#lang "de"}}Tag 1: Wien - Zagreb ({{addDays start 0}}){{else}}{{/lang}}</a></li>
+          <li><a href="#t2">{{#lang "de"}}Tag 2: Plitvicer Seen ({{addDays start 1}}){{else}}{{/lang}}</a></li>
+          <li><a href="#t3">{{#lang "de"}}Tag 3: Adriatische Küste ({{addDays start 2}}){{else}}{{/lang}}</a></li>
+          <li><a href="#t4">{{#lang "de"}}Tag 4: Bohinj und Bled ({{addDays start 3}}){{else}}{{/lang}}</a></li>
+          <li><a href="#t5">{{#lang "de"}}Tag 5: Zurück nach Wien ({{addDays start 4}}){{else}}{{/lang}}</a></li>
         </ul> 
       </p>
-      
+
+      <h3>Wetter</h3>
+      <p>
+        <a href="https://at.wetter.com/wetter_aktuell/wettervorhersage/7_tagesvorhersage/kroatien/plitvica-seen/HR10630047.html">Plitvizer Seen</a><br/>
+        <a href="https://at.wetter.com/wetter_aktuell/wettervorhersage/7_tagesvorhersage/kroatien/rijeka/HR0PG0002.html">Rijeka</a><br/>
+        <a href="https://at.wetter.com/wetter_aktuell/wettervorhersage/7_tagesvorhersage/slowenien/bohinjska-bistrica/SI3203808.html">Bohinj und Bled</a><br/>
+      </p>
+
       <h3>Wichtiges</h3>
         Geschwindigkeit in Kroatien: 
         <ul>

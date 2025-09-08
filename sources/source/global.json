@@ -16,7 +16,9 @@
       "page": "plitvice.html",
       "name": "Plitvicer Seen",
       "text": "Tour ins Kroatien tum Pritvicer Seen und Adriatik Küste.",
-      "length": "1400 km",
+      "map" : "https://maps.app.goo.gl/k3hYiTCoZ5FByxU47",
+      "kurviger": "https://kurv.gr/JRthq",
+      "length": "1250 km",
       "drivetime": "5 Tagen" 
     },
     "schweiz2": {
