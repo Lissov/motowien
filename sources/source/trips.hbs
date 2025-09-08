@@ -3,18 +3,35 @@
 {{> header root=''}}
 
 <body>
-  <h1>Motorrad rund um Wien: Ausflüge</h1>
+  <h1>{{#lang "de"}}Motorrad rund um Wien: Ausflüge{{else}}Мотопоїздки з Відня{{/lang}}</h1>
   {{> menu root=root active='trips'}}
   <div class="page-content">
 
     <div class="content">
       <p>
+        {{#lang "de"}}
         Alle meine Ausflüge beginnen beim Donauturm in Wien, da ich in der nähe wohne.
+        {{else}}
+        Всі мої поїздки починаються біля Донаутурм (оглядової вежі у Донаупарку) у Відні, оскільки я живу поруч.
+        {{/lang}}
       </p>
 
       <div class="route-cards">
-        {{#each global.listings}}
-        {{> trip-listing trip=this this=@root}}
+
+        <details open>
+          <summary>{{#lang "de"}}Favoriten{{else}}Улюблені{{/lang}}</summary>
+          {{> trip-listing trip=global.listings.plitvice this=@root}}
+          {{> trip-listing trip=global.listings.schweiz2 this=@root}}
+          {{> trip-listing trip=global.listings.schweiz this=@root}}
+        </details>
+
+        {{#each global.groups}}
+          <details>
+            <summary>{{#lang "de"}}{{header}}{{else}}{{headerUk}}{{/lang}}</summary>
+            {{#each (getTripsByNames trips)}}
+              {{> trip-listing trip=this this=@root}}
+            {{/each}}
+          </details>
         {{/each}}
       </div>
   </div>

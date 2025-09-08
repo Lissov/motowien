@@ -1,7 +1,100 @@
 {
+  "groups": {
+    "short": {
+      "header": "Kurze Routen",
+      "headerUk": "Короткі маршрути",
+      "trips": ["burgenland", "kahlenberg", "tulln", "heiligenkreuz", "durnstein"]
+    },
+    "day": {
+      "header": "Tagesausflüge",
+      "headerUk": "Одноденні поїздки",
+      "trips": ["schneeberg_rax", "melk", "graz", "schneeberg"]
+    },
+    "austria": {
+      "header": "Österreich",
+      "headerUk": "Австрія",
+      "trips": ["oesterreich", "leoben", "rbr", "grossglockner", "westrunde_1", "noe_waldviertel"]
+    },
+    "abroad": {
+      "header": "Ausland",
+      "headerUk": "Закордон",
+      "trips": ["plitvice", "schweiz2", "schweiz", "sudtirol", "krumlov"]
+    }
+  },
   "listings": {
+    "burgenland": {
+      "page": "burgenland.html",
+      "name": "Burgenland",
+      "text": "Plan für Leithagebirge.",
+      "maps": [
+        {
+          "title": "Wien - Fischamend (26.5 km):",
+          "map": "https://goo.gl/maps/tXKpWtRf1mS984dW9"
+        },
+        {
+          "title": "Fischamend - Eisenstadt (61 km):",
+          "map": "https://goo.gl/maps/ntVrKDYYHLEca1177"
+        },
+        {
+          "title": "Eisenstadt - Wien (64 km):",
+          "map": "https://goo.gl/maps/Mjz4vroHyV15QR9i7"
+        }
+      ],
+      "calimoto": "https://calimoto.com/calimotour/vienna-eisenstadt-r-b1ecV87cJZ",
+      "length": "153 km",
+      "drivetime": "3 Stunden",
+      "complexity": "Mittel",
+      "alternative": {
+        "calimoto": "https://calimoto.com/calimotour/leithagebirge-r-jErKqug82O",
+        "length": "196 km",
+        "drivetime": "4 Stunden",
+        "complexity": "Mittel"
+      }
+    },
+    "kahlenberg": {
+      "page": "kahlenberg.html",
+      "name": "Kahlenberg",
+      "draft": "true",
+      "text": "Eine kleine Runde für ein Paar Stunden.",
+      "map": "https://goo.gl/maps/QBXKhJS8s27w99936",
+      "gpx": "kahlenberg",
+      "length": "... km",
+      "drivetime": "...",
+      "complexity": "Einfach"
+    },
+    "tulln": {
+      "page": "tulln.html",
+      "name": "Tulln",
+      "text": "Etwas großere Tagesrunde.",
+      "map": "https://goo.gl/maps/Vo6QSTWQzKdUm6Fi6",
+      "gpx": "tulln",
+      "length": "84 km",
+      "drivetime": "2 Stunden 10 Minuten",
+      "complexity": "Einfach"
+    },
+    "heiligenkreuz": {
+      "page": "heiligenkreuz.html",
+      "name": "Heiligenkreuz",
+      "text": "Tagesausflug.",
+      "map": "https://goo.gl/maps/abfmUSiSJPQnfZN59",
+      "gpx": "heiligenkreuz",
+      "length": "89 km",
+      "drivetime": "2 Stunden",
+      "complexity": "Mittel"
+    },
+    "durnstein": {
+      "page": "durnstein.html",
+      "name": "Durnstein",
+      "text": "Marillenblute... oder einfach Straßen :)",
+      "map": "https://goo.gl/maps/Y5FyHCBQLRsYX7Uu7",
+      "gpx": "durnstein",
+      "length": "185 km",
+      "drivetime": "4 Stunden",
+      "complexity": "Mittel"
+    },
     "schneeberg_rax": {
-      "page": "schneeberg_rax.html", "name": "Rax und Schneeberg",
+      "page": "schneeberg_rax.html",
+      "name": "Rax und Schneeberg",
       "text": "Kulinarik-Runde zu Schneeberg und Rax. Gut für eine gemütliche Runde mit Beifahrer.",
       "map": "https://maps.app.goo.gl/yymeFA7ZaBLsVVH56",
       "gpx": "schneeberg_rax",
@@ -10,49 +103,66 @@
       "drivetime": "5 Stunden",
       "complexity": "Mittel"
     },
-
-    "plitvice": {
+    "melk": {
       "draft": "true",
-      "page": "plitvice.html",
-      "name": "Plitvicer Seen",
-      "text": "Tour ins Kroatien tum Pritvicer Seen und Adriatik Küste.",
-      "map" : "https://maps.app.goo.gl/k3hYiTCoZ5FByxU47",
-      "kurviger": "https://kurv.gr/JRthq",
-      "length": "1250 km",
-      "drivetime": "5 Tagen" 
+      "page": "melk.html",
+      "name": "Melk",
+      "text": "Schiffahrt Melk-Krems-Melk.",
+      "drivetime": "250 km",
+      "part1": {
+        "map": "https://maps.app.goo.gl/V9SU97sYzJtjk6wx5",
+        "kurviger": "https://kurv.gr/3FCC5",
+        "gpx": "melk1",
+        "length": "110 km",
+        "drivetime": "2 Stunden",
+        "complexity": "Leicht"
+      },
+      "part2": {
+        "map": "https://maps.app.goo.gl/M8Ux82AXgDAAP4k46",
+        "kurviger": "https://kurv.gr/dPacq",
+        "gpx": "melk2",
+        "length": "120 km",
+        "drivetime": "2.5 Stunden",
+        "complexity": "Mittel"
+      }
     },
-    "schweiz2": {
+    "graz": {
+      "page": "graz.html",
+      "name": "Graz",
       "draft": "true",
-      "page": "schweiz2.html",
-      "name": "Schweiz ohne Stelvio",
-      "text": "Kleine Runde in Nordosten Schweiz ab Feldkirchen Bahnhof (Autoreisezug).",
-      "length": "800 km",
-      "drivetime": "4 Tagen" 
+      "text": "Tagesausflug ins Graz.",
+      "part1": {
+        "map": "https://maps.app.goo.gl/uT3ZMdRbLACR3cX8A",
+        "gpx": "graz",
+        "length": "157 km + Autobahn von Wien",
+        "drivetime": "3 Stunden",
+        "complexity": "Mittel",
+        "kurviger": "https://kurv.gr/DE5Gx"
+      },
+      "part2": {
+        "map": "https://maps.app.goo.gl/JBvFHZTcUCdXVZPLA",
+        "gpx": "graz",
+        "length": "204 km",
+        "drivetime": "3 Stunden",
+        "complexity": "Mittel",
+        "kurviger": "https://kurv.gr/DE5Gx"
+      }
     },
-    "schweiz": {
-      "draft": "true",
-      "page": "schweiz.html",
-      "name": "Schweiz",
-      "text": "Kleine Runde in Nordosten Schweiz ab Feldkirchen Bahnhof (Autoreisezug).",
-      "length": "1500 km",
-      "drivetime": "5 Tagen"
-    },
-    "sudtirol": {
-      "draft": "true",
-      "page": "sudtirol.html",
-      "name": "Südtirol",
-      "text": "Von Feldkirch durch Südtirol nach Hause",
-      "drivetime": "1000 km"
-    },
-    "krumlov": {
-      "draft": "true",
-      "page": "krumlov.html",
-      "name": "Cesky Krumlov",
-      "text": "2-3 Tage Runde zum Czechische Republik: Cesky Krumlov",
-      "drivetime": "1000 km"
+    "schneeberg": {
+      "page": "schneeberg.html",
+      "name": "Schneeberg via Leithagebirge",
+      "text": "Lange aber sehr schöne Runde.",
+      "map": "https://goo.gl/maps/JEAe2zAL5BUmd3aa6",
+      "gpx": "schneeberg",
+      "calimoto": "https://calimoto.com/calimotour/leithagebirge-schneeberg-r-Eiz5l8bA2a",
+      "length": "282 km",
+      "drivetime": "6 Stunden",
+      "complexity": "Mittel lang"
     },
     "oesterreich": {
-      "page": "oesterreich.html", "name": "Österreich", "text": "Durch ganzes Land.",
+      "page": "oesterreich.html",
+      "name": "Österreich",
+      "text": "Durch ganzes Land.",
       "map": "https://maps.app.goo.gl/nySFhyBDPg3SDR5Y7",
       "length": "1100 km",
       "drivetime": "18 Stunden",
@@ -95,39 +205,17 @@
       "day4": "in the html directly",
       "day5": "in the html directly"
     },
-
-    "melk": {
-      "draft": "true",
-      "page": "melk.html",
-      "name": "Melk",
-      "text": "Schiffahrt Melk-Krems-Melk.",
-      "drivetime": "250 km",
-      "part1": {
-        "map": "https://maps.app.goo.gl/V9SU97sYzJtjk6wx5",
-        "kurviger": "https://kurv.gr/3FCC5",
-        "gpx": "melk1",
-        "length": "110 km",
-        "drivetime": "2 Stunden",
-        "complexity": "Leicht"
-      },
-      "part2": {
-        "map": "https://maps.app.goo.gl/M8Ux82AXgDAAP4k46",
-        "kurviger": "https://kurv.gr/dPacq",
-        "gpx": "melk2",
-        "length": "120 km",
-        "drivetime": "2.5 Stunden",
-        "complexity": "Mittel"
-      }
-    },
-
     "leoben": {
-      "page": "leoben.html", "name": "Leoben", "draft": "true", "text": "Wochenende in Leoben.",
+      "page": "leoben.html",
+      "name": "Leoben",
+      "draft": "true",
+      "text": "Wochenende in Leoben.",
       "length": " km",
       "drivetime": " Stunden",
       "complexity": "Mittel",
       "day1": {
         "map": "https://maps.app.goo.gl/K5aVsvFSgsUcPrMD6",
-        "draft": "true", 
+        "draft": "true",
         "gpx": "leoben_1",
         "length": "262 km",
         "drivetime": "4.5 Stunden",
@@ -135,15 +223,16 @@
       },
       "day2": {
         "map": "https://maps.app.goo.gl/PxbPUfHmmsjwWQLGA",
-        "draft": "true", 
+        "draft": "true",
         "length": "319 km",
         "drivetime": "5.5 Stunden",
         "complexity": "Mittel"
       }
     },
-
     "rbr": {
-      "page": "rbr.html", "name": "Red-Bull-Ring", "text": "Ausflüg zum Event am Ring.",
+      "page": "rbr.html",
+      "name": "Red-Bull-Ring",
+      "text": "Ausflüg zum Event am Ring.",
       "map": "https://maps.app.goo.gl/H4KKXMnwi4VvNUTu6",
       "length": "550 km",
       "drivetime": "10 Stunden",
@@ -169,16 +258,18 @@
         "complexity": "Mittel"
       }
     },
-
     "grossglockner": {
-      "page": "grossglockner.html", "name": "Grossglockner", "draft": "true", "text": "Traumreise.",
+      "page": "grossglockner.html",
+      "name": "Grossglockner",
+      "draft": "true",
+      "text": "Traumreise.",
       "map": "https://maps.app.goo.gl/H4KKXMnwi4VvNUTu6",
       "length": "928 km",
       "drivetime": "16 Stunden",
       "complexity": "Schwer",
       "day1": {
         "map": "https://maps.app.goo.gl/amwCrVRYqscbvRow8",
-        "draft": "true", 
+        "draft": "true",
         "gpx": "grossglockner_1",
         "length": "280 km",
         "drivetime": "4.5 Stunden",
@@ -186,7 +277,7 @@
       },
       "day2": {
         "map": "https://maps.app.goo.gl/AGwaRKLKwRRN1vYu9",
-        "draft": "true", 
+        "draft": "true",
         "gpx": "grossglockner_2",
         "length": "169 km",
         "drivetime": "3.5 Stunden",
@@ -194,7 +285,7 @@
       },
       "day3": {
         "map": "https://maps.app.goo.gl/EPDBb8nttL8gxsfT7",
-        "draft": "true", 
+        "draft": "true",
         "gpx": "grossglockner_3",
         "length": "90 km",
         "drivetime": "1.5 Stunden",
@@ -202,35 +293,17 @@
       },
       "day4": {
         "map": "https://maps.app.goo.gl/ucvE3smg2sMVa9tN68",
-        "draft": "true", 
+        "draft": "true",
         "gpx": "grossglockner_4",
         "length": "389 km",
         "drivetime": "6 Stunden",
         "complexity": "Schwer"
       }
     },
-
-    "graz": { "page": "graz.html", "name": "Graz", "draft": "true", "text": "Tagesausflug ins Graz.",
-      "part1": {
-        "map": "https://maps.app.goo.gl/uT3ZMdRbLACR3cX8A",
-        "gpx": "graz",
-        "length": "157 km + Autobahn von Wien",
-        "drivetime": "3 Stunden",
-        "complexity": "Mittel",
-        "kurviger": "https://kurv.gr/DE5Gx"
-      },
-      "part2": {
-        "map": "https://maps.app.goo.gl/JBvFHZTcUCdXVZPLA",
-        "gpx": "graz",
-        "length": "204 km",
-        "drivetime": "3 Stunden",
-        "complexity": "Mittel",
-        "kurviger": "https://kurv.gr/DE5Gx"
-      }
-    },
-
     "westrunde_1": {
-      "page": "westrunde_1.html", "name": "Westrunde für 2 Tage", "draft": "true",
+      "page": "westrunde_1.html",
+      "name": "Westrunde für 2 Tage",
+      "draft": "true",
       "text": "2-Tages Runde entlang der Donau, sehr schöne und interessante Straßen.",
       "length": "XXXX km",
       "drivetime": "XXXX Stunden",
@@ -252,19 +325,10 @@
         "complexity": "Mittel"
       }
     },
-
-    "schneeberg": {
-      "page": "schneeberg.html", "name": "Schneeberg via Leithagebirge", "text": "Lange aber sehr schöne Runde.",
-      "map": "https://goo.gl/maps/JEAe2zAL5BUmd3aa6",
-      "gpx": "schneeberg",
-      "calimoto": "https://calimoto.com/calimotour/leithagebirge-schneeberg-r-Eiz5l8bA2a",
-      "length": "282 km",
-      "drivetime": "6 Stunden",
-      "complexity": "Mittel lang"
-    },
-
     "noe_waldviertel": {
-      "page": "noe_waldviertel.html", "name": "NÖ Waldviertel", "text": "3 Tages Route.",
+      "page": "noe_waldviertel.html",
+      "name": "NÖ Waldviertel",
+      "text": "3 Tages Route.",
       "length": "460 km",
       "drivetime": "9 Stunden",
       "complexity": "Mittel",
@@ -277,8 +341,16 @@
       },
       "day2": {
         "maps": [
-          { "title": "Ottenstein zu Weitra:", "gpx": "no_waldv_2_1", "map": "https://goo.gl/maps/jRZMBxQrT6FUaiWA7" },
-          { "title": "Weitra to Horn:", "gpx": "no_waldv_2_2", "map": "https://goo.gl/maps/GxfqW4UCTqgmmjK47" }
+          {
+            "title": "Ottenstein zu Weitra:",
+            "gpx": "no_waldv_2_1",
+            "map": "https://goo.gl/maps/jRZMBxQrT6FUaiWA7"
+          },
+          {
+            "title": "Weitra to Horn:",
+            "gpx": "no_waldv_2_2",
+            "map": "https://goo.gl/maps/GxfqW4UCTqgmmjK47"
+          }
         ],
         "length": "185 km",
         "drivetime": "3 Stunden",
@@ -292,60 +364,45 @@
         "complexity": "Leicht"
       }
     },
-
-    "burgenland": {
-      "page": "burgenland.html", "name": "Burgenland", "text": "Plan für Leithagebirge.",
-      "maps": [
-        { "title": "Wien - Fischamend (26.5 km):", "map": "https://goo.gl/maps/tXKpWtRf1mS984dW9" },
-        { "title": "Fischamend - Eisenstadt (61 km):", "map": "https://goo.gl/maps/ntVrKDYYHLEca1177" },
-        { "title": "Eisenstadt - Wien (64 km):", "map": "https://goo.gl/maps/Mjz4vroHyV15QR9i7" }
-      ],
-      "calimoto": "https://calimoto.com/calimotour/vienna-eisenstadt-r-b1ecV87cJZ",
-      "length": "153 km",
-      "drivetime": "3 Stunden",
-      "complexity": "Mittel",
-      "alternative": {
-        "calimoto": "https://calimoto.com/calimotour/leithagebirge-r-jErKqug82O",
-        "length": "196 km",
-        "drivetime": "4 Stunden",
-        "complexity": "Mittel"
-      }
+    "plitvice": {
+      "draft": "true",
+      "page": "plitvice.html",
+      "name": "Plitvicer Seen",
+      "text": "Tour ins Kroatien tum Pritvicer Seen und Adriatik Küste.",
+      "map": "https://maps.app.goo.gl/k3hYiTCoZ5FByxU47",
+      "kurviger": "https://kurv.gr/JRthq",
+      "length": "1250 km",
+      "drivetime": "5 Tagen"
     },
-
-    "kahlenberg": {
-      "page": "kahlenberg.html", "name": "Kahlenberg", "draft": "true", "text": "Eine kleine Runde für ein Paar Stunden.",
-      "map": "https://goo.gl/maps/QBXKhJS8s27w99936",
-      "gpx": "kahlenberg",
-      "length": "... km",
-      "drivetime": "...",
-      "complexity": "Einfach"
+    "schweiz2": {
+      "draft": "true",
+      "page": "schweiz2.html",
+      "name": "Schweiz ohne Stelvio",
+      "text": "Kleine Runde in Nordosten Schweiz ab Feldkirchen Bahnhof (Autoreisezug).",
+      "length": "800 km",
+      "drivetime": "4 Tagen"
     },
-
-    "tulln": {
-      "page": "tulln.html", "name": "Tulln", "text": "Etwas großere Tagesrunde.",
-      "map": "https://goo.gl/maps/Vo6QSTWQzKdUm6Fi6",
-      "gpx": "tulln",
-      "length": "84 km",
-      "drivetime": "2 Stunden 10 Minuten",
-      "complexity": "Einfach"
+    "schweiz": {
+      "draft": "true",
+      "page": "schweiz.html",
+      "name": "Schweiz",
+      "text": "Kleine Runde in Nordosten Schweiz ab Feldkirchen Bahnhof (Autoreisezug).",
+      "length": "1500 km",
+      "drivetime": "5 Tagen"
     },
-
-    "heiligenkreuz": {
-      "page": "heiligenkreuz.html", "name": "Heiligenkreuz", "text": "Tagesausflug.",
-      "map": "https://goo.gl/maps/abfmUSiSJPQnfZN59",
-      "gpx": "heiligenkreuz",
-      "length": "89 km",
-      "drivetime": "2 Stunden",
-      "complexity": "Mittel"
+    "sudtirol": {
+      "draft": "true",
+      "page": "sudtirol.html",
+      "name": "Südtirol",
+      "text": "Von Feldkirch durch Südtirol nach Hause",
+      "drivetime": "1000 km"
     },
-
-    "durnstein": {
-      "page": "durnstein.html", "name": "Durnstein", "text": "Marillenblute... oder einfach Straßen :)",
-      "map": "https://goo.gl/maps/Y5FyHCBQLRsYX7Uu7",
-      "gpx": "durnstein",
-      "length": "185 km",
-      "drivetime": "4 Stunden",
-      "complexity": "Mittel"
+    "krumlov": {
+      "draft": "true",
+      "page": "krumlov.html",
+      "name": "Cesky Krumlov",
+      "text": "2-3 Tage Runde zum Tschechische Republik: Cesky Krumlov",
+      "drivetime": "1000 km"
     }
   },
   "tourism": {

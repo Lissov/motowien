@@ -52,4 +52,10 @@ module.exports.registerHelpers = function() {
     const i = days.indexOf(day);
     return days[(i + delta) % 7];
   });
+
+  Handlebars.registerHelper('getTripsByNames', function(tripNames, options) {
+    return tripNames.map(name => {
+      return options.data.root.global.listings[name];
+    });
+  });
 }

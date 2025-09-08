@@ -5,4 +5,3 @@ module.exports.getRelativePathBack = function(filePath) {
   // Generate "../" for each directory level
   return '..\\'.repeat(depth); 
 }
-  
