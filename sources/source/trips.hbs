@@ -25,14 +25,17 @@
           {{> trip-listing trip=global.listings.schweiz this=@root}}
         </details>
 
-        {{#each global.groups}}
-          <details>
-            <summary>{{#lang "de"}}{{header}}{{else}}{{headerUk}}{{/lang}}</summary>
-            {{#each (getTripsByNames trips)}}
-              {{> trip-listing trip=this this=@root}}
-            {{/each}}
-          </details>
-        {{/each}}
+        {{#lang "de"}}
+          {{#each global.groups}}
+          {{> trip-group header=this.header trips=this.trips}}
+          {{/each}}
+        {{else}}
+          {{#each global.groups}}
+          {{> trip-group header=this.headerUk trips=this.trips}}
+          {{/each}}
+        {{/lang}}
+
+        
       </div>
   </div>
 

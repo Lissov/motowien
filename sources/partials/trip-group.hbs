@@ -1,0 +1,6 @@
+<details>
+  <summary>{{header}}</summary>
+  {{#each (getTripsByNames trips)}}
+  {{> trip-listing trip=this}}
+  {{/each}}
+</details>
