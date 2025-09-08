@@ -12,11 +12,12 @@
       <p>
         {{#lang "de"}}Entwurf, zum Planen.{{else}}Приблизний план.{{/lang}}
       </p>
+      {{> trip-details details=global.listings.plitvice}}
       {{> trip-details
         details=(json '{
           "map": "https://maps.app.goo.gl/k3hYiTCoZ5FByxU47",
           "kurviger": "https://kurv.gr/JRthq",
-          "length": "1400 km",
+          "length": "1250 km",
           "drivetime": "18 Stunden"
         }')
       }}
