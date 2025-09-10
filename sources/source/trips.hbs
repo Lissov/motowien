@@ -18,24 +18,16 @@
 
       <div class="route-cards">
 
-        <details open>
-          <summary>{{#lang "de"}}Favoriten{{else}}Улюблені{{/lang}}</summary>
-          {{> trip-listing trip=global.listings.plitvice this=@root}}
-          {{> trip-listing trip=global.listings.schweiz2 this=@root}}
-          {{> trip-listing trip=global.listings.schweiz this=@root}}
-        </details>
-
         {{#lang "de"}}
           {{#each global.groups}}
-          {{> trip-group header=this.header trips=this.trips}}
+          {{> trip-group header=header trips=trips open=open}}
           {{/each}}
         {{else}}
           {{#each global.groups}}
-          {{> trip-group header=this.headerUk trips=this.trips}}
+          {{> trip-group header=headerUk trips=trips open=open}}
           {{/each}}
         {{/lang}}
 
-        
       </div>
   </div>
 

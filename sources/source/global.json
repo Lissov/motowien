@@ -1,5 +1,11 @@
 {
   "groups": {
+    "favourite": {
+      "header": "Favoriten",
+      "headerUk": "Улюблені",
+      "open": "true",
+      "trips": ["oesterreich2", "plitvice", "schweiz2", "schweiz"]
+    },
     "short": {
       "header": "Kurze Routen",
       "headerUk": "Короткі маршрути",
@@ -13,7 +19,7 @@
     "austria": {
       "header": "Österreich",
       "headerUk": "Австрія",
-      "trips": ["oesterreich", "leoben", "rbr", "grossglockner", "westrunde_1", "noe_waldviertel"]
+      "trips": ["oesterreich", "oesterreich2", "leoben", "rbr", "grossglockner", "westrunde_1", "noe_waldviertel"]
     },
     "abroad": {
       "header": "Ausland",
@@ -204,6 +210,15 @@
       },
       "day4": "in the html directly",
       "day5": "in the html directly"
+    },
+    "oesterreich2": {
+      "page": "oesterreich2.html",
+      "name": "Österreich 2",
+      "text": "Durch ganzes Land, schneller.",
+      "map": "https://maps.app.goo.gl/V9DW2SUSXD848Dte6",
+      "length": "1300 km",
+      "drivetime": "18 Stunden",
+      "complexity": "Mittel"
     },
     "leoben": {
       "page": "leoben.html",
