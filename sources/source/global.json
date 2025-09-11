@@ -4,7 +4,7 @@
       "header": "Favoriten",
       "headerUk": "Улюблені",
       "open": "true",
-      "trips": ["oesterreich2", "plitvice", "schweiz2", "schweiz"]
+      "trips": ["split", "oesterreich2", "plitvice", "schweiz2", "schweiz"]
     },
     "short": {
       "header": "Kurze Routen",
@@ -24,7 +24,7 @@
     "abroad": {
       "header": "Ausland",
       "headerUk": "Закордон",
-      "trips": ["plitvice", "schweiz2", "schweiz", "sudtirol", "krumlov"]
+      "trips": ["split", "plitvice", "schweiz2", "schweiz", "sudtirol", "krumlov"]
     }
   },
   "listings": {
