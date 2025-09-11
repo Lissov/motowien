@@ -170,7 +170,7 @@
       "name": "Österreich",
       "text": "Durch ganzes Land.",
       "map": "https://maps.app.goo.gl/nySFhyBDPg3SDR5Y7",
-      "length": "1100 km",
+      "length": "1200 km",
       "drivetime": "18 Stunden",
       "complexity": "Mittel",
       "day0": {
@@ -216,9 +216,17 @@
       "name": "Österreich 2",
       "text": "Durch ganzes Land, schneller.",
       "map": "https://maps.app.goo.gl/V9DW2SUSXD848Dte6",
-      "length": "1300 km",
+      "length": "1100 km",
       "drivetime": "18 Stunden",
       "complexity": "Mittel"
+    },
+    "split": {
+      "page": "split.html",
+      "name": "Split (Kroatien)",
+      "text": "Zug ins Split und zurück durch Slowenien.",
+      "map": "https://maps.app.goo.gl/MtV4iE3UoTQLMtCq9",
+      "length": "1100 km",
+      "drivetime": "19 Stunden"
     },
     "leoben": {
       "page": "leoben.html",

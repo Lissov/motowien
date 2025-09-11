@@ -13,12 +13,7 @@
         {{#lang "de"}}Entwurf, zum Planen.{{else}}Приблизний план.{{/lang}}
       </p>
       {{> trip-details
-        details=(json '{
-          "map": "",
-          "kurviger": "",
-          "length": "X km",
-          "drivetime": "X Stunden"
-        }')
+        details=global.listings.
       }}
 
       <p></p>
