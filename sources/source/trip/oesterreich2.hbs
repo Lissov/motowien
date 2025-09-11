@@ -32,11 +32,10 @@
       <p>
         Plan:<ul>
           <li>{{start}} Abend: Zug nach Feldkirch.</li>
-          <li>{{addDays start 1}}: Vorarlberg und Tirol bis Reutte.</li>
-          <li>{{addDays start 2}}: Innsbruck bis Kaprun.</li>
-          <li>{{addDays start 3}}: Grossglockner.</li>
-          <li>{{addDays start 4}}: Steiermark - Niederösterreich.</li>
-          <li>{{addDays start 5}}: Weg nach Wien.</li>
+          <li>{{addDays start 1}}: Vorarlberg und Tirol bis Innsbruck.</li>
+          <li>{{addDays start 2}}: Innsbruck bis Grossglockner.</li>
+          <li>{{addDays start 3}}: Nockalmstrasse.</li>
+          <li>{{addDays start 4}}: Weg nach Wien.</li>
         </ul> 
       </p>
 
@@ -45,6 +44,7 @@
         <a href="https://at.wetter.com/wetter_aktuell/wettervorhersage/7_tagesvorhersage/oesterreich/bregenz/ATAT30083.html">Bregenz</a><br/>
         <a href="https://at.wetter.com/wetter_aktuell/wettervorhersage/7_tagesvorhersage/oesterreich/innsbruck/ATAT30256.html">Innsbruck</a><br/>
         <a href="https://at.wetter.com/oesterreich/heiligenblut-am-grossglockner/ATAT20165.html">Grossglockner (Heiligenblut)</a><br/>
+        <a href="https://at.wetter.com/wetter_aktuell/wettervorhersage/7_tagesvorhersage/oesterreich/turracherhoehe/AT11592956.html">Nockalmstrasse (Turracher Höhe)</a><br/>
       </p>
 
       <h3>Auto-reisezug Wien-Feldkirch</h3>
@@ -153,7 +153,7 @@
       {{> trip-details
         details=(json '{
           "map": "https://maps.app.goo.gl/mHzWu94auW8ieozf6",
-          "kurviger": ",
+          "kurviger": "",
           "length": "250 km",
           "drivetime": "5 Stunden"
         }')
