@@ -1,9 +1,5 @@
 <script>
-  var t = localStorage.getItem('allowTracking');
-  if (t !== 'false') {
-    var cid = t === 'true' ? localStorage.getItem('clientId') : 'anonymous';
-    var x = new XMLHttpRequest();
-    x.open('GET', 'https://lissov.net/api/visitors/log?pageName={{context.fileName}}&clientId=anonymous', true);
-    x.send();
-  }
+  var x = new XMLHttpRequest();
+  x.open('GET', 'https://lissov.net/api/visitors/log?pageName={{context.fileName}}&clientId=all', true);
+  x.send();
 </script>

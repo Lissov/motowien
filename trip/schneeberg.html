@@ -15,13 +15,11 @@
     <div class="language"></div>
     <div class="menu">
       <div >
-        <a href="..\index.html">Home</a>
+        <a href="..\me.html">Home</a>
       </div><div class="active">
         <a href="..\trips.html">Routes</a>
       </div><div >
         <a href="..\travel.html">Reisen</a>
-      </div><div >
-        <a href="..\tech.html">Technologie</a>
       </div>
     </div>
     <div class="language">
@@ -114,12 +112,8 @@
       </div>
   </div>
   <script>
-    var t = localStorage.getItem('allowTracking');
-    if (t !== 'false') {
-      var cid = t === 'true' ? localStorage.getItem('clientId') : 'anonymous';
-      var x = new XMLHttpRequest();
-      x.open('GET', 'https://lissov.net/api/visitors/log?pageName=schneeberg.html&clientId=anonymous', true);
-      x.send();
-    }
+    var x = new XMLHttpRequest();
+    x.open('GET', 'https://lissov.net/api/visitors/log?pageName=schneeberg.html&clientId=all', true);
+    x.send();
   </script></body>
 </html>

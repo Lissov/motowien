@@ -16,13 +16,11 @@ https://maps.app.goo.gl/G4W7r9yov7Y9FJ639?g_st=ic
     <div class="language"></div>
     <div class="menu">
       <div >
-        <a href="..\..\uk\index.html">Старт</a>
+        <a href="..\..\uk\me.html">Старт</a>
       </div><div class="active">
         <a href="..\..\uk\trips.html">Маршрути</a>
       </div><div >
         <a href="..\..\uk\travel.html">Туризм</a>
-      </div><div >
-        <a href="..\..\uk\tech.html">Технології</a>
       </div>
     </div>
     <div class="language">
@@ -108,12 +106,8 @@ https://maps.app.goo.gl/G4W7r9yov7Y9FJ639?g_st=ic
       </div>
   </div>
   <script>
-    var t = localStorage.getItem('allowTracking');
-    if (t !== 'false') {
-      var cid = t === 'true' ? localStorage.getItem('clientId') : 'anonymous';
-      var x = new XMLHttpRequest();
-      x.open('GET', 'https://lissov.net/api/visitors/log?pageName=krumlov.html&clientId=anonymous', true);
-      x.send();
-    }
+    var x = new XMLHttpRequest();
+    x.open('GET', 'https://lissov.net/api/visitors/log?pageName=krumlov.html&clientId=all', true);
+    x.send();
   </script></body>
 </html>

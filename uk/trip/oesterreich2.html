@@ -16,13 +16,11 @@
     <div class="language"></div>
     <div class="menu">
       <div >
-        <a href="..\..\uk\index.html">Старт</a>
+        <a href="..\..\uk\me.html">Старт</a>
       </div><div class="active">
         <a href="..\..\uk\trips.html">Маршрути</a>
       </div><div >
         <a href="..\..\uk\travel.html">Туризм</a>
-      </div><div >
-        <a href="..\..\uk\tech.html">Технології</a>
       </div>
     </div>
     <div class="language">
@@ -40,7 +38,7 @@
 
     <div class="content">
       <p>
-        <b>Eine Reise durch das ganze Land, etwas mehr fahren und weniger spazieren</b>
+        <b>Eine Reise durch das ganze Land in 3 Tagen</b>
       </p>
 
       <div class="route-core-data">
@@ -220,12 +218,8 @@
       </div>
   </div>
   <script>
-    var t = localStorage.getItem('allowTracking');
-    if (t !== 'false') {
-      var cid = t === 'true' ? localStorage.getItem('clientId') : 'anonymous';
-      var x = new XMLHttpRequest();
-      x.open('GET', 'https://lissov.net/api/visitors/log?pageName=oesterreich2.html&clientId=anonymous', true);
-      x.send();
-    }
+    var x = new XMLHttpRequest();
+    x.open('GET', 'https://lissov.net/api/visitors/log?pageName=oesterreich2.html&clientId=all', true);
+    x.send();
   </script></body>
 </html>

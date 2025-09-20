@@ -11,11 +11,11 @@
 </head>
 
 <body>
-  <h1>Motorrad rund um Wien: Technologie</h1>
+  <h1>Motorrad rund um Wien</h1>
   <div class="menu-container">
     <div class="language"></div>
     <div class="menu">
-      <div >
+      <div class="active">
         <a href="me.html">Home</a>
       </div><div >
         <a href="trips.html">Routes</a>
@@ -25,7 +25,7 @@
     </div>
     <div class="language">
       
-      <a class="flag flag-uk" href="uk\tech.html"
+      <a class="flag flag-uk" href="uk\me.html"
     title="Перейти на українську мову">
     <div class="uk-top"></div>
     <div class="uk-bottom"></div>
@@ -35,6 +35,22 @@
   </div>
   <div class="page-content">
     <div class="content">
+      <h3>Über mich</h3>
+      <p>
+        Ich bin Pavlo Lissov, in der Ukraine geboren und lebe seit 2012 in Wien.
+        Im Jahr 2021 habe ich den Code 111 erhalten (Motorräder bis 125 ccm, das österreichische Äquivalent zum A1), und 2022 dann den vollen A-Führerschein gemacht.
+        Ich mag kleine Tagesausflüge – es gibt wirklich viele schöne Straßen rund um Wien, die man in einem Tag genießen kann.
+        Auf dieser Website werde ich die Strecken beschreiben, mit Fotos, Tipps und GPS-Routen. Hauptsächlich für mich selbst, aber vielleicht kann für andere auch interessant sein.
+      </p>
+      <p>
+        Deutsch ist nicht meine Muttersprache, also verzeiht mir bitte die Fehler.
+        Ich möchte mein Deutsch verbessern, und diese Seite ist auch ein Versuch, mehr Übung zu bekommen.
+        Als professioneller Softwareentwickler arbeite ich meistens mit Angular und anderen modernen Technologien, aber jetzt versuche ich, eine möglichst einfache Website nur mit reinem HTML zu erstellen.
+        Ich bin gespannt, wie mir das alles gelingt.
+        Schreibt mir gerne, damit ich die Seite verbessern kann!
+      </p>
+
+      <h3>Technologie</h3>
       <p>
         Als professioneller Softwareentwickler arbeite ich mit den neuesten Technologien wie Angular – und alle diese Dependencies bereiten mir regelmäßig Kopfschmerzen.
         Als jemand, der im 20. Jahrhundert geboren wurde, erinnere ich mich noch an alte Software, die ihren Zweck ohne überflüssige Megabytes an Code erfüllte.
@@ -74,42 +90,22 @@
         Ich würde gerne wissen, ob und wie viele Leute meine Website besuchen.
         Dafür habe ich einen einfachen Zähler integriert, der registriert, wann jede Seite geöffnet wird.
         Diese Informationen werden auf meinem Server protokolliert.
-        Wenn erlaubt, wird eine zufällige Client-ID verwendet.
-        Dabei werden keine personenbezogenen Daten übermittelt oder gespeichert.
-        Es gibt folgende Optionen:
-        <ul>
-          <li><b>Erlauben</b>: Ein <u>zufälliger</u> Identifikator wird generiert und im Browser gespeichert.
-            Dieser wird dann an den Server gesendet.
-            Der Identifikator ist rein zufällig und nicht mit dem Nutzer, der Hardware oder der Software verknüpft.
-            Er dient lediglich dazu, die Anzahl einzigartiger Nutzer zu erfassen, damit ich dich von anderen unterscheiden kann.
-            <b>Ich bitte dich, diese Option zu wählen.</b>
-          </li>
-          <li><b>Anonym</b>: Dasselbe, aber mit "anonymous" als ID.
-            Dadurch kann ich die Nutzer nicht unterscheiden und somit nicht wissen, ob es mehrere Personen sind oder eine Person die Seite mehrmals besucht.
-            Aber es ist besser als nichts.
-          </li>
-        </ul>
-
-        <p id="tracking-option"></p>
-        <button id="tracking-option-change" onclick="localStorage.removeItem('allowTracking'); location.reload();">Option ändern</button>
-        <p id="tracking-history"></p>
-        <p>
-          Aktuelle Nutzerzahl ist <a href="usage.html">hier</a>.
-        </p>
+      </p>
+      <p>
+        Natürlich respektiere ich deine Privatsphäre und sammle keine personenbezogenen Daten.
+        Deshalb gibt es kein User ID, keine Cookies und keine Tracking-Software.
+        Ich schau nur die einzelne Seiten-Öffnungen, egal ob von einem oder mehrere Nutzer.
+      </p>
+      <p>
+        Wenn diese Seite für dich nützlich ist, würde ich mich freuen, wenn du mir eine Email schreibst.
+        So weiß ich, dass ich nicht nur für mich selbst schreibe.
+        Und es wäre für mich eine große Motivation, weiterzumachen.
+      </p>
+      <p>
+        Aktuelle Nutzerzahl ist <a href="usage.html">hier</a>.
       </p>
     </div>
-    <script>
-      var o = localStorage.getItem('allowTracking');
-      var ot = document.getElementById('tracking-option');
-      if (o === 'anonymous') ot.innerHTML = 'Du hast die Option <b>Anonym</b> gewählt.'
-        else if (o === 'true') ot.innerHTML = 'Du hast die Option <b>Erlauben</b> gewählt. Danke!'
-        else document.getElementById('tracking-option-change').style = 'display: none';
-      var clientId = localStorage.getItem('clientId');
-      if (!!clientId)
-        document.getElementById('tracking-history').innerHTML = `Du bist oder warst mit dem Identifikator [${clientId}] protokolliert. Um die Logs zu löschen, sende mir bitte eine E-Mail mit diesem Identifikator.`;
-      else
-        document.getElementById('tracking-history').style = 'display: none';
-    </script>
+
   </div>
 
   <div class="footer">
@@ -121,36 +117,7 @@
   </div>
   <script>
     var x = new XMLHttpRequest();
-    x.open('GET', 'https://lissov.net/api/visitors/log?pageName=tech.html&clientId=all', true);
+    x.open('GET', 'https://lissov.net/api/visitors/log?pageName=me.html&clientId=all', true);
     x.send();
   </script></body>
 </html>
-
-<div id="tracking_warning" class="popup-bottom">
-  <div class="tracking-inside">
-    Die Webseite logiert Zahl der Benutzer.
-    <a href="tech.html">Mehr Info hier...</a><br/>
-    Bitte erlaube Tracking mit zufälliges Client ID.
-    <div class="buttons">
-      <button class="primary" onclick="window.selectTracking('true')">Erlauben</button>
-      <button onclick="window.selectTracking('anonymous')">Anonymes Tracking</button>
-    </div>
-  </div>
-</div>
-<script>
-  var el = document.getElementById('tracking_warning');
-  window['selectTracking'] = (option) => {
-    var cid = localStorage.getItem('clientId');
-    if (!cid) {
-      var clientId = '';
-      for (var i = 0; i < 20; i++) clientId += String.fromCharCode(97 + Math.floor(Math.random()*26));
-      localStorage.setItem('clientId', clientId);
-    }
-    localStorage.setItem('allowTracking', option);
-    location.reload();
-  };
-  var at = localStorage.getItem('allowTracking');
-  if (!at || at === 'false') {
-    setTimeout(() => el.classList.add('popup-bottom-appear'), 1);
-  }
-</script>

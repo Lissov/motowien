@@ -1,0 +1,37 @@
+{{> doctype}}
+<html lang="de">
+{{> header root=''}}
+
+<body>
+  <h1>{{#lang "de"}}Motorrad rund um Wien: Ausflüge{{else}}Мотопоїздки з Відня{{/lang}}</h1>
+  {{> menu root=root active='trips'}}
+  <div class="page-content">
+
+    <div class="content">
+      <p>
+        {{#lang "de"}}
+        Alle meine Ausflüge beginnen beim Donauturm in Wien, da ich in der nähe wohne.
+        {{else}}
+        Всі мої поїздки починаються біля Донаутурм (оглядової вежі у Донаупарку) у Відні, оскільки я живу поруч.
+        {{/lang}}
+      </p>
+
+      <div class="route-cards">
+
+        {{#lang "de"}}
+          {{#each global.groups}}
+          {{> trip-group header=header trips=trips open=open}}
+          {{/each}}
+        {{else}}
+          {{#each global.groups}}
+          {{> trip-group header=headerUk trips=trips open=open}}
+          {{/each}}
+        {{/lang}}
+
+      </div>
+  </div>
+
+  {{> footer}}
+  {{> counter}}
+</body>
+</html>
