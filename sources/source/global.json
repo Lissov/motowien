@@ -214,14 +214,15 @@
     "oesterreich2": {
       "page": "oesterreich2.html",
       "name": "Österreich 2",
-      "text": "Durch ganzes Land, schneller.",
-      "map": "https://maps.app.goo.gl/V9DW2SUSXD848Dte6",
-      "length": "1100 km",
+      "text": "Durch ganzes Land in 3 Tagen.",
+      "map": "https://maps.app.goo.gl/w22rD11v5HUt2prX7",
+      "length": "1275 km",
       "drivetime": "18 Stunden",
       "complexity": "Mittel"
     },
     "split": {
       "page": "split.html",
+      "draft": "true",
       "name": "Split (Kroatien)",
       "text": "Zug ins Split und zurück durch Slowenien.",
       "map": "https://maps.app.goo.gl/MtV4iE3UoTQLMtCq9",

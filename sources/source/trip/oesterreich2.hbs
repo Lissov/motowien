@@ -1,7 +1,7 @@
 {{> doctype}}
 <html lang="de">
 {{> header}}
-{{setVar "start" "Samstag"}}
+{{setVar "start" "Freitag"}}
 <body>
   <h1>Durch Österreich 2</h1>
   {{> menu active='trips'}}
@@ -13,37 +13,38 @@
       </p>
 
       {{> trip-details
-        details=global.listings.oesterreich
+        details=global.listings.oesterreich2
       }}
-      <p class="route-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m69!1m8!1m3!1d932102.8897726501!2d10.889564510807922!3d46.65789630217862!3m2!1i1024!2i768!4f13.1!4m58!3e0!4m5!1s0x479b39b11ef7d1e9%3A0x88d808d3a42795c3!2s%C3%96sterreichische%20Bundesbahnen%20Autoreisezug!3m2!1d47.2403723!2d9.60397!4m5!1s0x479b0d620e6982ef%3A0xbf6aa7993530ff24!2sBregenz!3m2!1d47.5017509!2d9.745354599999999!4m5!1s0x479ca163890b837b%3A0xdb4e266d9ed7fb22!2sWarth%2C%206767!3m2!1d47.2586744!2d10.1829362!4m5!1s0x479d6ecfe1f8ca73%3A0x9d201c7d281d9b0d!2sInnsbruck!3m2!1d47.2675322!2d11.3910349!4m3!3m2!1d47.0726312!2d12.755812899999999!4m5!1s0x477098286719883d%3A0x603ab975110c4569!2sDellach!3m2!1d46.78856!2d13.61559!4m5!1s0x4770eaeabddccb39%3A0x60652fe17ace5ba1!2sInnerkrems%2C%20Austria!3m2!1d46.968579999999996!2d13.725999999999999!4m5!1s0x4771a3b274d65f77%3A0x716ecee1be710020!2sHohentauern%2C%20Austria!3m2!1d47.4335843!2d14.4842765!4m4!1s0x477191903a259a4f%3A0xd9b9e395fa2aae13!3m2!1d47.5924367!2d14.706014699999999!4m5!1s0x476d06f6a9a48b3b%3A0x2cd0bab263e7514b!2sDanube%20Tower!3m2!1d48.2403397!2d16.4100505!5e0!3m2!1sen!2sat!4v1757510648555!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </p>
+      <details>
+        <summary>Google map</summary>
+        <p class="route-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m73!1m12!1m3!1d2759970.199887005!2d10.37172938351198!3d47.50387184236213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m58!3e0!4m5!1s0x479b39b11ef7d1e9%3A0x88d808d3a42795c3!2s%C3%96sterreichische%20Bundesbahnen%20Autoreisezug!3m2!1d47.2403723!2d9.60397!4m5!1s0x479b0d620e6982ef%3A0xbf6aa7993530ff24!2sBregenz!3m2!1d47.5017509!2d9.745354599999999!4m5!1s0x479ca692c31d2329%3A0x8ac52ded630e79ae!2sLech%20am%20Arlberg!3m2!1d47.207658599999995!2d10.1407701!4m4!1s0x478329f4bdeefd0f%3A0x575d0513548066a8!3m2!1d46.864289899999996!2d10.7139206!4m5!1s0x479d6ecfe1f8ca73%3A0x9d201c7d281d9b0d!2sInnsbruck!3m2!1d47.2675322!2d11.3910349!4m3!3m2!1d47.0726312!2d12.755812899999999!4m5!1s0x4770eaeabddccb39%3A0x60652fe17ace5ba1!2sInnerkrems%2C%20Austria!3m2!1d46.968579999999996!2d13.725999999999999!4m5!1s0x4771a3b274d65f77%3A0x716ecee1be710020!2sHohentauern%2C%20Austria!3m2!1d47.4335843!2d14.4842765!4m5!1s0x477206cc830dcfc1%3A0x56b9a90ae2ace698!2sMariazell%2C%208630!3m2!1d47.7702441!2d15.314876499999999!4m5!1s0x476d06f6a9a48b3b%3A0x2cd0bab263e7514b!2sDanube%20Tower!3m2!1d48.2403397!2d16.4100505!5e0!3m2!1sen!2sat!4v1758639285534!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </p>
+        <p>
+          Diese Karte ist für die Fahrt nicht optimal nutzbar – Google erlaubt nicht genügend Wegpunkte und ist daher nicht präzise genug.
+        </p>
+      </details>
 
-      <p>
-        Diese Karte ist für die Fahrt nicht optimal nutzbar – Google erlaubt nicht genügend Wegpunkte und ist daher nicht präzise genug.
-      </p>
-      <p>
-        Die Route führt über drei Mautstraßen: Gerlos, Großglockner und Nockalm.
-        Beim ÖAMTC gibt es eine reduzierte Kombikarte für alle drei Straßen (47 EUR), gültig für zwei Jahre.
-      </p>
-
+      {{> oeamtc-strassen}}
+      
       <p>
         Plan:<ul>
           <li>{{start}} Abend: Zug nach Feldkirch.</li>
           <li>{{addDays start 1}}: Vorarlberg und Tirol bis Innsbruck.</li>
           <li>{{addDays start 2}}: Innsbruck bis Grossglockner.</li>
-          <li>{{addDays start 3}}: Nockalmstrasse.</li>
-          <li>{{addDays start 4}}: Weg nach Wien.</li>
+          <li>{{addDays start 3}}: Nockalmstrasse und Weg nach Wien.</li>
         </ul> 
       </p>
 
-      <h3>Wetter</h3>
-      <p>
-        <a href="https://at.wetter.com/wetter_aktuell/wettervorhersage/7_tagesvorhersage/oesterreich/bregenz/ATAT30083.html">Bregenz</a><br/>
-        <a href="https://at.wetter.com/wetter_aktuell/wettervorhersage/7_tagesvorhersage/oesterreich/innsbruck/ATAT30256.html">Innsbruck</a><br/>
-        <a href="https://at.wetter.com/oesterreich/heiligenblut-am-grossglockner/ATAT20165.html">Grossglockner (Heiligenblut)</a><br/>
-        <a href="https://at.wetter.com/wetter_aktuell/wettervorhersage/7_tagesvorhersage/oesterreich/turracherhoehe/AT11592956.html">Nockalmstrasse (Turracher Höhe)</a><br/>
-      </p>
+      <details>
+        <summary>Wetter</summary>
+        <p>
+          <a href="https://at.wetter.com/wetter_aktuell/wettervorhersage/7_tagesvorhersage/oesterreich/bregenz/ATAT30083.html">Bregenz</a><br/>
+          <a href="https://at.wetter.com/wetter_aktuell/wettervorhersage/7_tagesvorhersage/oesterreich/innsbruck/ATAT30256.html">Innsbruck</a><br/>
+          <a href="https://at.wetter.com/oesterreich/heiligenblut-am-grossglockner/ATAT20165.html">Grossglockner (Heiligenblut)</a><br/>
+          <a href="https://at.wetter.com/wetter_aktuell/wettervorhersage/7_tagesvorhersage/oesterreich/turracherhoehe/AT11592956.html">Nockalmstrasse (Turracher Höhe)</a><br/>
+        </p>
+      </details>
 
       <h3>Auto-reisezug Wien-Feldkirch</h3>
       <div class="dates-hint under-h3">{{start}} 21:00 - {{addDays start 1}} 8:00</div>
@@ -56,56 +57,89 @@
           "drivetime": "bis zum Bahnhof"
         }')
       }}
-      <p class="route-map">
+      <details class="details-map">
+        <summary>Karte: Route zum Bahnhof</summary>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1330.266805911904!2d16.39032740237685!3d48.17706939023787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476da9bba78c93df%3A0x92e4605fa482205!2sAutoverladestelle%20Wien%20Hauptbahnhof!5e0!3m2!1sen!2sat!4v1718897390854!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </p>
+      </details>
 
-      <p>
-        <a href="https://www.nightjet.com/de/angebote/automotorrad/in-oesterreich">ÖBB Autoreisezug Wien-Feldkirch</a>
-      </p>
-      <p>
-        Die Tickets kosten 65–150 EUR pro Person, inklusive Motorrad.
-        Alternativ kann man für etwa 350 EUR ein wirklich komfortables Schlafwagenabteil für zwei Personen buchen.
-        Der Zug fährt um 22:44 Uhr in Wien ab (man sollte eine Stunde vorher an der Verladestelle sein) und erreicht Feldkirch um 07:49 Uhr.
-      </p>
+      {{> arz-feldkirch}}
 
-
-
-      <h3>Tag 1: Feldkirch - Bregenz - Innsbruck</h3>
+      <h3>Tag 1: Feldkirch - Bregenz - Kaunertal - Innsbruck</h3>
       <div class="dates-hint under-h3">{{addDays start 1}}</div>
       {{> trip-details
         details=(json '{
-          "map": "https://maps.app.goo.gl/j5jeoRCdJ3Zq9r2i8",
-          "kurviger": "https://kurv.gr/65rQa",
-          "length": "250 km",
-          "drivetime": "5 Stunden"
+          "map": "https://maps.app.goo.gl/9WsAqoNpvcV6e2z77",
+          "kurviger": "https://kurv.gr/NaVsh",
+          "length": "400 km",
+          "drivetime": "9 Stunden"
         }')
       }}
-      <p class="route-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m42!1m12!1m3!1d691836.2170827044!2d9.838445283653604!3d47.363447436877046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m27!3e0!4m5!1s0x479b39b11ef7d1e9%3A0x88d808d3a42795c3!2s%C3%96sterreichische%20Bundesbahnen%20Autoreisezug!3m2!1d47.2403723!2d9.60397!4m3!3m2!1d47.5038105!2d9.7372597!4m3!3m2!1d47.5089057!2d9.8658982!4m5!1s0x479ca163890b837b%3A0xdb4e266d9ed7fb22!2sWarth%2C%206767!3m2!1d47.2586744!2d10.1829362!4m5!1s0x479d6ecfe1f8ca73%3A0x9d201c7d281d9b0d!2sInnsbruck!3m2!1d47.2675322!2d11.3910349!5e0!3m2!1sen!2sat!4v1757515054453!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>      </p>
+
+      <details class="details-map">
+        <summary>Karte: Feldkirch - Innsbruck</summary>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m64!1m12!1m3!1d694125.9756341118!2d9.816986597386121!3d47.18860361440593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m49!3e0!4m5!1s0x479b39b11ef7d1e9%3A0x88d808d3a42795c3!2s%C3%96sterreichische%20Bundesbahnen%20Autoreisezug!3m2!1d47.2403723!2d9.60397!4m3!3m2!1d47.272915399999995!2d9.5362152!4m3!3m2!1d47.2841324!2d9.5923461!4m3!3m2!1d47.3425753!2d9.604205199999999!4m3!3m2!1d47.5038105!2d9.7372597!4m3!3m2!1d47.5089057!2d9.8658982!4m5!1s0x479ca163890b837b%3A0xdb4e266d9ed7fb22!2sWarth%2C%206767!3m2!1d47.2586744!2d10.1829362!4m3!3m2!1d46.8638279!2d10.7135952!4m5!1s0x479d228aa1d831b5%3A0xf07339a6e5b4d5ff!2zS8O8aHRhaQ!3m2!1d47.2137396!2d11.023472199999999!4m5!1s0x479d46c6f4f8f699%3A0xe4ef5d8793231a6!2sNeustift%20im%20Stubaital!3m2!1d47.1090461!2d11.3052459!5e0!3m2!1sen!2sat!4v1758641850529!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </details>
+
       <p>
-        <b>Ausladen von Motorräder</b> bis 9 Uhr, <b>Frühstück</b> in Bregenz um 9, kurze Staziergang.
+        Kleiner <b>Frühstück</b> bekommt man in Zug, deshalb nach <b>Ausladen von Motorräder</b> (um etwa 9 Uhr) kann man gleich fahren.
       </p>
       <p>
-        2 Stunden bis Lech (und kurze Pause), oder ohne Lech witer bis Rauchwang (bisschen mehr als 2 Stunden).
-        Dann es ist 2 Stunden bis Inssbruck. <b>Abbendessen</b> und vielleicht Spaziergang durch die Stadt.
+        Zuerst nach Westlichster Punkt von Österreich, er ist nur 15 Minuten entfehrnt, wäre schade es zu verpassen.
+        Da kann man kurz ins Liechtenstein oder Schweiz spazieren.
       </p>
+      <p>
+        Dann in etwas mehr als eine Stunde erreicht man Bregenz.
+        Dort kann man am See spazieren, oder auch zweites <b>Frühstück</b> essen.
+        Oder einfach gutes Kaffee trinken.
+      </p>
+      <p>
+        In nur 10 Minuten erreicht man schönes Fotopint mit Aussicht auf Bodensee und Bregenz.
+        Dann es geht Richtung Lech, mit 2 Stunden schöner Bergstrassen.
+        Dann geht es über nicht weniger schöne Strassen weiter.
+        Am Flexenpass kann man Souvenirs kaufen oder was essen und trinken
+      </p>
+      <p>
+        Von dort erreicht man in einundhalb Stunden Piller Höhe.
+        Da empfehle ich <b>Mittagessen</b> in Naturparthaus Kaunertal.
+        Oder direkt in Kaunertal fahren um beim Gletcher Mittagessen zu essen - aber man muss Öffnungszeiten beachten.
+      </p>
+      <p>
+        Kaunertaler Gletcherstrasse ist ziemlich interessant, kostet 18 EUR pro Motorrad.
+        Die Berge sind impossant, die Aussichte super, aber die Strasse ist manchmal in schlechter Zustand.
+      </p>
+      <p>
+        Dann fährt man zurück via Naturparthaus Kaunertal.
+        Mir ist die Straße sehr gut gefallen, ich habe deshalb zweimal gefahren.
+        Aber für essen wird es wohl zu spät sein.
+      </p>
+      <p>
+        Weiter geht ziemlich gete Straße ins Ötztal.
+        Da hat man die Möglichkeit etwas schneller via Autobahn zu fahren oder schöne Bergstrasse zum Kühtai zu nehmen.
+        Die Strasse ist nicht schwer, aber Kühtai selbst liegt auf 2000 m Seehöhe, das ist Überraschend eine der höchsten Stellen auf dieser Route.
+        Und als der man erreicht Kühtai schon am Abend, es kann etwas kalt sein.
+      </p>
+      <p>
+        Dann auf jedem Fall weiter nach Innsbruck.
+        Ich habe einen gemütlichen Hotel in Neustift im Stubaital gefunden, aber da gibt es viele Möglichkeiten.
+      </p>
+
 
 
       <h3>Tag 2: Innsbruck - Gerlos - Grossglockner</h3>
       <div class="dates-hint under-h3">{{addDays start 2}}</div>
       {{> trip-details
         details=(json '{
-          "map": "https://maps.app.goo.gl/urVptRb1MkhS6AVc6",
+          "map": "https://maps.app.goo.gl/JUdbMK9BeZzCsD4t9",
           "kurviger": "https://kurv.gr/qHMs5",
           "length": "200 km",
           "drivetime": "4 Stunden"
         }')
       }}
 
-      <p class="route-map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m34!1m12!1m3!1d693091.7182041139!2d10.760011343367003!3d47.26763957668682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m19!3e0!4m5!1s0x479d6ecfe1f8ca73%3A0x9d201c7d281d9b0d!2sInnsbruck!3m2!1d47.2675322!2d11.3910349!4m5!1s0x4777dae07db52371%3A0x716abdf9e497bc1!2sZillertal!3m2!1d47.265809999999995!2d11.889629999999999!4m5!1s0x4777134369d3ab51%3A0xddc69ef27adadf94!2sFranz%20Josef%20H%C3%B6he!3m2!1d47.0666667!2d12.75!5e0!3m2!1sen!2sat!4v1757515227179!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </p>
+      <details class="details-map">
+        <summary>Karte: Innsbruck - Grossglockner</summary>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m60!1m12!1m3!1d5438.683040620304!2d12.849242215546711!3d47.033528904930435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m45!3e0!4m5!1s0x479d46c6f4f8f699%3A0xe4ef5d8793231a6!2sNeustift%20im%20Stubaital%2C%206167!3m2!1d47.1090461!2d11.3052459!4m5!1s0x479d365a69fdd3c1%3A0x9176b121e61611ed!2sStubaier%20Gletscher%20Parkplatz%20A!3m2!1d47.0119985!2d11.1563299!4m3!3m2!1d47.2517096!2d11.9021934!4m5!1s0x4777c6c17e00b5f9%3A0x708481e42c87a486!2sSeest%C3%BCberl!3m2!1d47.2386371!2d12.0841876!4m3!3m2!1d47.2137451!2d12.1670467!4m5!1s0x47771683220442c3%3A0x4a8e60932b34020e!2sEdelwei%C3%9Fspitze!3m2!1d47.1238554!2d12.830798!4m5!1s0x4777134369d3ab51%3A0xddc69ef27adadf94!2sFranz%20Josef%20H%C3%B6he!3m2!1d47.0666667!2d12.75!4m5!1s0x47776aa85f2c6a37%3A0xe14e78e564f87825!2sLandgasthof%20Hotel%20Sonnblick!3m2!1d47.0313556!2d12.8501215!5e0!3m2!1sen!2sat!4v1758644641751!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </details>
       <p>
         2 Stunden bis Gerlos (<b>Frühstück</b> in Seestüberl) und Krimmler Wasserfälle.
         Dann bleibt 1 Stunde bis Kaprun. Und 1 Stunde weiter via Grossglocknerstraße. 
@@ -167,7 +201,7 @@
       </p>
       <p>
         Und weiter zum Sparbach und A21 ins Wien.
-      </p>
+      </p-->
 
     </div>
   </div>

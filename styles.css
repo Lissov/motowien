@@ -192,6 +192,14 @@ details[open] summary {
   display:            block;  
 }
 
+.details-map {
+  width:              calc(100% - 2*var(--small-margin-side));
+  margin:             auto;
+  iframe {
+    width:            100%;
+  }
+}
+
 .route-core-data {
   margin:             4px var(--small-margin-side) 8px var(--small-margin-side);
   border:             1px solid darkgray;
