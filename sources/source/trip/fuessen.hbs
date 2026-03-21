@@ -1,0 +1,124 @@
+{{> doctype}}
+<html lang="de">
+{{> header}}
+{{setVar "start" "Donnerstag"}}
+<body>
+  <h1>{{#lang "de"}}Schloss Neuschwanstein mit Auto und Motorrad{{else}}Замок Нойшванштайн з машиною і мотоциклом{{/lang}}</h1>
+  {{> menu active='trips'}}
+  <div class="page-content">
+    <div class="content">
+
+      {{> draft}}
+      <p>
+        {{#lang "de"}}Entwurf, zum Planen.{{else}}Приблизний план.{{/lang}}
+      </p>
+      {{> trip-details
+        details=(json '{
+          "map": "",
+          "kurviger": "",
+          "length": "",
+          "drivetime": "",
+          "complexity": ""
+        }')
+      }}
+      <p class="route-map">
+      </p>
+
+      <p>
+        {{#lang "de"}}Plan{{else}}План{{/lang}}:<ul>
+          <li><a href="#t1">Tag 1: Wien - München</a></li>
+          <li><a href="#t2">Tag 2: Luzern bis Rheinwald</a></li>
+          <li><a href="#t3">Tag 3: Stelvio Pass</a></li>
+          <li><a href="#t4">Tag 4: Davos und Vaduz</a></li>
+          <li>Nacht 5: Zug nach Wien</li>
+        </ul> 
+      </p>
+      
+
+      <h3 id="t1">Tag 1: Wien - München</h3>
+      <div class="dates-hint under-h3">{{start}}</div>
+      {{> trip-details
+        details=(json '{ 
+          "kurviger": "",
+          "map": "https://maps.app.goo.gl/jUZHV1xTKCgqAh56A",
+          "length": "450 km",
+          "drivetime": "7 Stunden"
+        }')
+      }}
+      <p class="route-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d85048.72695941749!2d13.026758492749005!3d48.23025092231492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m5!1s0x476d06f6a9a48b3b%3A0x2cd0bab263e7514b!2sDanube%20Tower%2C%20Donauturmplatz%201%2C%201220%20Wien%2C%20Austria!3m2!1d48.2403397!2d16.4100505!4m3!3m2!1d48.274915!2d11.580700199999999!5e0!3m2!1sen!2suk!4v1774077818090!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </p>
+
+      <p>
+        Auto fährt via Autobahn (4.5 Stunden), Motorrad ohne Autobahn etwas länger.
+        Man kann über Autobahn etwas abkürzen.
+      </p>
+
+
+      <h3 id="t2">Tag 2: Neuschwanstein</h3>
+      <div class="dates-hint under-h3">{{addDays start 1}}</div>
+      {{> trip-details
+        details=(json '{ 
+          "kurviger": "",
+          "map": "https://maps.app.goo.gl/7TUYnsdEjHGiGCreA",
+          "length": "200 km",
+          "drivetime": "4 Stunden"
+        }')
+      }}
+      <p class="route-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m36!1m12!1m3!1d345107.662692749!2d10.852484469826923!3d47.486920741753316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m21!3e0!4m3!3m2!1d48.274915!2d11.580700199999999!4m5!1s0x479cf7cac44ea35d%3A0xc8a6866bd39dbba3!2sNeuschwanstein%20Castle%2C%20Neuschwansteinstra%C3%9Fe%2020%2C%2087645%20Schwangau%2C%20Germany!3m2!1d47.557573999999995!2d10.7498004!4m5!1s0x479cfbaaf46387ff%3A0x785ff9c4c00d8eac!2sAussichtsplattform%20H%C3%B6llkopf%2C%20Am%20Plansee%2C%206600%20Gemeinde%20Reutte%2C%20Austria!3m2!1d47.4731236!2d10.794456499999999!4m3!3m2!1d47.496663999999996!2d11.0971019!5e0!3m2!1sen!2suk!4v1774078200197!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </p>
+
+      <p>
+        Von München bis Neuschwanstein sind weniger als 2 Stunden fahrt.
+        Ein bisschen Autobahn, dann Landstrassen.
+      </p>
+      <p>
+        Wanderung <b>Neuschwanstein</b>.
+      </p>
+      <p>
+        Dann noch etwa 2 Stunden bis Garmisch-Partenkirchen.
+      </p>
+
+      <h3 id="t3">Tag 3: München</h3>
+      <div class="dates-hint under-h3">{{addDays start 2}}</div>
+      {{> trip-details
+        details=(json '{ 
+          "kurviger": "",
+          "map": "https://maps.app.goo.gl/VRR6TywoYwLKoTx17",
+          "length": "200 km",
+          "drivetime": "3 Stunden"
+        }')
+      }}
+      <p class="route-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m40!1m12!1m3!1d342526.6435728092!2d11.099868644976551!3d47.878532408853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m25!3e0!4m3!3m2!1d47.496663999999996!2d11.0971019!4m3!3m2!1d47.589227699999995!2d11.316854!4m3!3m2!1d47.7521067!2d11.563370899999999!4m3!3m2!1d47.583182099999995!2d11.582237099999999!4m3!3m2!1d47.6557879!2d11.749047299999999!4m3!3m2!1d48.2751065!2d11.5811111!5e0!3m2!1sen!2suk!4v1774078639748!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </p>
+
+      <p>
+        Muss schöne Strassen noch finden.
+      </p>
+
+      <h3 id="t4">Tag 4: Zurück nach Wien</h3>
+      <div class="dates-hint under-h3">{{addDays start 3}}</div>
+      {{> trip-details
+        details=(json '{ 
+          "kurviger": "",
+          "map": "",
+          "length": "450 km",
+          "drivetime": "7 Stunden"
+        }')
+      }}
+
+      <p class="route-map">
+      </p>
+
+      <p>
+        Eigentlich einfach zurück.
+      </p>
+    </div>
+  </div>
+
+  {{> footer}}
+  {{> counter}}
+</body>
+</html>

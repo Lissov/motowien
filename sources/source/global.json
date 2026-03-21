@@ -4,7 +4,7 @@
       "header": "Favoriten",
       "headerUk": "Улюблені",
       "open": "true",
-      "trips": ["split", "oesterreich2", "plitvice", "schweiz2", "schweiz"]
+      "trips": ["fuessen", "split", "oesterreich2", "plitvice", "schweiz2", "schweiz"]
     },
     "short": {
       "header": "Kurze Routen",
@@ -24,7 +24,7 @@
     "abroad": {
       "header": "Ausland",
       "headerUk": "Закордон",
-      "trips": ["split", "plitvice", "schweiz2", "schweiz", "sudtirol", "krumlov"]
+      "trips": ["fuessen", "split", "plitvice", "schweiz2", "schweiz", "sudtirol", "krumlov"]
     }
   },
   "listings": {
@@ -219,6 +219,15 @@
       "length": "1275 km",
       "drivetime": "18 Stunden",
       "complexity": "Mittel"
+    },
+    "fuessen": {
+      "page": "fuessen.html",
+      "draft": "true",
+      "name": "Füssen (Neuschwanstein)",
+      "text": "4 Tage in Deutschland.",
+      "map": "",
+      "length": "1600 km",
+      "drivetime": "20 Stunden"
     },
     "split": {
       "page": "split.html",
