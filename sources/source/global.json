@@ -4,7 +4,7 @@
       "header": "Favoriten",
       "headerUk": "Улюблені",
       "open": "true",
-      "trips": ["fuessen", "split", "oesterreich2", "plitvice", "schweiz2", "schweiz"]
+      "trips": ["feldkirch", "split", "oesterreich2", "plitvice", "schweiz2", "schweiz"]
     },
     "short": {
       "header": "Kurze Routen",
@@ -19,13 +19,18 @@
     "austria": {
       "header": "Österreich",
       "headerUk": "Австрія",
-      "trips": ["oesterreich", "oesterreich2", "leoben", "rbr", "grossglockner", "westrunde_1", "noe_waldviertel"]
+      "trips": ["feldkirch", "leoben", "rbr", "oesterreich", "oesterreich2", "grossglockner", "westrunde_1", "noe_waldviertel"]
     },
     "abroad": {
       "header": "Ausland",
       "headerUk": "Закордон",
       "trips": ["fuessen", "split", "plitvice", "schweiz2", "schweiz", "sudtirol", "krumlov"]
-    }
+    },
+    "ideen": {
+      "header": "Ideen um weiter zu denken",
+      "headerUk": "Ідеї на майбутнє",
+      "trips": ["fuessen"]
+    },
   },
   "listings": {
     "burgenland": {
@@ -218,6 +223,15 @@
       "map": "https://maps.app.goo.gl/w22rD11v5HUt2prX7",
       "length": "1275 km",
       "drivetime": "18 Stunden",
+      "complexity": "Mittel"
+    },
+    "feldkirch": {
+      "page": "feldkirch.html",
+      "name": "Feldkirch",
+      "text": "Durch ganzes Land in 4 Tagen und zurück mit dem Zug.",
+      "map": "",
+      "length": "",
+      "drivetime": "",
       "complexity": "Mittel"
     },
     "fuessen": {
