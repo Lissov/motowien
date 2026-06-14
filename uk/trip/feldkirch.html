@@ -1,10 +1,39 @@
-{{> doctype}}
+<!doctype html public "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+
 <html lang="de">
-{{> header}}
-{{setVar "start" "Samstag"}}
+<head>
+    <meta charset="utf-8">
+    <title>МотоВідень</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="..\..\images\motowien_icon.png">
+    <link rel="stylesheet" href="..\..\styles.css">
+</head>
+
 <body>
   <h1>Feldkirch</h1>
-  {{> menu active='trips'}}
+  <div class="menu-container">
+    <div class="language"></div>
+    <div class="menu">
+      <div >
+        <a href="..\..\uk\me.html">Старт</a>
+      </div><div class="active">
+        <a href="..\..\uk\trips.html">Маршрути</a>
+      </div><div >
+        <a href="..\..\uk\travel.html">Туризм</a>
+      </div>
+    </div>
+    <div class="language">
+      <a class="flag flag-de" href="..\..\trip\feldkirch.html"
+    title="Sprache auf Deutsch wechseln">
+    <div class="de-top"></div>
+    <div class="de-middle"></div>
+    <div class="de-bottom"></div>
+  </a>
+      
+  
+    </div>
+  </div>
   <div class="page-content">
 
     <div class="content">
@@ -12,9 +41,9 @@
         <b>Nach Feldkirch (zurück mit dem Zug)</b>
       </p>
 
-      {{> trip-details
-        details=global.listings.feldkirch
-      }}
+      <div class="route-core-data">
+        <p>Складність: <b>середній</b></p>
+      </div>
       <details>
         <summary>Google map</summary>
         <p class="route-map">
@@ -23,14 +52,16 @@
         </p>
       </details>
 
-      {{> oeamtc-strassen}}
-
+      <p>
+        Diese Route führt über drei Mautstraßen: Gerlos, Großglockner und Nockalm.
+        Beim ÖAMTC gibt es eine reduzierte <a href="https://www.oeamtc.at/thema/maut-vignette/grossglockner-hochalpen-strasse-ermaessigte-vorverkaufskarten-beim-oeamtc-16181934" target="_blank">Kombikarte</a> für alle drei Straßen für 49 EUR (Stand 2025), gültig für zwei Jahre.
+      </p>
       <p>
         Plan:<ul>
-          <li>{{start}}: Wien - Admont.</li>
-          <li>{{addDays start 1}}: Nockalms oder Rossfeld PanoramaStraße .</li>
-          <li>{{addDays start 2}}: Innsbruck und Kaunertal.</li>
-          <li>{{addDays start 3}}: Vorarlberg bis Feldkirch, zug nach Wien.</li>
+          <li>Samstag Wien - Admont oder Murau.</li>
+          <li>Sonntag: .</li>
+          <li>Montag: Innsbruck bis Grossglockner.</li>
+          <li>Dienstag: Nockalmstrasse und Weg nach Wien.</li>
         </ul> 
       </p>
 
@@ -48,52 +79,37 @@
       <details>
         <summary>Wichtige</summary>
         Es gibt viele Alternativen, wir können die Route zu Wetter anpassen.
-        {{> arz-feldkirch}}
+        <p>
+          <a href="https://www.nightjet.com/de/angebote/automotorrad/in-oesterreich">ÖBB Autoreisezug Wien-Feldkirch</a>
+        </p>
+        <p>
+          Die Tickets kosten normalerweise 100 EUR pro Person in Liegewagen, 85 für Motorrad.
+          Es gibr ÖAMTC-Rabatt.
+          Der Zug fährt um 22:44 Uhr in Wien ab (man sollte eine Stunde vorher an der Verladestelle sein) und erreicht Feldkirch um 07:49 Uhr.
+          Mehr info über <a href="..\..\uk\info/arz.html">ÖBB Autoreisezug</a>.
+        </p>
       </details>
 
 
       <h3>Tag 1: Wien - Admont</h3>
-      <div class="dates-hint under-h3">{{start}}</div>
-      <details>
-        <summary>Option 1: via Mariazell</summary>
-        <details class="details-map">
-          <summary>Karte</summary>
+      <div class="dates-hint under-h3">Samstag</div>
+      <div class="route-core-data">
+        
+      </div>
 
-        </details>
-        {{> trip-details
-          details=(json '{
-            "map": "",
-            "kurviger": "",
-            "length": "",
-            "drivetime": ""
-          }')
-      }}
-      </details>
-
-      <details>
-        <summary>Option 2: Wachautal entlang der Donau</summary>
-        <details class="details-map">
-          <summary>Karte</summary>
-
-        </details>
-        {{> trip-details
-          details=(json '{
-            "map": "",
-            "kurviger": "",
-            "length": "",
-            "drivetime": ""
-          }')
-      }}
+      <details class="details-map">
+        <summary>Karte: </summary>
+        <iframe></iframe>
       </details>
 
       <p>
-        
+        Kleiner <b>Frühstück</b> bekommt man in Zug, deshalb nach <b>Ausladen von Motorräder</b> (um etwa 9 Uhr) kann man gleich fahren.
       </p>
 
 
 
       <h3>Tag 2: Nockalm zu Heiligenblut oder Rossfeld</h3>
-      <div class="dates-hint under-h3">{{addDays start 1}}</div>
+      <div class="dates-hint under-h3">Sonntag</div>
       <p>
         Wir können entweder in die Richtung Grossglockner, oder zum Rossfeld Panoramastraße fahren.
       </p>
@@ -103,14 +119,14 @@
           <summary>Karte</summary>
           <iframe src="https://www.google.com/maps/embed?pb=!1m44!1m12!1m3!1d685001.9838177145!2d11.784102214359983!3d47.882412296139655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m29!3e0!4m3!3m2!1d47.5840673!2d14.4484462!4m5!1s0x47705600d3d924c7%3A0x36675881aa5485c!2sMurau%2C%208850!3m2!1d47.11304!2d14.169039999999999!4m5!1s0x47708dac3e109237%3A0x22ddf24fc6e12919!2sUnter-Winkl%2C%209565!3m2!1d46.87208!2d13.87853!4m5!1s0x4770eaeabddccb39%3A0x60652fe17ace5ba1!2sInnerkrems%2C%209862!3m2!1d46.968579999999996!2d13.725999999999999!4m5!1s0x4777154cb5a4c623%3A0x6667721a13fd7046!2sHeiligenblut%20am%20Gro%C3%9Fglockner%2C%209844!3m2!1d47.039812399999995!2d12.8431885!5e0!3m2!1sen!2sat!4v1781422391888!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </details>
-        {{> trip-details
-          details=(json '{
-            "map": "https://maps.app.goo.gl/q77PJzAPq1CRardn9",
-            "kurviger": "",
-            "length": "285 km",
-            "drivetime": "5 Stunden"
-          }')
-      }}
+        <div class="route-core-data">
+          <p>
+            <a href="https://maps.app.goo.gl/q77PJzAPq1CRardn9" target="_blank">Карта</a>&nbsp;
+          </p>
+          <p>Довжина: <b>285 км</b></p>
+          <p>Час їзди: <b>5 годин</b></p>
+          
+        </div>
       </details>
 
       <details>
@@ -119,19 +135,19 @@
           <summary>Karte</summary>
           <iframe src="https://www.google.com/maps/embed?pb=!1m42!1m12!1m3!1d86222.92120317505!2d12.578613309865286!3d47.51978430529018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m27!3e0!4m3!3m2!1d47.5840673!2d14.4484462!4m5!1s0x4771366f6e414663%3A0x16c165596a26c1ad!2sHallstatt!3m2!1d47.5622342!2d13.649261699999998!4m3!3m2!1d47.5333505!2d13.4964775!4m5!1s0x4776eae9b2c2b099%3A0x1d619ba7442ad414!2sRossfeld%20Panorama%20Strasse%2C%20Ro%C3%9Ffeldstra%C3%9Fe%2C%2083471%20Eck%2C%20Germany!3m2!1d47.6267652!2d13.092201999999999!4m5!1s0x4776f584a0beb245%3A0xc0f752c03cc52421!2sUnken%2C%205091!3m2!1d47.649955999999996!2d12.729779899999999!5e0!3m2!1sen!2sat!4v1781422935425!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </details>
-        {{> trip-details
-          details=(json '{
-            "map": "https://maps.app.goo.gl/2nUrKr8prJTRoysz7",
-            "kurviger": "",
-            "length": "210 km",
-            "drivetime": "4 Stunden"
-          }')
-      }}
+        <div class="route-core-data">
+          <p>
+            <a href="https://maps.app.goo.gl/2nUrKr8prJTRoysz7" target="_blank">Карта</a>&nbsp;
+          </p>
+          <p>Довжина: <b>210 км</b></p>
+          <p>Час їзди: <b>4 годин</b></p>
+          
+        </div>
       </details>
 
 
       <h3>Tag 3: Innsbruck zum Kaunertal</h3>
-      <div class="dates-hint under-h3">{{addDays start 2}}</div>
+      <div class="dates-hint under-h3">Montag</div>
       <p>
         Optionen abhängig von Tag 2 Entscheidung.
       </p>
@@ -141,14 +157,14 @@
           <summary>Karte</summary>
           <iframe src="https://www.google.com/maps/embed?pb=!1m52!1m12!1m3!1d693741.232735436!2d11.10882634408005!3d47.21801671006098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m37!3e0!4m5!1s0x4777154cb5a4c623%3A0x6667721a13fd7046!2sHeiligenblut%20am%20Gro%C3%9Fglockner%2C%209844!3m2!1d47.039812399999995!2d12.8431885!4m5!1s0x47776ab2db3f4801%3A0x1c2c7427677f2635!2sPanoramarestaurant%20Kaiser%20Franz-Josefs-H%C3%B6he%20und%20Kaiser%20Franz-Josef-Haus%2C%20F%20J%20H%C3%B6he%20Grossglockner%2C%209844!3m2!1d47.0727435!2d12.756378199999999!4m5!1s0x4777037dd9b5c639%3A0xf480bc92781c318e!2sPiesendorf%2C%205721!3m2!1d47.2920626!2d12.7160542!4m5!1s0x4777c6c17e00b5f9%3A0x708481e42c87a486!2sSeestueberl%2C%20Gerlos%20353%2C%206281%20Gerlos!3m2!1d47.2386371!2d12.0841876!4m5!1s0x479d22f558b8c1c1%3A0x6be9b507c50cb7f6!2zS8O8aHRhaSwgNjE4Mw!3m2!1d47.212399999999995!2d11.01724!4m5!1s0x479cda9aeb7ab07b%3A0xc294c78c2d579c6a!2sNaturparkhaus%20Kaunergrat%2C%20Gachenblick%20100%2C%206521%20Flie%C3%9F!3m2!1d47.1168786!2d10.6680571!5e0!3m2!1sen!2sat!4v1781423596284!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </details>
-        {{> trip-details
-          details=(json '{
-            "map": "https://maps.app.goo.gl/FRmbUPHCNwVDm2Tq6",
-            "kurviger": "",
-            "length": "285 km",
-            "drivetime": "5.5 Stunden"
-          }')
-      }}
+        <div class="route-core-data">
+          <p>
+            <a href="https://maps.app.goo.gl/FRmbUPHCNwVDm2Tq6" target="_blank">Карта</a>&nbsp;
+          </p>
+          <p>Довжина: <b>285 км</b></p>
+          <p>Час їзди: <b>5.5 годин</b></p>
+          
+        </div>
       </details>
 
       <details>
@@ -157,38 +173,47 @@
           <summary>Karte</summary>
           <iframe src="https://www.google.com/maps/embed?pb=!1m58!1m12!1m3!1d345912.93768784247!2d11.960519241048122!3d47.36423600435555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m43!3e0!4m5!1s0x4776f584a0beb245%3A0xc0f752c03cc52421!2sUnken%2C%205091!3m2!1d47.649955999999996!2d12.729779899999999!4m5!1s0x47764c86a5fba847%3A0x9936fb6e22403ac0!2sKirchberg%20in%20Tirol%2C%206365!3m2!1d47.4477519!2d12.3151773!4m5!1s0x4776330a4176e5b1%3A0x40097572de69060!2zV8O2cmds!3m2!1d47.485649099999996!2d12.0646238!4m5!1s0x479d6489df078895%3A0x5af0eb4a33240fd5!2sSwarovski%20Crystal%20Worlds%2C%20Kristallweltenstra%C3%9Fe%201%2C%206112%20Wattens!3m2!1d47.293811299999994!2d11.600818799999999!4m5!1s0x479d6ecfe1f8ca73%3A0x9d201c7d281d9b0d!2sInnsbruck!3m2!1d47.2675322!2d11.3910349!4m5!1s0x479d22f558b8c1c1%3A0x6be9b507c50cb7f6!2zS8O8aHRhaSwgNjE4Mw!3m2!1d47.212399999999995!2d11.01724!4m5!1s0x479cda9aeb7ab07b%3A0xc294c78c2d579c6a!2sNaturparkhaus%20Kaunergrat%2C%20Gachenblick%20100%2C%206521%20Flie%C3%9F!3m2!1d47.1168786!2d10.6680571!5e0!3m2!1sen!2sat!4v1781423280059!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </details>
-        {{> trip-details
-          details=(json '{
-            "map": "https://maps.app.goo.gl/qpYsB5AX9eUH7x798",
-            "kurviger": "",
-            "length": "220 km",
-            "drivetime": "4.5 Stunden"
-          }')
-        }}
+        <div class="route-core-data">
+          <p>
+            <a href="https://maps.app.goo.gl/qpYsB5AX9eUH7x798" target="_blank">Карта</a>&nbsp;
+          </p>
+          <p>Довжина: <b>220 км</b></p>
+          <p>Час їзди: <b>4.5 годин</b></p>
+          
+        </div>
       </details>
 
 
       <h3>Tag 4: Feldkirch</h3>
-      <div class="dates-hint under-h3">{{addDays start 3}}</div>
+      <div class="dates-hint under-h3">Dienstag</div>
       <details class="details-map">
         <summary>Karte</summary>
         <iframe src="https://www.google.com/maps/embed?pb=!1m52!1m12!1m3!1d346467.92756975896!2d10.23946893673653!3d47.27954159714815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m37!3e0!4m5!1s0x479cda9aeb7ab07b%3A0xc294c78c2d579c6a!2sNaturparkhaus%20Kaunergrat%2C%20Gachenblick%20100%2C%206521%20Flie%C3%9F!3m2!1d47.1168786!2d10.6680571!4m5!1s0x479cb0607e5a9e05%3A0x91c94663dc22ad8f!2sSt%20Anton%20am%20Arlberg%2C%206580!3m2!1d47.129634599999996!2d10.268178599999999!4m5!1s0x479ca5dda317a2b7%3A0x40f1d7879813fea3!2sSeekopf%20Sesselbahn%2C%20Talstation%2C%20Schr%C3%B6fliweg%2C%206763%20Lech!3m2!1d47.1760051!2d10.161622!4m5!1s0x479b5df2117be6cd%3A0x8da65835222b383a!2sAu%2C%206883!3m2!1d47.3191926!2d9.9858329!4m5!1s0x479b46db4a26e67d%3A0xa9157ad0c8fc93d5!2sInnerlaterns%2C%206830!3m2!1d47.25768!2d9.74292!4m5!1s0x479b399f89964143%3A0x466fc7d5164541a1!2sFeldkirch%2C%20Bahnhofstra%C3%9Fe%2040-42%2C%206800%20Feldkirch!3m2!1d47.2410906!2d9.6038151!5e0!3m2!1sen!2sat!4v1781423885673!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </details>
-      {{> trip-details
-        details=(json '{
-          "map": "https://maps.app.goo.gl/LSKH64SfVnE4dja26",
-          "kurviger": "",
-          "length": "140 km",
-          "drivetime": "3 Stunden"
-        }')
-      }}
+      <div class="route-core-data">
+        <p>
+          <a href="https://maps.app.goo.gl/LSKH64SfVnE4dja26" target="_blank">Карта</a>&nbsp;
+        </p>
+        <p>Довжина: <b>140 км</b></p>
+        <p>Час їзди: <b>3 годин</b></p>
+        
+      </div>
 
       
 
     </div>
   </div>
 
-  {{> footer}}
-  {{> counter}}
-</body>
+  <div class="footer">
+      <div class="footer-content">
+          <p>2025 &#169; Павло Ліссов</p>
+          <p>Всі права на зображення і фотографії належать Павлу Ліссову</p>
+          <p>Контакт: <a href="mailto: admin@lissov.net?subject=MotoWien">Надіслати листа</a></p>  
+      </div>
+  </div>
+  <script>
+    var x = new XMLHttpRequest();
+    x.open('GET', 'https://lissov.net/api/visitors/log?pageName=feldkirch.html&clientId=all', true);
+    x.send();
+  </script></body>
 </html>
