@@ -27,10 +27,10 @@
 
       <p>
         Plan:<ul>
-          <li>{{start}} Wien - Admont oder Murau.</li>
-          <li>{{addDays start 1}}: .</li>
-          <li>{{addDays start 2}}: Innsbruck bis Grossglockner.</li>
-          <li>{{addDays start 3}}: Nockalmstrasse und Weg nach Wien.</li>
+          <li>{{start}}: Wien - Admont.</li>
+          <li>{{addDays start 1}}: Nockalms oder Rossfeld PanoramaStraße .</li>
+          <li>{{addDays start 2}}: Innsbruck und Kaunertal.</li>
+          <li>{{addDays start 3}}: Vorarlberg bis Feldkirch, zug nach Wien.</li>
         </ul> 
       </p>
 
@@ -54,22 +54,40 @@
 
       <h3>Tag 1: Wien - Admont</h3>
       <div class="dates-hint under-h3">{{start}}</div>
-      {{> trip-details
-        details=(json '{
-          "map": "",
-          "kurviger": "",
-          "length": "",
-          "drivetime": ""
-        }')
-      }}
+      <details>
+        <summary>Option 1: via Mariazell</summary>
+        <details class="details-map">
+          <summary>Karte</summary>
 
-      <details class="details-map">
-        <summary>Karte: </summary>
-        <iframe></iframe>
+        </details>
+        {{> trip-details
+          details=(json '{
+            "map": "",
+            "kurviger": "",
+            "length": "",
+            "drivetime": ""
+          }')
+      }}
+      </details>
+
+      <details>
+        <summary>Option 2: Wachautal entlang der Donau</summary>
+        <details class="details-map">
+          <summary>Karte</summary>
+
+        </details>
+        {{> trip-details
+          details=(json '{
+            "map": "",
+            "kurviger": "",
+            "length": "",
+            "drivetime": ""
+          }')
+      }}
       </details>
 
       <p>
-        Kleiner <b>Frühstück</b> bekommt man in Zug, deshalb nach <b>Ausladen von Motorräder</b> (um etwa 9 Uhr) kann man gleich fahren.
+        
       </p>
 
 
