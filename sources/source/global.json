@@ -229,9 +229,9 @@
       "page": "feldkirch.html",
       "name": "Feldkirch",
       "text": "Durch ganzes Land in 4 Tagen und zurück mit dem Zug.",
-      "map": "",
-      "length": "",
-      "drivetime": "",
+      "map": "https://maps.app.goo.gl/8dWszYMJKys3Zamh9",
+      "length": "830 km",
+      "drivetime": "16 Stunden ",
       "complexity": "Mittel"
     },
     "fuessen": {
