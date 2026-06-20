@@ -1,0 +1,156 @@
+{{> doctype}}
+<html lang="de">
+{{> header}}
+{{setVar "start" "Sonntag"}}
+<body>
+  <h1>Feldkirch (3 Tage)</h1>
+  {{> menu active='trips'}}
+  <div class="page-content">
+
+    <div class="content">
+      <p>
+        <b>Spezielle Variante für Hitze:</b> Nach Feldkirch in 3 Tagen fast ohne Wanderungen, zurück mit dem Zug.
+      </p>
+
+      {{> trip-details
+        details=global.listings.feldkirch3
+      }}
+      <details>
+        <summary>Google map</summary>
+        <p class="route-map">
+        </p>
+      </details>
+
+      {{> oeamtc-strassen}}
+
+      <p>
+        Plan:<ul>
+          <li>{{start}}: Wien - Admont.</li>
+          <li>{{addDays start 1}}: Grossglockner.</li>
+          <li>{{addDays start 2}}: Innsbruck und Vorarlberg.</li>
+        </ul> 
+      </p>
+
+      <details>
+        <summary>Wetter</summary>
+        <p>
+          <a href="https://at.wetter.com/oesterreich/admont/ATAT20001.html" target="_blank">Admont</a><br/>
+          <a href="https://at.wetter.com/wetter_aktuell/wettervorhersage/7_tagesvorhersage/oesterreich/turracherhoehe/AT11592956.html" target="_blank">Nockalmstrasse (Turracher Höhe)</a><br/>
+          <a href="https://at.wetter.com/oesterreich/heiligenblut-am-grossglockner/ATAT20165.html" target="_blank">Grossglockner (Heiligenblut)</a><br/>
+          <a href="https://at.wetter.com/wetter_aktuell/wettervorhersage/7_tagesvorhersage/oesterreich/innsbruck/ATAT30256.html" target="_blank">Innsbruck</a><br/>
+          <a href="https://at.wetter.com/oesterreich/feldkirch/ATAT30133.html" target="_blank">Feldkirch</a><br/>
+        </p>
+      </details>
+
+      <h3>Tag 1: Wien - Murau</h3>
+      <div class="dates-hint under-h3">{{start}}</div>
+        
+      <details class="details-map" open>
+        <summary>Karte</summary>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m60!1m12!1m3!1d686880.5029999804!2d14.29688648184766!3d47.74019121927563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m45!3e0!4m5!1s0x476d983a9a213b65%3A0x86070b158ab9f370!2sSch%C3%B6pflgitter%2C%202533!3m2!1d48.09437!2d15.98477!4m5!1s0x476d06f6a9a48b3b%3A0x2cd0bab263e7514b!2sDanube%20Tower%2C%20Donauturmplatz%201%2C%201220%20Wien!3m2!1d48.2403397!2d16.4100505!4m3!3m2!1d48.057770399999995!2d15.902924299999999!4m3!3m2!1d47.9149479!2d15.4370774!4m5!1s0x477206cc830dcfc1%3A0x56b9a90ae2ace698!2sMariazell%2C%208630!3m2!1d47.7702441!2d15.314876499999999!4m5!1s0x477191903a259a4f%3A0xd9b9e395fa2aae13!2sTake%20out%20k%C3%BCmmerbrucke%2C%208912%20Johnsbach!3m2!1d47.5924367!2d14.706014699999999!4m5!1s0x4771a51cf58c33f7%3A0xd3a9bafe14aea5f7!2sSankt%20Johann%20am%20Tauern%2C%208765!3m2!1d47.356868999999996!2d14.468534!4m5!1s0x47705600d3d924c7%3A0x36675881aa5485c!2sMurau%2C%208850!3m2!1d47.11304!2d14.169039999999999!5e0!3m2!1sen!2sat!4v1781961159347!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </details>
+      {{> trip-details
+        details=(json '{
+          "map": "https://maps.app.goo.gl/Dhg7KnPuHBFk8FSr6",
+          "kurviger": "https://kurv.gr/vqQZ4",
+          "length": "390 km",
+          "drivetime": "6.5 Stunden"
+        }')
+      }}
+      <p>
+        Starten um 4 Uhr, 40 Minuten Autobahn bis Alland (Tankstelle, Sandwitch, Wasser).
+        Dann St.Corona, Hainfeld, Lilienfeld, Mariazell - 2 Stunden. Inkl. Pausen 8 Uhr - hier Frühstück.
+      </p>
+      <p>
+        1.5 Stunden bis Gesäuse, Wanderung Hartelsgraben. Es soll bis höchstens 25 Grad da sein.
+      </p>
+      <p>
+        Am Abend können wir ca. 2 Stunden Fahren? Dann reicht es bis Murau, oder noch ein bisschen weiter.
+      </p>
+
+
+      <h3>Tag 2: Nockalm und Grossglockner</h3>
+      <div class="dates-hint under-h3">{{addDays start 1}}</div>
+
+      <details class="details-map" open>
+        <summary>Karte</summary>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m44!1m12!1m3!1d695773.921046746!2d12.366033820976716!3d47.062461638013836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m29!3e0!4m5!1s0x47705600d3d924c7%3A0x36675881aa5485c!2sMurau%2C%208850!3m2!1d47.11304!2d14.169039999999999!4m5!1s0x47708af83c010f23%3A0xfad2e6f89108fadd!2sGlockenh%C3%BCtte%20-%20Nockalmstrasse.%2C%20Nockalmstra%C3%9Fe%201%2C%209565%20Ebene%20Reichenau!3m2!1d46.8901627!2d13.7943302!4m3!3m2!1d46.9603166!2d13.630625!4m5!1s0x4777154cb5a4c623%3A0x6667721a13fd7046!2sHeiligenblut%20am%20Gro%C3%9Fglockner%2C%209844!3m2!1d47.039812399999995!2d12.8431885!4m5!1s0x4777db59aaf4a735%3A0x40097572de69900!2sZell%20am%20Ziller!3m2!1d47.2333597!2d11.881894899999999!5e0!3m2!1sen!2sat!4v1781962297551!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </details>
+      {{> trip-details
+        details=(json '{
+          "map": "https://maps.app.goo.gl/nBNDboWHh5k77LrBA",
+          "kurviger": "",
+          "length": "333 km",
+          "drivetime": "6 Stunden"
+        }')
+      }}
+      <p>
+        Start um 7 Uhr, 1 Stunde fahrt bis Nockalmstrasse.
+        Frühstuck mit Kaffee in Glocknerhütte.
+        <b>Oder</b> wir lassen Nockalmstrasse aus, spart uns 20 km und 30 Minuten.
+        Macht sinn wenn wir früher starten - Nockalmstraße ist erst um 8 Uhr geöffnet. 
+      </p>
+      <p>
+        Dann 2 Stunden bis Heiligenblut.
+        In Spittal kann schon ein bisschen heiß sein, aber da fahren wir durch in 30 Minuten.
+      </p>
+      <p>
+        Am Grossglocknerstrasse ist es angenehm, da können wir zum Gletscher spazieren oder irgendwo.
+      </p>
+      <p>
+        Weiter runter zum Zell-am-See.
+      </p>
+      <p>
+        <b>Hier Entscheidung</b> - wenn wir Zeit und Lust haben bis Zillertal, oder besser fast Innsbruck - dann weiter.
+        Wenn nicht - zurück in die Richtung Hallstatt.
+      </p>
+
+
+      <h3>Tag 3: Innsbruck, Vorarlberg</h3>
+      <div class="dates-hint under-h3">{{addDays start 2}}</div>
+      <details class="details-map" open>
+        <summary>Karte</summary>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m66!1m12!1m3!1d693231.8502058137!2d10.090915075112909!3d47.256936861949995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m51!3e0!4m5!1s0x4777db59aaf4a735%3A0x40097572de69900!2sZell%20am%20Ziller!3m2!1d47.2333597!2d11.881894899999999!4m5!1s0x479d6ecfe1f8ca73%3A0x9d201c7d281d9b0d!2sInnsbruck!3m2!1d47.2675322!2d11.3910349!4m5!1s0x479d22f558b8c1c1%3A0x6be9b507c50cb7f6!2zS8O8aHRhaSwgNjE4Mw!3m2!1d47.212399999999995!2d11.01724!4m3!3m2!1d47.2216637!2d10.8324381!4m3!3m2!1d47.1182093!2d10.6667849!4m5!1s0x479cb0607e5a9e05%3A0x91c94663dc22ad8f!2sSt%20Anton%20am%20Arlberg%2C%206580!3m2!1d47.129634599999996!2d10.268178599999999!4m5!1s0x479ca5e5fc511855%3A0x546139ba099a9cbd!2zWsO8cnMsIDY3NjM!3m2!1d47.1715441!2d10.1628904!4m5!1s0x479b5df2117be6cd%3A0x8da65835222b383a!2sAu%2C%206883!3m2!1d47.3191926!2d9.9858329!4m5!1s0x479b399f89964143%3A0x466fc7d5164541a1!2sFeldkirch%2C%20Bahnhofstra%C3%9Fe%2040-42%2C%206800%20Feldkirch!3m2!1d47.2410906!2d9.6038151!5e0!3m2!1sen!2sat!4v1781963463884!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </details>
+      {{> trip-details
+        details=(json '{
+          "map": "https://maps.app.goo.gl/Ei7pXmWLzarwqrn76",
+          "kurviger": "",
+          "length": "290 km",
+          "drivetime": "5.5 Stunden"
+        }')
+      }}
+      <p>
+        Wir müsse früh genug beginnen um Innsbruck vor der Hitze zu erreichen.
+        Inntal wird heiß.
+      </p>
+      <p>
+        Weiter wird angenehm.
+        Zuerst Kühtai (40 Minuten) - Bergpass am 2 Tausend Meter höhe. 
+      </p>
+      <p>
+        Dann zum Kaunertal, etwa 1 Stunde.
+      </p>
+      <p>
+        Dann kurz ins "Tal" zum St. Anton, aber doch bleiben wir hoch.
+      </p>
+      <p>
+        Und weiter zum Gebirgspass Zürs.
+        Es dauert insgesamt weniger als 4 Stunden ab Zell am Ziller, also theoretisch haben wir Zeit zum Zürser See zu wandern.
+      </p>
+      <p>
+        Dann fahren wir zum Feldkirch Bahnhof durch der Bregenzer Wald via Warth und Au.
+        Die Strecke ist 85 km lang, etwa 2 Stunden.
+      </p>
+      <p>
+        Auf jeden Fall, Verladung ins Zug ist um 20:55.
+        Also es wäre gut um 19 Uhr in Feldkirch zu kommen und da gemütlich Abendessen zu gönnen.
+      </p>
+
+    </div>
+  </div>
+
+  {{> footer}}
+  {{> counter}}
+</body>
+</html>
