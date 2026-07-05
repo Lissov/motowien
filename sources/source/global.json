@@ -471,7 +471,8 @@
       "page": "wochenende4.html",
       "name": "Wochenende 3 Nächte",
       "text": "Freitag abend bis Montag Morgen in Alpen.",
-      "drivetime": "XXX km"
+      "length": "800 km",
+      "drivetime": "2-4 Stunden am Tag"
     }
   },
   "tourism": {
