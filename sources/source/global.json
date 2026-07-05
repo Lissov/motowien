@@ -1,5 +1,11 @@
 {
   "groups": {
+    "planned": {
+      "header": "Jetzt im Planung",
+      "headerUk": "Заплановані найближчим часом",
+      "open": "true",
+      "trips": ["wochenende4"]
+    },
     "favourite": {
       "header": "Favoriten",
       "headerUk": "Улюблені",
@@ -459,6 +465,13 @@
       "name": "Cesky Krumlov",
       "text": "2-3 Tage Runde zum Tschechische Republik: Cesky Krumlov",
       "drivetime": "1000 km"
+    },
+    "wochenende4": {
+      "draft": "true",
+      "page": "wochenende4.html",
+      "name": "Wochenende 3 Nächte",
+      "text": "Freitag abend bis Montag Morgen in Alpen.",
+      "drivetime": "XXX km"
     }
   },
   "tourism": {
